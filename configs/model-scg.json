@@ -1,0 +1,198 @@
+{
+  "name": "tracking",
+  "title": "Document tracking",
+  "table": {
+    "name": "tracking",
+    "header": "",
+    "paging": true,
+    "container": "rows",
+    "create": true,
+    "createPermission": "PO-Upload",
+    "exportPermission": "PO-Export",
+    "search": true,
+    "manualExport": false,
+    "sortable": true,
+    "hideAction": false,
+    "columns": [
+      {
+        "columnIndex": 1,
+        "defaultOrder": 1,
+        "header": "Company Name",
+        "field": "companyName",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 2,
+        "defaultOrder": 2,
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 3,
+        "defaultOrder": 3,
+        "requiredColumn": true,
+        "header": "Invoice number",
+        "field": "documentNo",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 4,
+        "defaultOrder": 4,
+        "header": "Invoice Amount",
+        "field": "document.invoiceTotal",
+        "type": "number",
+        "pattern": "#,###.00",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 5,
+        "defaultOrder": 5,
+        "header": "Invoice Payable Amount",
+        "field": "document.totalPayable",
+        "type": "number",
+        "pattern": "#,###.00",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 6,
+        "defaultOrder": 6,
+        "header": "Document Completion",
+        "field": "completion",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 7,
+        "defaultOrder": 7,
+        "header": "Original Tax Invoice",
+        "field": "Invoice",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 8,
+        "defaultOrder": 8,
+        "header": "Original Receipt",
+        "field": "Receipt",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 9,
+        "header": "Other Doc.",
+        "field": "Other Doc.",
+        "editable": false,
+        "sort": true,
+        "hidden": true,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 10,
+        "header": "FI Doc (LIV)",
+        "field": "linearId",
+        "editable": false,
+        "sort": true,
+        "hidden": true,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      }
+    ],
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": {
+      "name": "Tracking",
+      "url": "/standard/api/documents/invoice"
+    }
+  },
+  "form": {
+    "name": "tracking",
+    "size": "medium",
+    "autoClose": true,
+    "clearOnClose": false,
+    "sections": [
+      {
+        "fields": [
+          {
+            "key": "companyName",
+            "title": "Company Name",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "vendorName",
+            "title": "vendorName",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "externalId",
+            "title": "Invoice number",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "document.invoiceDate",
+            "title": "Invoice date",
+            "controlType": "dropdown",
+            "type": "date",
+            "required": false
+          },
+          {
+            "key": "document.paymentDate",
+            "title": "Invoice payment date",
+            "controlType": "date",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "buttons": [],
+    "header": {
+      "add": "Search"
+    }
+  },
+  "search": {
+    "url": "/standard/api/documents/invoice"
+  }
+}

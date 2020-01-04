@@ -1,0 +1,221 @@
+{
+  "name": "tracking",
+  "title": "Document tracking",
+  "table": {
+    "name": "tracking",
+    "header": "",
+    "paging": true,
+    "container": "rows",
+    "create": true,
+    "createPermission": "PO-Upload",
+    "exportPermission": "PO-Export",
+    "search": true,
+    "manualExport": false,
+    "sortable": true,
+    "hideAction": false,
+    "columns": [
+      {
+        "columnIndex": 1,
+        "defaultOrder": 1,
+        "header": "Company Tax ID",
+        "field": "companyTaxId",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 2,
+        "defaultOrder": 2,
+        "header": "Company Name",
+        "field": "companyName",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 3,
+        "defaultOrder": 3,
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 4,
+        "defaultOrder": 4,
+        "requiredColumn": true,
+        "header": "Document number",
+        "field": "documentNo",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 5,
+        "defaultOrder": 5,
+        "header": "Document Type",
+        "field": "state",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 6,
+        "defaultOrder": 6,
+        "header": "Document Completion",
+        "field": "completion",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 7,
+        "defaultOrder": 7,
+        "header": "Invoice",
+        "field": "Invoice",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 8,
+        "defaultOrder": 8,
+        "header": "Receipt",
+        "field": "Receipt",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 9,
+        "defaultOrder": 9,
+        "header": "Delivery Note",
+        "field": "Delivery Note",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 9,
+        "header": "Other Doc",
+        "field": "Other Doc",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      },
+      {
+        "columnIndex": 10,
+        "header": "Credit Note",
+        "field": "Credit Note",
+        "editable": true,
+        "sort": false,
+        "hidden": false,
+        "export": true
+      }
+    ],
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": {
+      "name": "Tracking",
+      "url": "/standard/api/documents"
+    }
+  },
+  "form": {
+    "name": "tracking",
+    "size": "medium",
+    "autoClose": true,
+    "clearOnClose": false,
+    "sections": [
+      {
+        "fields": [
+          {
+            "key": "companyName",
+            "title": "Company Name",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "vendorName",
+            "title": "vendorName",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "documentNo",
+            "title": "Document number",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "completion",
+            "title": "Document Completion",
+            "controlType": "dropdown",
+            "type": "option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "true"
+              },
+              {
+                "text": "No",
+                "value": "false"
+              }
+            ],
+            "required": false
+          },
+          {
+            "key": "state",
+            "title": "Document Type",
+            "controlType": "dropdown",
+            "type": "option",
+            "options": [
+              {
+                "text": "Invoice",
+                "value": "Invoice"
+              },
+              {
+                "text": "Credit Note",
+                "value": "Credit Note"
+              },
+              {
+                "text": "Payment",
+                "value": "Payment"
+              }
+            ],
+            "required": false
+          },
+          {
+            "key": "companyTaxId",
+            "title": "Company Tax ID",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "vendorTaxId",
+            "title": "Vendor Tax ID",
+            "controlType": "textbox",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "buttons": [],
+    "header": {
+      "add": "Search"
+    }
+  },
+  "search": {
+    "url": "/standard/api/documents"
+  }
+}

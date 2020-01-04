@@ -1,0 +1,23 @@
+{
+  "Dashboard": "แดชบอร์ด",
+  "Purchase Order": "ใบสั่งซื้อ",
+  "PO List": "รายการใบสั่งซื้อ",
+  "PO Delivery Schedule": "แผนการส่งมอบ",
+  "Goods Receipt": "ใบรับสินค้า",
+  "Invoice": "ใบกำกับภาษี",
+  "Credit Note": "ใบลดหนี้",
+  "Debit Note": "ใบเพิ่มหนี้",
+  "Request": "ใบคำร้อง",
+  "3 Way Matching": "3 Way Matching",
+  "2 Way Matching": "2 Way Matching",
+  "Waiting DOA Approval": "Waiting DOA Approval",
+  "Monitoring": "ตรวจสอบ",
+  "Upload Invoice Monitoring": "ผลการ Upload ใบกำกับภาษี",
+  "LIV Posting Result": "รายการการตั้งหนี้",
+  "Payment Posting": "รายการการทำจ่าย",
+  "Document Tracking": "ติดตามเอกสาร",
+  "change-locale": "Change to English",
+  "mobileLocale": "English",
+  "Logout": "ออกจากระบบ",
+  "more": "เพิ่มเติม"
+}

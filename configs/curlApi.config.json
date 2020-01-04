@@ -1,0 +1,448 @@
+{
+  "corda": {
+    "credit": {
+      "url": "/api/creditnotes",
+      "getCreditNotes": {
+        "uri": "",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "debit": {
+      "url": "/api/debitnotes",
+      "getDebitNotes": {
+        "uri": "",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getDebitNote": {
+        "uri": ":linearId",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "issueDebitNote": {
+        "uri": "",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "checkUniquenessDebitNote": {
+        "uri": "validate/uniqueness",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "approveDebitNote": {
+        "uri": "approve",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "rejectDebitNote": {
+        "uri": "reject",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "cancelDebitNote": {
+        "uri": "cancel",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "editDueDate": {
+        "uri": "duedates",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "editDebitNote": {
+        "uri": "edit",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "invoice": {
+      "url": "/api/invoices",
+      "getInvoices": {
+        "uri": "",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "queryDueDate": {
+        "uri": "calculate-due-date",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getInvoice": {
+        "uri": ":linearId",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "approveInvoice": {
+        "uri": "approve",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "offledgers": {
+      "url": "/api/offledgers",
+      "getConfigurationForDebitNote": {
+        "uri": "configuration/debitnote",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getConfigurationForInvoice": {
+        "uri": "configuration/invoice",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getConfigurationForRequest": {
+        "uri": "configuration/request",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getVendor": {
+        "uri": "vendors",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getCompany": {
+        "uri": "company",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getCompanyBranch": {
+        "uri": "company/branch",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getRequestConfigurationByTaxId": {
+        "uri": "configuration/request/byTaxId",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getRequestConfigurationBySubtype": {
+        "uri": "configuration/request/bySubtype",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getRequestPermission": {
+        "uri": "configuration/request/permission",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getTaxCodeByLegalName": {
+        "uri": "taxcodesByLegalName",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getConfigurationByName": {
+        "uri": "configuration/name",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getHolidayFromDate": {
+        "uri": "next/holidays",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "file": {
+      "url": "/api/files",
+      "handleFileUpload": {
+        "uri": "upload",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "handleMultipleFileUpload": {
+        "uri": "multiple-upload",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json"
+        }
+      }
+    },
+    "purchaseOrder": {
+      "url": "/api/purchaseorders",
+      "getPurchaseOrders": {
+        "uri": "",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getPurchaseOrder": {
+        "uri": ":linearId",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "request": {
+      "url": "/api/requests",
+      "getRequests": {
+        "uri": "",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "issueRequest": {
+        "uri": "",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "checkUniquenessRequest": {
+        "uri": "validate/uniqueness",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "editRequests": {
+        "uri": "",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "getRequestDetail": {
+        "uri": ":linearId",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "sendRequest": {
+        "uri": ":party/send",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "approveRequest": {
+        "uri": "approve",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "buyerClarifyRequest": {
+        "uri": "clarify",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      },
+      "buyerCancelRequest": {
+        "uri": "cancel",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "goodsReceived": {
+      "url": "/api/goodsreceivedheader",
+      "editGoodsReceivedWithNewInvoice": {
+        "uri": "",
+        "method": "PUT",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  },
+  "offchain": {
+    "model": {
+      "url": "/model",
+      "debitGetModel": {
+        "uri": "dn-list",
+        "method": "GET"
+      },
+      "debitSaveModel": {
+        "uri": "dn-list",
+        "method": "POST"
+      },
+      "doaGetModel": {
+        "uri": "doa-list",
+        "method": "GET"
+      },
+      "doaSaveModel": {
+        "uri": "doa-list",
+        "method": "POST"
+      },
+      "requestGetModel": {
+        "uri": "rq-list",
+        "method": "GET"
+      },
+      "requestSaveModel": {
+        "uri": "rq-list",
+        "method": "POST"
+      },
+      "livDebitNoteGetModel": {
+        "uri": "liv-dn-list",
+        "method": "GET"
+      },
+      "livDebitNoteSaveModel": {
+        "uri": "liv-dn-list",
+        "method": "POST"
+      },
+      "livInvoiceGetModel": {
+        "uri": "liv-inv-list",
+        "method": "GET"
+      },
+      "livInvoiceSaveModel": {
+        "uri": "liv-inv-list",
+        "method": "POST"
+      },
+      "livCreditNoteGetModel": {
+        "uri": "liv-cn-list",
+        "method": "GET"
+      },
+      "livCreditNoteSaveModel": {
+        "uri": "liv-cn-list",
+        "method": "POST"
+      },
+      "livRequestGetModel": {
+        "uri": "liv-rq-list",
+        "method": "GET"
+      },
+      "livRequestSaveModel": {
+        "uri": "liv-rq-list",
+        "method": "POST"
+      }
+    }
+  },
+  "standard": {
+    "pendingApprovalDocument": {
+      "url": "/api/pending",
+      "queryApproval": {
+        "uri": "approval",
+        "method": "GET"
+      }
+    },
+    "moremenu": {
+      "url": "/api/ui-custom-menu",
+      "getmoremenu": {
+        "uri": "",
+        "method": "GET"
+      }
+    },
+    "actionHistory": {
+      "url": "/api/actionhistory",
+      "getActionHistory": {
+        "uri": "",
+        "method": "GET"
+      },
+      "createActionHistory": {
+        "uri": "",
+        "method": "POST"
+      }
+    },
+    "debitNote": {
+      "url": "/api/debitnotes",
+      "getAvailableRevisedDueDate": {
+        "uri": "available_due_date",
+        "method": "GET"
+      }
+    },
+    "Tax": {
+      "url": "/api/tax",
+      "list": {
+        "uri": "",
+        "method": "GET"
+      }
+    }
+  }
+}

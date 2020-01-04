@@ -1,0 +1,193 @@
+{
+  "name": "gr-list",
+  "title": "GR List",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "gr-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "GR", "url": "/api/goodsreceivedheader/native" },
+    "columns": [
+      {
+        "header": "GR No.",
+        "field": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "GR Posting Date",
+        "field": "postingDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "PO No.",
+        "field": "purchaseOrderNumbers",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+
+      {
+        "header": "Invoice No.",
+        "field": "initialInvoiceExternalId",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Revised Invoice No.",
+        "field": "invoiceExternalId",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true,
+        "editPermission": "GR-Edit-Inv"
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "GR No.",
+            "key": "externalId",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/goodsreceivedheader?page=1&pageSize=10&externalId=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "PO No.",
+            "key": "purchaseOrderExternalId",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Invoice No",
+            "key": "invoiceExternalId",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "GR Posting Date",
+            "key": "postingDate",
+            "controlType": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 6,
+            "title": "GR Type",
+            "key": "movementClass",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Normal GR", "value": "NORMAL" },
+              { "text": "Return GR", "value": "RETURN" },
+              { "text": "Reverse of Normal GR", "value": "REVERSE" },
+              { "text": "Reverse of Return GR", "value": "REVERSE_RETURN" }
+            ]
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "Reference No. 1",
+            "key": "referenceField1",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 10,
+            "title": "Reference No. 2",
+            "key": "referenceField2",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

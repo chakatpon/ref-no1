@@ -1,0 +1,193 @@
+{
+  "name": "payment-list",
+  "title": "Payment Posting Result",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "payment-list",
+    "header": "",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": {
+      "name": "Payment Posting",
+      "url": "/api/payments/postings/results"
+    },
+    "columns": [
+      {
+        "header": "Customer Ref. No.",
+        "field": "customerReference",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true,
+        "pathParam": "linearId"
+      },
+      {
+        "header": "Payment Amount",
+        "field": "paymentAmount",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": true,
+        "export": false,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "SCB Payment Status",
+        "field": "lifecycleSCB",
+        "type": "template",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "SCB Payment Reason",
+        "field": "settledMessage",
+        "displayMode": 2,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "FI Doc",
+        "field": "customisedFields.paymentRes.AccountingDocumentNumber",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Send to SCB Date",
+        "field": "lastGeneratedDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": false,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      },
+      {
+        "header": "Payment Posting Date",
+        "field": "lastPostedDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "Document No.",
+            "key": "documentNumbers",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Payment Value Date",
+            "key": "paymentItemDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "SCB Payment status",
+            "key": "lifecycles",
+            "controlType": "textbox",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Success", "value": "PAID" },
+              { "text": "Failed", "value": "DECLINED" }
+            ]
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Payment Posting Status",
+            "key": "postingStatuses",
+            "controlType": "textbox",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Success", "value": "SUCCESS" },
+              { "text": "Failed", "value": "FAILED" }
+            ]
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Send To SCB",
+            "key": "lastGeneratedDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Customer Reference",
+            "key": "customerReference",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/paymentitems/postings/results?page=1&pageSize=10&customerReference=",
+            "displayField": "customerReference"
+          }
+        ]
+      }
+    ]
+  }
+}

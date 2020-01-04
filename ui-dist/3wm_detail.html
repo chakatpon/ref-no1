@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <div class="page__header">
+        <h2>Invoice No. : DIRESIT-002</h2>
+      </div>
+      <div class="page__breadcrumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><strong>3 Way Matching</strong></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><strong>Invoice No. : DIRESIT-002</strong></li>
+          </ol>
+        </nav>
+      </div>
+      <section id="invoice_detail_page" class="three_wm_detail box box--width-header">
+        <!-- box--no-shadow -->
+        <div class="box__header">
+          <div class="row justify-content-between align-items-center mb-2">
+            <div class="col-4"> Entry Date : <strong>07/03/2018</strong>
+            </div>
+            <div class="col-8 text-right"> 3 Way Matching Status : <strong class="purple-2">Pending Manual Approval</strong>
+              <button name="btnCancel" class="btn btn--transparent mx-2">Request to Resubmit</button>
+              <button name="btnHold" class="btn btn-wide mr-2">Approve</button>
+            </div>
+          </div>
+        </div><!-- box__header -->
+        <div class="box__inner">
+          <!-- Box "#vendor" - Start -->
+          <div class="row box">
+            <a href="#vendorInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="vendorInfo" class="d-flex w-100 btnToggle">
+              <div class="col-6">
+                <h3 class="border-bottom gray-1">Vendor</h3>
+              </div>
+              <div class="col-6">
+                <h3 class="border-bottom gray-1">Company</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Vendor Lists - Start -->
+            <div id="vendorInfo" class="collapse multi-collapse w-100 show">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Code :</p>
+                      <p class="col-6">0001001150</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Name :</p>
+                      <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tax ID :</p>
+                      <p class="col-6">7729602003486</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Branch :</p>
+                      <p class="col-6">112 (BKK)</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Address :</p>
+                      <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tel. :</p>
+                      <p class="col-6">02-224-0027</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Code :</p>
+                      <p class="col-6">0100</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Name :</p>
+                      <p class="col-6">SCG Chemical</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tax ID :</p>
+                      <p class="col-6">263707019058</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Branch :</p>
+                      <p class="col-6">BU1 (SCG)</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Address :</p>
+                      <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tel. :</p>
+                      <p class="col-6">02-123-4567</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Vendor Lists - End -->
+          </div>
+          <!-- Box #vendor" - End -->
+          <!-- Box "#paymentInfo" - Start -->
+          <div class="row box">
+            <a href="#paymentInfo" data-toggle="collapse" role="button" aria-expanded="false" area-controls="paymentInfo" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="border-bottom gray-1">Payment Information</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Payment Information Lists - Start -->
+            <div id="paymentInfo" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Date :</p>
+                      <p class="col-6">07/08/2018</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Payment Date :</p>
+                      <p class="col-6">30 days</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Payment Term <br />Description :</p>
+                      <p class="col-6">Credit 30 days after receive bill</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Financing :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Send to CMS :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Send to Bank :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited By :</p>
+                      <p class="col-6">Thanakit.a</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited Date :</p>
+                      <p class="col-6">20/08/2018</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Due Date :</p>
+                      <p class="col-6">21/08/2018</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Revised Payment <br />Due Date :</p>
+                      <p class="col-6">
+                            <strong class="purple d-flex align-items-center">
+                                30/09/2018 
+                                <svg width="24px" height="24px" viewBox="10 8 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-left:15px;">
+                                    <defs>
+                                        <filter x="-2.9%" y="-7.9%" width="105.8%" height="116.9%" filterUnits="objectBoundingBox" id="filter-1">
+                                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                                            <feMerge>
+                                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    <g id="Invoice" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Invoice_Detail_supplier_full" transform="translate(-1054.000000, -576.000000)" fill="#AF3694">
+                                            <g id="02_payment_information" filter="url(#filter-1)" transform="translate(166.000000, 480.000000)">
+                                                <g id="tb_revised_payment_due_date" transform="translate(801.000000, 102.000000)">
+                                                    <path d="M106,19.9404 L112.07,13.8794 L114.12,15.8794 L108.06,22.0004 L106,22.0004 L106,19.9404 Z M115.7,14.3494 L114.7,15.3494 L112.65,13.3504 L113.65,12.3504 C113.85,12.1404 114.19,12.1294 114.42,12.3504 L115.7,13.6294 C115.89,13.8304 115.89,14.1504 115.7,14.3494 Z M113,4.0004 L112,4.0004 L112,2.0004 L110,2.0004 L110,4.0004 L102,4.0004 L102,2.0004 L100,2.0004 L100,4.0004 L99,4.0004 C97.896,4.0004 97,4.8954 97,6.0004 L97,20.0004 C97,21.1044 97.896,22.0004 99,22.0004 L104,22.0004 L104,20.0004 L99,20.0004 L99,9.0004 L113,9.0004 L113,10.0004 L115,10.0004 L115,6.0004 C115,4.8954 114.104,4.0004 113,4.0004 Z" id="Fill-1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Sub Total :</p>
+                      <p class="col-6">
+                        <span class="number text-right">625,500.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">TAX Total :</p>
+                      <p class="col-6">
+                        <span class="number text-right">45,675.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Amount <br />(inc. TAX) :</p>
+                      <p class="col-6">
+                        <span class="number text-right">698,175.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Payable <br />Amount (inc. TAX) :</p>
+                      <p class="col-6">
+                        <span class="number text-right">698,175.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited Reason :</p>
+                      <p class="col-6">Lorem ipsum dolor sit amet, consetetursadipsc ing elitr, sed diam nonumy eirmod temporinvid unt ut Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodtem…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Payment Information Lists - End -->
+          </div>
+          <!-- Box #paymentInfo" - End -->
+          <!-- Box Attachment - Start -->
+          <div class="row box">
+            <a href="#attachmentLists" data-toggle="collapse" role="button" aria-expanded="false" area-controls="attachmentLists" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="border-bottom gray-1">Attachments</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Attachment lists - Start -->
+            <div id="attachmentLists" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Tax Invoice :</p>
+                      <p class="col-6"><span class="fileName">TaxINV.PNG</span><a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Receipt NO. :</p>
+                      <p class="col-6">123456789</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Delivery Note :</p>
+                      <p class="col-6"><span class="fileName">DeliveryNote.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Receipt :</p>
+                      <p class="col-6"><span class="fileName">Receipt.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Other Documents :</p>
+                      <p class="col-6"><span class="fileName">OtherDoc.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Attachment lists - End -->
+          </div>
+          <!-- Box Attachment - End -->
+
+          <!-- Box Amount Matching - Start -->
+          <div id="amountMatching" class="row box unmatched"> <!-- Use Status matched / unmatched : Box color will change -->
+            <div class="col-12 btnToggle">
+                <h3 class="border-bottom gray-1">Amount Matching</h3>
+            </div>
+            <!-- Matching Status - Start -->
+            <div id="matchingStatus" class="col-12 d-flex">
+              <div class="col-3">
+                  <p class="mt-3 mb-0">Status</p>
+                  <p class="indicator"><strong>TAX Total Unmatched</strong></p>
+                  <p class="indicator"><strong>Sub Total Unmatched</strong></p>
+              </div>
+              <div class="col-3">
+                  <p class="mt-3 mb-0">Calculated by System Amount</p>
+                  <p class="indicator w-50 text-right">700.00 THB</p>
+                  <p class="indicator w-50 text-right">10,000.00 THB</p>
+              </div>
+              <div class="col-3">
+                  <p class="mt-3 mb-0">Amount in Invoice</p>
+                  <p class="indicator w-50 text-right">715.00 THB</p>
+                  <p class="indicator w-50 text-right">10,000.00 THB</p>
+              </div>
+              <div class="col-3">
+                  <p class="mt-3 mb-0">Diff Amount</p>
+                  <p class="indicator w-50 text-right">15.00 THB</p>
+                  <p class="indicator w-50 text-right">1,000.00 THB</p>
+              </div>
+            </div>
+            <!-- Matching Status - End -->
+          </div>
+          <!-- Box Amount Matching - End -->
+
+        </div><!-- box__inner -->
+      </section>
+      <section id="invoice_detail_page" class="three_wm_detail box box--width-header">
+        <!-- box--no-shadow -->
+        <div class="box__header">
+          <div class="row justify-content-between align-items-center mb-2">
+            <div class="col-6">
+              <h3>Matching Details</h3>
+            </div>
+            <div class="col-6 d-flex flex-wrap justify-content-end align-items-center">
+                <div class="filter col-8 d-flex justify-content-end">
+                    <strong class="mr-3">Filter:</strong>
+                    <a href="javascript:void(0);" class="active"><strong class="purple">All</strong></a>
+                    <a href="javascript:void(0);"><strong class="purple">Unmatched</strong></a>
+                    <a href="javascript:void(0);"><strong class="purple">Matched</strong></a>
+                </div>
+                <div class="searchBox input-append-icon col-4">
+                    <i class="fa fa-search"></i>
+                    <input type="text" name="search" id="search" value="" placeholder="Search Item No" />
+                </div>
+            </div>
+          </div>
+        </div><!-- box__header -->
+        <div class="box__inner">
+
+          <!-- Box "#item1" - Start -->
+          <div class="row box item-unmatched"> <!-- Use Status item-matched / item-unmatched : Box color will change -->
+            <a href="#item1" data-toggle="collapse" role="button" aria-expanded="false" area-controls="item1" class="d-flex w-100 btnToggle">
+              <div class="col-12 px-0 d-flex">
+                <div class="col-5 px-0">
+                    <p class="mb-0 gray-1">Items 001:</p>
+                    <h3 class="gray-1">BIGBAG,105x110x110CM,LOGO</h3>
+                </div>
+                <div class="col-4">
+                    <p class="indicator mb-0">Unmatched Reason</p>
+                    <h3 class="indicator"><strong>Date Mismatch</strong></h3>
+                </div>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- item1 Lists - Start -->
+            <div id="item1" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="w-100 d-flex flex-wrap items-wrapper">
+                    <div class="items col-2 px-0">
+                        <p class="header bg-lightgray"><strong>Matching</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-white"></i> <strong>Item No.</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Price</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Quantity</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Description</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-times c-red"></i> <strong>Date</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Amount</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Currency</strong></p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>PO No.<br />5002111686</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">00001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center"><strong class="c-red">11/06/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">1,623,660.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-gray"><a href="javascript:void(0);" class="show-hidden" data-before="gr-hidden" data-after="gr-show" data-status="hide"><strong class="gray-1">GR Summary <i class="fa fa-chevron-right" aria-hidden="true"></i> </strong></a></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">Multiple Value</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250576</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">11/06/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250587</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">09/08/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250591</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">09/08/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>Invoice No.<br />BLOC2944-1</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">5,412.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- item1 Lists - End -->
+          </div>
+          <!-- Box #item1" - End -->
+
+          <!-- Box "#item2" - Start -->
+          <div class="row box item-unmatched"> <!-- Use Status item-matched / item-unmatched : Box color will change -->
+            <a href="#item2" data-toggle="collapse" role="button" aria-expanded="false" area-controls="item2" class="d-flex w-100 btnToggle">
+              <div class="col-12 px-0 d-flex">
+                <div class="col-5 px-0">
+                    <p class="mb-0 gray-1">Items 002:</p>
+                    <h3 class="gray-1">BIGBAG,105x110x110CM,LOGO</h3>
+                </div>
+                <div class="col-4">
+                    <p class="indicator mb-0">Unmatched Reason</p>
+                    <h3 class="indicator"><strong>Date Mismatch, Quantity Mismatch</strong></h3>
+                </div>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- item2 Lists - Start -->
+            <div id="item2" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="w-100 d-flex flex-wrap items-wrapper">
+                    <div class="items col-2 px-0">
+                        <p class="header bg-lightgray"><strong>Matching</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-white"></i> <strong>Item No.</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Price</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-times c-red"></i> <strong>Quantity</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Description</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-times c-red"></i> <strong>Date</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Amount</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Currency</strong></p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>PO No.<br />5002111686</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">00001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center"><strong class="c-red">11/06/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">1,623,660.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-gray"><a href="javascript:void(0);" class="show-hidden" data-before="gr-hidden" data-after="gr-show" data-status="hide"><strong class="gray-1">GR Summary <i class="fa fa-chevron-right" aria-hidden="true"></i> </strong></a></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">Multiple Value</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250576</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">10.000</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">11/06/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250587</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">10.000</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">09/08/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250591</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">10.000</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3"><strong class="c-red">09/08/2018</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>Invoice No.<br />BLOC2944-1</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">5,412.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- item2 Lists - End -->
+          </div>
+          <!-- Box #item2" - End -->
+
+          <!-- Box "#item3" - Start -->
+          <div class="row box item-matched"> <!-- Use Status item-matched / item-unmatched : Box color will change -->
+            <a href="#item3" data-toggle="collapse" role="button" aria-expanded="false" area-controls="item3" class="d-flex w-100 btnToggle">
+              <div class="col-12 px-0 d-flex">
+                <div class="col-5 px-0">
+                    <p class="mb-0 gray-1">Items 003:</p>
+                    <h3 class="gray-1">BIGBAG,105x110x110CM,LOGO</h3>
+                </div>
+                <div class="col-4 d-flex align-items-center">
+                    <h3 class="indicator"><strong>Matched</strong></h3>
+                </div>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- item3 Lists - Start -->
+            <div id="item3" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="w-100 d-flex flex-wrap items-wrapper">
+                    <div class="items col-2 px-0">
+                        <p class="header bg-lightgray"><strong>Matching</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-white"></i> <strong>Item No.</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Price</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Quantity</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Unit Description</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Date</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Amount</strong></p>
+                        <p class="border-bottom border-1px border-gray d-flex align-items-center"><i class="fa fa-check c-green"></i> <strong>Currency</strong></p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>PO No.<br />5002111686</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">00001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center">11/06/2018</p>
+                        <p class="border-bottom border-1px border-gray text-center">1,623,660.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-gray"><a href="javascript:void(0);" class="show-hidden" data-before="gr-hidden" data-after="gr-show" data-status="hide"><strong class="gray-1">GR Summary <i class="fa fa-chevron-right" aria-hidden="true"></i> </strong></a></p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">11/06/2018</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250576</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">11/06/2018</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250587</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">11/06/2018</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items gr-hidden col">
+                        <p class="header text-center bg-gray">GR No.<br />3000250591</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">00002</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">11/06/2018</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                        <p class="border-bottom border-1px border-gray text-center bg-lightgray-3">-</p>
+                    </div>
+                    <div class="items col px-0">
+                        <p class="header text-center bg-lightgray"><strong>Invoice No.<br />BLOC2944-1</strong></p>
+                        <p class="border-bottom border-1px border-gray text-center">001</p>
+                        <p class="border-bottom border-1px border-gray text-center">54122</p>
+                        <p class="border-bottom border-1px border-gray text-center">3,000.000</p>
+                        <p class="border-bottom border-1px border-gray text-center">BAG</p>
+                        <p class="border-bottom border-1px border-gray text-center">-</p>
+                        <p class="border-bottom border-1px border-gray text-center">5,412.00</p>
+                        <p class="border-bottom border-1px border-gray text-center">THB</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- item3 Lists - End -->
+          </div>
+          <!-- Box #item3" - End -->
+          
+        </div><!-- box__inner -->
+      </section>
+
+      <section id="invoice_detail_page_2" class="box box--width-header">
+        <!-- box--no-shadow -->
+        <div class="box__inner">
+          <!-- Box "#actionHistory" - Start -->
+          <div class="row box">
+            <a href="#actionHistory" data-toggle="collapse" role="button" aria-expanded="false" area-controls="actionHistory" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="gray-1">Action History</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- actionHistory Lists - Start -->
+            <div id="actionHistory" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row overflow-x-scroll">
+                  <div class="col-12">
+                    <div class="table_wrapper">
+                      <table class="table dataTable">
+                        <thead>
+                          <tr>
+                            <th>Action</th>
+                            <th>Date/Time</th>
+                            <th>By (Position: Name)</th>
+                            <th>Reason</th>
+                            <th>Attach File</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td>3 Way Matching Result</td>
+                              <td>17/08/2018, 16:56:54</td>
+                              <td>3 Way Matching</td>
+                              <td>Quantity Mismatch</td>
+                              <td>
+                                  test.pdf <a href="javascript:void(0);" class="purple underline">Download</a><br />
+                                  test.pdf <a href="javascript:void(0);" class="purple underline">Download</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Manual Approved</td>
+                              <td>17/08/2018, 16:54:23</td>
+                              <td>BU: testadm1</td>
+                              <td>OK</td>
+                              <td>test.pdf <a href="javascript:void(0);" class="purple underline">Download</a></td>
+                          </tr>
+                          <tr>
+                              <td>DOA Approved</td>
+                              <td>17/08/2018, 16:53:25</td>
+                              <td>DOA: testdoa1</td>
+                              <td>Approved</td>
+                              <td>test.pdf <a href="javascript:void(0);" class="purple underline">Download</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- actionHistory Lists - End -->
+          </div>
+          <!-- Box #actionHistory" - End -->
+        </div>
+      </section>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('body').on('click','.show-hidden', function(){
+            var status = $(this).attr('data-status');
+            var beforeClick = $(this).attr('data-before');
+            var afterClick = $(this).attr('data-after');
+
+            if( status == 'hide' ){
+                $(this).parents('.items-wrapper').find('.'+beforeClick).removeClass(beforeClick).addClass(afterClick);
+                $(this).attr('data-before', afterClick);
+                $(this).attr('data-after', beforeClick);
+                $(this).attr('data-status','show');
+                $(this).find('i.fa').removeClass('fa-chevron-right').addClass('fa-chevron-left');
+            }else{
+                $(this).parents('.items-wrapper').find('.'+beforeClick).removeClass(beforeClick).addClass(afterClick);
+                $(this).attr('data-before', afterClick);
+                $(this).attr('data-after', beforeClick);
+                $(this).attr('data-status','hide');
+                $(this).find('i.fa').removeClass('fa-chevron-left').addClass('fa-chevron-right');
+            }
+        });
+      });
+    </script>
+  </body>
+
+</html>

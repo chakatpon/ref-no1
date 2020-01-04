@@ -1,0 +1,136 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+    <div class="page__header">
+        <h2>Purchase Order</h2>
+    </div>
+
+    <section class="box box--width-header"><!-- box--no-shadow -->
+
+        <div class="box__header box__header--shadow">
+            <div class="row justify-content-between align-items-center mb-2">
+                <div class="col">
+                    <h4>Search: </h4>
+                </div>
+                <div class="col text-right">
+                    <a class="btn btn--transparent btn-clear mr-2" href="javascript:;"><i class="icon icon-x"></i> Clear</a>
+                    <button class="btn" type="submit"><i class="icon icon-search"></i> Search</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-between align-items-center ml--2 mr--2">
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputDefault" class="form-control" placeholder="PO. No.">
+                            <label for="inputDefault">PO. No.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputDefault2" class="form-control" placeholder="Company Code">
+                            <label for="inputDefault2">Company Code</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputDefault3" class="form-control" placeholder="Vendor Code">
+                            <label for="inputDefault3">Vendor Code</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputDefault4" class="form-control" placeholder="Status">
+                            <label for="inputDefault4">Status</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputDefault5" class="form-control" placeholder="Delivery Date">
+                            <label for="inputDefault5">Delivery Date</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center">
+                    <div class="purple">
+                        More Search <i class="icon icon-arrow_small_down"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- box__header -->
+
+        <div class="box__inner">
+            <div class="table__wrapper">
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>PO. No.</th>
+                            <th>Company Code</th>
+                            <th>Vendor Code</th>
+                            <th>Status</th>
+                            <th>Delivery Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- box__inner -->
+        
+    </section>
+
+  
+{% endblock main %}
+
+{% block scripts %}
+	{{ parent() }}
+{% endblock %}
+

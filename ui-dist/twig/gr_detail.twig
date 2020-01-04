@@ -1,0 +1,46 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<p><a href="javascript:void(0);" data-toggle="modal" data-target="#reviseInvoice">Click ME!</a></p>
+
+<!-- Modal #confirmCancel - Start -->
+<div id="reviseInvoice" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="reviseInvoice" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="text-center w-100">Revise Invoice No.</h3>
+      </div>
+
+      <div class="modal-body">
+        <form id="reviseInvoiceForm" name="reviseInvoiceForm" method="post" enctype="multipart/form-data">
+          <div class="form-label-group">
+            <input type="text" id="invoice_no" class="form-control" placeholder="Revise Invoice No." value="ABC123456" required="" autofocus="">
+            <label for="invoice_no">Revise Invoice No.</label>
+          </div>
+          <p class="message c-red">All GR items have been processed in 3WM. You cannot revise invoice No.</p>
+        </form>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+          <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide btn--transparent" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn-wide">Change</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal #confirmCancel - End -->
+
+{% endblock main %}
+
+{% block scripts %}
+	{{ parent() }}
+  <script type="text/javascript">
+
+  </script>
+{% endblock %}

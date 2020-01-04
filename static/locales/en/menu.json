@@ -1,0 +1,23 @@
+{
+  "Dashboard": "Dashboard",
+  "Purchase Order": "Purchase Order",
+  "PO List": "PO List",
+  "PO Delivery Schedule": "PO Delivery Schedule",
+  "Goods Receipt": "Goods Receipt",
+  "Invoice": "Invoice",
+  "Credit Note": "Credit Note",
+  "Debit Note": "Debit Note",
+  "Request": "Request",
+  "3 Way Matching": "3 Way Matching",
+  "2 Way Matching": "2 Way Matching",
+  "Waiting DOA Approval": "Waiting DOA Approval",
+  "Monitoring": "Monitoring",
+  "Upload Invoice Monitoring": "Upload Invoice Monitoring",
+  "LIV Posting Result": "LIV Posting Result",
+  "Payment Posting": "Payment Posting",
+  "Document Tracking": "Document Tracking",
+  "change-locale": "เปลี่ยนเป็น ภาษาไทย",
+  "mobileLocale": "ภาษาไทย",
+  "Logout": "Logout",
+  "more": "More"
+}

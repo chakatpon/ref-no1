@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <!-- Start #upload_monitoring - Start -->
+      <div id="cn_create" class="upload_monitoring row step-3">
+        
+        <div class="page__header col-12">
+          <h2>Please Upload Files</h2>
+        </div>
+        <form id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+          
+            <!-- UploadForm - Start -->
+            <div class="box col-12 d-flex flex-wrap">
+
+                <!-- Left Panel - Start -->
+                <div id="upload-section" class="col-9">
+
+                    <!-- Row 1 - Start -->
+                    <div class="d-flex flex-wrap">
+
+                        <!-- Box 1 - Start -->
+                        <div id="box-1" class="col-12">
+                            <p class="mb-0"><strong>Invoice and other attachments</strong></p>
+                            <div class="uploadArea custom-fileUpload">
+                                <p class="text-center">Drag &amp; Drop files here</p>
+                                <p class="text-center">or</p>
+                                <div class="upload-btn-wrapper">
+                                    <button type="button" class="btn btn--transparent btnUpload">Browse Files</button>
+                                    <input type="file" name="attach_tax_invoice_file" />
+                                </div>
+                            </div>
+                            <p class="small mb-0">File type: CSV, PDF, JPG</p>
+                        </div>
+                        <!-- Box 1 - End -->
+
+                        <!-- Box 2 - Start -->
+                        <div id="box-2" class="col-12 mt-3 nopadding d-flex flex-wrap">
+                            <div id="uploaded-list-section" class="col-6 border-right border-2px border-lightgray">
+                                <h5>Selected CSV Files</h5>
+                                <div id="uploadedLists" class="bg-grey rounded">
+                                    <ul>
+                                        <li>
+                                            <h5 class="medium">CSV</h5>
+                                            <div class="border-top border-bottom border-1px border-grey">
+                                                <p class="form-inline">
+                                                    <span><i class="fa fa-file" aria-hidden="true"></i> INVOICE_V04.CSV</span>
+                                                    <span class="text-right">79.87K</span>
+                                                    <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="uploaded-list-section" class="col-6">
+                                <h5>Uploaded Files</h5>
+                                <div id="uploadedLists" class="bg-grey rounded">
+                                    <ul>
+                                        <li>
+                                            <h5 class="medium">Tax Invoice</h5>
+                                            <div class="border-top border-bottom border-1px border-grey">
+                                                <p class="form-inline">
+                                                    <span><i class="fa fa-file" aria-hidden="true"></i> TaxINV.PNG</span>
+                                                    <span class="text-right">79.87K</span>
+                                                    <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5 class="medium">Receipt</h5>
+                                            <div class="border-top border-bottom border-1px border-grey">
+                                                <p class="form-inline">
+                                                    <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                                                    <span class="text-right">79.87K</span>
+                                                    <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5 class="medium">Other Documents</h5>
+                                            <div class="border-top border-bottom border-1px border-grey">
+                                                <p class="form-inline">
+                                                    <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                                                    <span class="text-right">79.87K</span>
+                                                    <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                                                </p>
+                                                <p class="form-inline">
+                                                    <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                                                    <span class="text-right">79.87K</span>
+                                                    <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 2 - End -->
+
+                    </div>
+                    <!-- Row 1 - End -->
+
+                </div>
+                <!-- Center Panel - End -->
+
+                <!-- Right Panel - Start -->
+                <div id="upload-instruction" class="col-3 nopadding">
+                    <p class="mb-0"><strong>File’s Name and Format Instruction</strong></p>
+                    <div class="border border-2px border-lightgray rounded">
+                        <p class="underline">File Name Format</p>
+                        <p>CSV File Name should be in the following format: [vendorTaxId]_*.csv</p>
+                        <p>&nbsp;</p>
+                        <p>e.g., 0125552003888_CSV001.csv</p>
+                        <p>&nbsp;</p>
+                        <p>
+                            Attachment File Name should be in the following format: <br />
+                            [Invoice No.]-[AttachmentType]-[Running No.].[file extension]
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>e.g., INV001-TaxInvoice-001.pdf, INV001-Receipt-002.pdf, INV001-DeliveryNote-003.pdf, INV001-Others-004.pdf</p>
+                        <p>&nbsp;</p>
+                        <p class="underline">Tax Invoice</p>
+                        <p>File type: PDF, JPG</p>
+                        <p>Required: 1 files</p>
+                        <p>&nbsp;</p>
+                        <p>Receipt</p>
+                        <p>File type: PDF, JPG, JPGE</p>
+                        <p>Required: 1 file</p>
+                        <p>&nbsp;</p>
+                        <p>Delivery Note</p>
+                    </div>
+                </div>
+                <!-- Right Panel - End -->
+
+            </div>
+            <!-- UploadForm - End -->
+
+            <!-- Button - Start -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+                    <button type="button" name="btnNext" id="btnNext" class="btn">Upload</button>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <!-- Button - End -->
+
+        </form>
+        
+        <!-- Modal #confirmCancel - Start -->
+        <div id="confirmCancel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center w-100">Cancel</h3>
+              </div>
+              <div class="modal-body">
+                <p class="text-center">Do you want to cancel this invoice?</p>
+                <p>&nbsp;</p>
+                <p class="text-center">
+                  <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                  <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn--transparent btn-wide" onclick="top.location.href='cn.html';">Yes</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal #confirmCancel - End -->
+
+        <!-- Small Screen Cover - Start -->
+        <div id="smallScreenCover">
+          <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+        </div>
+        <!-- Small Screen Cover - End -->
+      </div>
+      <p><a href="javascript:void(0);" data-toggle="modal" data-target="#alertBox">Click ME!</a></p>
+      <!-- Start #upload_monitoring - End -->
+
+      <!-- Modal - Start -->
+      <div id="alertBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alertBox" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+            <h3 id="myModalLabel">Error</h3>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <p>The system cannot get attachment configuration because {error message}</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">OK</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Modal - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /* Hiding Navigation - Start */
+            $('.page').css('width', '100%');
+            $('nav.side-navbar, .sidenav-header-toggle').hide();
+            /* Hiding Navigation - End */
+
+            $('.dataTable').DataTable({
+                //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+                "language": {
+                    "lengthMenu": "Display _MENU_ Per Page"
+                },
+                columnDefs: [{
+                    "targets": [0],
+                    "orderable": false,
+                    'sortable': false,
+                    'width' : '60px'
+                }, {
+                    'targets': [1],
+                    'width': '80px',
+                    'orderable': true
+                }, {
+                    'targets': [2],
+                    'width': '300px',
+                }, {
+                    'targets': [3],
+                    'width': '100px'
+                }, {
+                    'targets': [4],
+                    'width': '80px'
+                }, {
+                    'targets': [5],
+                    'width': '80px'
+                }, {
+                    'targets': [6],
+                    'width': '80px'
+                }, {
+                    'targets': [7,8,9,10],
+                    'width': '80px'
+                }],
+                order: [
+                    [1, "asc"]
+                ],
+                fixedHeader: true,
+                stateSave: false,
+                paging: false,
+                bLengthChange: true,
+                searching: false,
+                info: false,
+                ordering: true
+            });
+
+            /* input#selectAll handler - Start */
+            $('body').on('change', 'input#selectAll', function(){
+                $('input[name="selectedIds[]"]').prop( 'checked', $(this).prop('checked') );
+                if( $(this).prop('checked') === true ){
+                    $('tbody').find('tr').addClass('selected');
+                    $('tbody').find('input[name="cnQty[]"]').prop('disabled', false );
+                    countSelectedTotal();
+                    checkNextStep();
+                }else{
+                    $('tbody').find('tr').removeClass('selected');
+                    $('tbody').find('input[name="cnQty[]"]').prop('disabled', true );
+                    countSelectedTotal();
+                    checkNextStep();
+                }
+            });
+            /* input#selectAll handler - End */
+
+            /* input[name="selectedIds[]"] handler - Start */
+            $('body').on('change', 'input[name="selectedIds[]"]', function(){
+                $(this).each(function(){
+                    if( $(this).prop('checked') === true ){
+                        $(this).parents('tr').addClass('selected');
+                        $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', false );
+                        checkNextStep();
+                    }else{
+                        $(this).parents('tr').removeClass('selected');
+                        $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', true );
+                        checkNextStep();
+                    }
+                });
+            });
+            /* input[name="selectedIds[]"] handler - End */
+
+            /* input[name="cnQty[]"] handler - Start */
+            $('body').on('keyup', 'input[name="cnQty[]"]', function(){
+                var limitVal = $(this).parents('tr').find('input[name="invoiceQty[]"]').val();
+                if( $(this).val() > limitVal ){
+                    $(this).addClass('danger');
+                }else{
+                    $(this).removeClass('danger');
+                }
+
+                /* Calculate Total - Start */
+                var unitPrice = $(this).parents('tr').find('input[name="unitPrice[]"]').val();
+                var total = parseInt( $(this).val() ) * parseInt( unitPrice );
+                $(this).parents('tr').find('.total').html( number_format( total, 2, '.', ',' ) );
+                /* Calculate Total - End */
+
+                checkNextStep();
+            });
+            /* input[name="cnQty[]"] handler - End */
+
+            /* btnCancel Handler - Start */
+            $('body').on('click', '#btnCancel', function(){
+                $('#confirmCancel').modal();
+            });
+            /* btnCancel Handler - End */
+
+            /* btnBack Handler - Start */
+            $('body').on('click', '#btnBack', function(){
+                top.location.href='cn_create.html';
+            });
+            /* btnBack Handler - End */
+
+            /* btnNextStep Handler - Start */
+            $('body').on('click', '#btnNext', function(){
+                top.location.href='cn_create_4.html';
+            });
+            /* btnNextStep Handler - End */
+
+            /* Datepicker - Start */
+            var d = new Date();
+            var todayDate = '' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + (d.getFullYear() + 3);
+            $('.datepicker').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minDate: '01/01/2015',
+                maxDate: todayDate,
+                locale: {
+                    format: 'DD/MM/YYYY'
+                }
+            });
+            /* Datepicker - End */
+
+            /* Trigger #btnNext - Start */
+            $('body').on('keyup', 'input#cn_no, input#cn_date, textarea#cn_reason', function() {
+                if ($('input#cn_no').val() != '' && $('input#cn_date').val() != '' && $('textarea#cn_reason')) {
+                    $('button#btnNext').prop('disabled', false);
+                } else {
+                    $('button#btnNext').prop('disabled', true);
+                }
+            });
+            /* Trigger #btnNext - End */
+        });
+        function number_format(number, decimals, dec_point, thousands_sep){
+            number = number.toFixed(decimals);
+
+            var nstr = number.toString();
+            nstr += '';
+            x = nstr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? dec_point + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+
+            while (rgx.test(x1))
+                x1 = x1.replace(rgx, '$1' + thousands_sep + '$2');
+
+            return x1 + x2;
+
+        }
+
+        function checkNextStep(){
+            var nextStep = false;
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            var cnQtyExceed = $('input[name="cnQty[]"].danger').length;
+
+            if( checked > 0 && cnQtyExceed == 0 ){
+                $('#btnNext').prop('disabled', false);
+            }else{
+                $('#btnNext').prop('disabled', true);
+            }
+        }
+
+        function countSelectedTotal(){
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            if( checked > 1 ){
+                $('.selectedTotal').html( checked+' Items' );
+            }else{
+                $('.selectedTotal').html( checked+' Item' );
+            }
+        }
+    </script>
+  </body>
+
+</html>

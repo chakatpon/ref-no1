@@ -1,0 +1,22 @@
+{
+  "Dashboard": "มือถือ 1",
+  "Purchase Order": "มือถือ 2",
+  "PO List": "มือถือ 3",
+  "PO Delivery Schedule": "มือถือ 4",
+  "Goods Receipt": "มือถือ 5",
+  "Invoice": "มือถือ 6",
+  "Credit Note": "มือถือ 7",
+  "Debit Note": "มือถือ 8",
+  "Request": "มือถือ 9",
+  "3 Way Matching": "มือถือ 10",
+  "2 Way Matching": "มือถือ 11",
+  "Waiting DOA Approval": "มือถือ 12",
+  "Monitoring": "มือถือ 13",
+  "Upload Invoice Monitoring": "มือถือ 14",
+  "LIV Posting Result": "มือถือ 15",
+  "Payment Posting": "มือถือ 16",
+  "Document Tracking": "มือถือ 17",
+  "change-locale": "Change to English",
+  "mobileLocale": "English",
+  "Logout": "ออกจากระบบ"
+}

@@ -1,0 +1,384 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+  <!-- Start #invoice_create - Start -->
+  <div id="invoice_create" class="row">
+
+    <div id="step-indicator" class="col-12">
+      <ul class="d-flex justify-content-center">
+        <li class="flex-fill finished">
+          <div class="indicator step-1 rounded-circle text-center">
+            <span class="number">1</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Select PO and Items</p>
+        </li>
+        <li class="flex-fill active">
+          <div class="indicator step-2 rounded-circle text-center">
+            <span class="number">2</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Insert Invoice Details</p>
+        </li>
+        <li class="flex-fill">
+          <div class="indicator step-3 rounded-circle text-center">
+            <span class="number">3</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Summary</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page__header col-12">
+        <h3>
+          Please Insert Invoice Details and Attched File
+        </h3>
+    </div>
+
+    <form id="editForm" name="editForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+      <div class="box box--width-header col-12">
+
+        <div class="box__header">
+
+
+
+        </div><!-- box__header -->
+
+        <div class="box__inner d-flex">
+
+          <!-- Left Panel - Start -->
+          <div id="detail-section" class="col-3 border-right border-1px border-lightgrey">
+            <h5>Insert Details</h5>
+            <div class="form-group has-float-label">
+              <input type="text" name="invoice_no" id="invoice_no" value="" placeholder="Invoice No *" class="form-control border border-1px border-lightgrey" />
+              <label for="invoice_no">Invoice No *</label>
+            </div>
+            <div class="form-group remark">
+              <span class="message error">Invalid Invoice No</span>
+            </div>
+            <div class="form-group has-float-label">
+              <input type="text" name="invoice_date" id="invoice_date" value="" placeholder="Invoice Date *" class="form-control border border-1px border-lightgrey datepicker" />
+              <label for="invoice_date">Invoice Date *</label>
+            </div>
+            <div class="form-group remark hide">
+              <span class="message error"></span>
+            </div>
+            <div class="form-group has-float-label">
+              <input type="text" name="invoice_payment_term" id="invoice_payment_term" placeholder="Payment Term" value="Credit 30 days after receive bill" class="form-control border border-1px border-lightgrey" />
+              <label for="invoice_payment_term">Payment Term</label>
+            </div>
+            <div class="form-group remark hide">
+              <span class="message error"></span>
+            </div>
+            <div class="form-group has-float-label">
+              <input type="text" name="invoice_due_date" id="invoice_due_date" value="" placeholder="Due Date" class="form-control border border-1px border-lightgrey" />
+              <label for="invoice_due_date">Due Date</label>
+            </div>
+            <div class="form-group remark hide">
+              <span class="message error"></span>
+            </div>
+            <div class="form-group has-float-label">
+              <input type="text" name="receipt_no" id="receipt_no" value="" placeholder="Receipt No" class="form-control border border-1px border-lightgrey" />
+              <label for="receipt_no">Receipt No</label>
+            </div>
+            <div class="form-group remark hide">
+              <span class="message error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label medium">Do you prefer Invoice financing?</label>
+              <div class="d-flex">
+                <div class="btn btn-wide checkbox-btn">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="invoice_financing" id="invoice_financing_y" value="Y" checked>
+                    <label class="custom-control-label" for="invoice_financing_y"> Yes</label>
+                  </div>
+                </div>
+                <div class="btn btn--transparent btn-wide checkbox-btn">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="invoice_financing" id="invoice_financing_n" value="N">
+                    <label class="custom-control-label" for="invoice_financing_n"> No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Left Panel - End -->
+
+          <!-- Center Panel - Start -->
+          <div id="upload-section" class="col-6">
+
+            <h5><small>Maximum file upload size 3 MB per file.</small></h5>
+
+            <!-- Row 1 - Start -->
+            <div class="d-flex">
+
+              <!-- Box 1 - Start -->
+              <div id="box-1" class="col-6">
+                <h5>Tax Invoice*</h5>
+                <div class="uploadArea custom-fileUpload">
+                  <p class="text-center">Drag &amp; Drop files here</p>
+                  <p class="text-center">or</p>
+                  <div class="upload-btn-wrapper">
+                    <button type="button" class="btn btn--transparent btnUpload">Browse Files</button>
+                    <input type="file" name="attach_tax_invoice_file" />
+                  </div>
+                </div>
+                <p class="small mb-0">File type: PDF, JPG, JPEG</p>
+                <p class="small mb-0 countUploadedFile">Number of Files: <span class="number">1</span></p>
+              </div>
+              <!-- Box 1 - End -->
+
+              <!-- Box 2 - Start -->
+              <div id="box-2" class="col-6">
+                <h5>Receipt</h5>
+                <div class="uploadArea custom-fileUpload">
+                  <p class="text-center">Drag &amp; Drop files here</p>
+                  <p class="text-center">or</p>
+                  <div class="upload-btn-wrapper">
+                    <button type="button" class="btn btn--transparent btnUpload">Browse Files</button>
+                    <input type="file" name="attach_receipt" />
+                  </div>
+                </div>
+                <p class="small mb-0">File type: PDF, JPG, JPEG</p>
+                <p class="small mb-0 countUploadedFile">Number of Files: <span class="number">1</span></p>
+              </div>
+              <!-- Box 2 - End -->
+
+            </div>
+            <!-- Row 1 - End -->
+
+            <!-- Row 2 - Start -->
+            <div class="d-flex">
+
+              <!-- Box 3 - Start -->
+              <div id="box-3" class="col-6">
+                <h5>Delivery Note</h5>
+                <div class="uploadArea custom-fileUpload">
+                  <p class="text-center">Drag &amp; Drop files here</p>
+                  <p class="text-center">or</p>
+                  <div class="upload-btn-wrapper">
+                    <button type="button" class="btn btn--transparent btnUpload">Browse Files</button>
+                    <input type="file" name="attach_tax_invoice_file" />
+                  </div>
+                </div>
+                <p class="small mb-0">File type: PDF, JPG, JPEG</p>
+                <p class="small mb-0 countUploadedFile">Number of Files: <span class="number">1</span></p>
+              </div>
+              <!-- Box 3 - End -->
+
+              <!-- Box 4 - Start -->
+              <div id="box-4" class="col-6">
+                <h5>Other Documents</h5>
+                <div class="uploadArea custom-fileUpload">
+                  <p class="text-center">Drag &amp; Drop files here</p>
+                  <p class="text-center">or</p>
+                  <div class="upload-btn-wrapper">
+                    <button type="button" class="btn btn--transparent btnUpload">Browse Files</button>
+                    <input type="file" name="attach_tax_invoice_file" />
+                  </div>
+                </div>
+                <p class="small mb-0">File type: PDF, JPG, JPEG</p>
+                <p class="small mb-0 countUploadedFile">Number of Files: <span class="number">1</span></p>
+              </div>
+              <!-- Box 4 - End -->
+
+            </div>
+            <!-- Row 2 - End -->
+
+          </div>
+          <!-- Center Panel - End -->
+
+          <!-- Right Panel - Start -->
+          <div id="uploaded-list-section" class="col-3">
+            <h5>Uploaded Files</h5>
+            <div id="uploadedLists" class="bg-grey rounded">
+              <ul>
+                <li>
+                  <h5 class="medium">Tax Invoice</h5>
+                  <div class="border-top border-bottom border-1px border-grey">
+                    <p class="form-inline">
+                      <span><i class="fa fa-file" aria-hidden="true"></i> TaxINV.PNG</span>
+                      <span class="text-right">79.87K</span>
+                      <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="medium">Delivery Note</h5>
+                  <div class="border-top border-bottom border-1px border-grey">
+                    <p class="form-inline">
+                      <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                      <span class="text-right">79.87K</span>
+                      <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="medium">Receipt</h5>
+                  <div class="border-top border-bottom border-1px border-grey">
+                    <p class="form-inline">
+                      <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                      <span class="text-right">79.87K</span>
+                      <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h5 class="medium">Other Documents</h5>
+                  <div class="border-top border-bottom border-1px border-grey">
+                    <p class="form-inline">
+                      <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                      <span class="text-right">79.87K</span>
+                      <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                    </p>
+                    <p class="form-inline">
+                      <span><i class="fa fa-file" aria-hidden="true"></i> Filename.pdf</span>
+                      <span class="text-right">79.87K</span>
+                      <a href="javascript:void(0);" class="btnRemove"><i class="fa fa-times"></i></a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right Panel - End -->
+
+        </div>
+      </div>
+
+      <!-- Button - Start -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+          <button type="button" name="btnBack" id="btnBack" class="btn btn--transparent"><i class="fa fa-chevron-left"></i> Back</button>
+          <button type="button" name="btnNext" id="btnNext" class="btn btn-purple" disabled>Next <i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <!-- Button - End -->
+    </form>
+
+    <!-- Small Screen Cover - Start -->
+    <div id="smallScreenCover">
+      <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+    </div>
+    <!-- Small Screen Cover - End -->
+
+  </div>
+  <!-- Start #invoice_create - End -->
+
+{% endblock main %}
+
+{% block scripts %}
+	{{ parent() }}
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    /* Hiding Navigation - Start */
+    $('.page').css('width','100%');
+    $('nav.side-navbar, .sidenav-header-toggle').hide();
+    /* Hiding Navigation - End */
+
+    /* DataTable - Start */
+      var table = $('.datatable').DataTable( {
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "scrollX": true,
+          "language": {
+              "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs:[
+            {
+              "targets": [0],
+              "orderable": false
+            },
+            {
+              'targets': [1],
+              'width': '120px'
+            },
+            {
+              'targets': [2],
+              'width': '300px',
+            },
+            {
+              'targets': [3],
+              'width': '150px'
+            },
+            {
+              'targets': [4],
+              'width': '100px'
+            },
+            {
+              'targets': [5],
+              'width': '150px'
+            },
+            {
+              'targets': [6],
+              'width': '120px'
+            },
+            {
+              'targets': [7,8],
+              'width': '100px'
+            }
+          ],
+          fixedHeader: true,
+          stateSave: true,
+          paging: false,
+          bLengthChange: false,
+          searching: false,
+          info: false
+      });
+      /* DataTable - End */
+
+      /* input[name="invoice_financing"] handler - Start */
+      $('body').on('click','input[name="invoice_financing"]',function(){
+        $('input[name="invoice_financing"]').parents('.btn').addClass('btn--transparent');
+        $(this).parents('.btn').removeClass('btn--transparent');
+      });
+      /* input[name="invoice_financing"] handler - End */
+
+      /* Trigger #btnNext - Start */
+      $('body').on('keyup','input#invoice_no, input#invoice_date', function(){
+        if( $('input#invoice_no').val() !='' && $('input#invoice_date').val() !='' ){
+          $('button#btnNext').prop('disabled', false);
+        }else{
+          $('button#btnNext').prop('disabled', true);
+        }
+      });
+      /* Trigger #btnNext - End */
+
+      /* Datepicker - Start */
+      var d = new Date();
+      var todayDate = '' + d.getDate() + '/' + ( d.getMonth() + 1 ) + '/' + ( d.getFullYear() + 3 );
+      $('.datepicker').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minDate : '01/01/2015',
+        maxDate : todayDate,
+        locale:{
+          format: 'DD/MM/YYYY'
+        }
+      });
+      /* Datepicker - End */
+
+      /* Button Handler - Start */
+      $('body').on('click', '#btnNext', function(){
+        top.location.href='invoice_create_3.html';
+      });
+      $('body').on('click', '#btnBack', function(){
+        top.location.href='invoice_create.html';
+      });
+      $('body').on('click', '#btnCancel', function(){
+        if( confirm( 'Do you want to cancel all information?') === true ){
+          top.location.href='invoice.html';
+        }
+      });
+      /* Button Handler - End */
+  });
+  </script>
+{% endblock %}

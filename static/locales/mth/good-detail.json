@@ -1,0 +1,19 @@
+{
+  "Goods Receipt No": "เลขที่ใบรับสินค้า",
+  "Goods Receipt": "ใบรับสินค้า",
+  "Create Date": "ใบสั่งซื้อถูกสร้างในวันที่",
+  "Edit GR": "Edit GR",
+  "GR Information": "ข้อมูลใบรับสินค้า",
+  "PO No": "เลขที่ใบสั่งซื้อ",
+  "GR Posting Date": "ข้อมูลใบรับสินค้า",
+  "GR Type": "ประเภทการรับสินค้า",
+  "Invoice No": "เบขที่ใบกำกับภาษี",
+  "Last Edited Date": "วันที่แก้ไข",
+  "Delivery Note No": "เลขที่ใบส่งสินค้า",
+  "GR By": "รับสินค้าโดย",
+  "Accounting Doc No": "เลขที่การบันทึกบัญชี",
+  "Original GR Doc No": "เลขที่ใบรับสินค้าเดิม",
+  "Revised Invoice No": "เลขที่ใบกำกับภาษีล่าสุด",
+  "Last Edited By": "แก้ไขล่าสุดโดย",
+  "Attach Document": "Attach Document"
+}

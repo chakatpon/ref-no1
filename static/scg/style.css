@@ -1,0 +1,74 @@
+.btn {
+  background-image: none !important;
+  background-color: #b31a25 !important;
+}
+
+.btn--transparent,
+.btn--transparent:hover {
+  /* background-image: none !important; */
+  background-color: white !important;
+  border-color: #b31a25 !important;
+  color: #b31a25 !important;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+button.btn:hover,
+button.btn:focus,
+button.btn:active {
+  -webkit-box-shadow: 0px 2px 10px rgba(179, 26, 35, 0.55);
+  box-shadow: 0px 2px 10px rgba(179, 26, 35, 0.55);
+}
+
+a.btn-show-more-search {
+  color: #b31a25 !important;
+}
+
+.dtClickAction a {
+  color: #b31a25 !important;
+}
+
+.dataTables_length .custom-select {
+  border-color: #b31a25 !important;
+}
+
+.dataTables_paginate .pagination .paginate_button.previous.active a:after,
+.dataTables_paginate .pagination .paginate_button.previous:hover a:after,
+.dataTables_paginate .pagination .paginate_button.previous:focus a:after,
+.dataTables_paginate .pagination .paginate_button.next.active a:after,
+.dataTables_paginate .pagination .paginate_button.next:hover a:after,
+.dataTables_paginate .pagination .paginate_button.next:focus a:after,
+.dataTables_paginate .pagination .paginate_button.active a,
+.dataTables_paginate .pagination .paginate_button:hover a,
+.dataTables_paginate .pagination .paginate_button:focus a {
+  background-image: none !important;
+  background-color: #b31a25 !important;
+  color: white !important;
+}
+
+.dataTables_paginate .pagination .paginate_button.next a {
+  color: #b31a25 !important;
+}
+
+.dataTables_paginate .pagination .paginate_button.next a:hover {
+  background-image: none !important;
+  background-color: #b31a25 !important;
+}
+
+.dataTables_paginate .pagination .paginate_button a,
+.dataTables_paginate .pagination .paginate_button .next a,
+.dataTables_paginate .pagination .paginate_button.prev a {
+  color: #b31a25 !important;
+}
+
+table.dataTable input[type="checkbox"] {
+  border-color: #b31a25 !important;
+}
+
+table.dataTable input[type="checkbox"]:checked {
+  background-color: #b31a25 !important;
+}

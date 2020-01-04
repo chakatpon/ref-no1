@@ -1,0 +1,17 @@
+{
+  "change-locale": "Change to English",
+  "Today": "วันนี้",
+  "Yesterday": "เมื่อวาน",
+  "This Week": "สัปดาห์นี้",
+  "Last Week": "สัปดาห์ก่อน",
+  "Last Month": "เดือนที่แล้ว",
+  "This Month": "เดือนนี้",
+  "This Year": "ปีนี้",
+  "Past 1 Year": "ย้อนหลัง 1 ปี",
+  "en": "EN : English",
+  "th": "TH : ไทย",
+  "cn": "CN : Chinese",
+  "id": "ID : Indonesian",
+  "ja": "JA : Japanese",
+  "ko": "KO : Korean"
+}

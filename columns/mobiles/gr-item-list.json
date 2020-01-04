@@ -1,0 +1,93 @@
+{
+  "name": "gr-item",
+  "title": "GR Detail",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "gr-item",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "GR Item", "url": "/api/goodsreceived" },
+    "columns": [
+      {
+        "header": "GR Item No",
+        "field": "externalId",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Material Description",
+        "field": "materialDescription",
+        "displayMode": 3,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "PO Item No",
+        "field": "purchaseItemExternalId",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Material Code",
+        "field": "materialNumber",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Qty",
+        "field": "quantity.initial",
+        "type": "number",
+        "pattern": "#,####.000",
+        "sort": false,
+        "export": false,
+        "hidden": true,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Unit Description",
+        "field": "unitDescription",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Site",
+        "field": "site",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "GR Type",
+        "field": "movementClass",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": { "sections": [{ "fields": [] }] }
+}

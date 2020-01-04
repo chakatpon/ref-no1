@@ -1,0 +1,20 @@
+{
+  "Purchase Order": "ใบสั่งซื้อ",
+  "Purchase Order No": "ใบสั่งซื้อเลขที่",
+  "PO Action History": "PO Action History",
+  "Email": "อีเมล",
+  "Business Place": "กลุ่มธุรกิจ",
+  "Organization": "แผนกจัดซื้อ",
+  "Group Name": "กลุ่ม",
+  "Payment Term Day": "เงื่อนไขการชำระเงิน (วัน)",
+  "Payment Term Description": "รายละเอียดเงื่อนไขการชำระเงิน",
+  "PO Amount": "มูลค่าใบสั่งซื้อ",
+  "PO Remaining Amount": "มูลค่าคงเหลือ",
+  "PO No": "เลขที่ใบสั่งซื้อ",
+  "Contract No": "Contract No",
+  "Invoice Lists": "ใบกำกับภาษี",
+  "Retention Rate": "Retention Rate",
+  "Retention Amount": "Retention Amount",
+  "Retention Term Day": "Retention Term Day",
+  "Delivery Schedule": "Delivery Schedule"
+}

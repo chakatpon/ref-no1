@@ -1,0 +1,32 @@
+[
+  {
+    "code": "DATE",
+    "reason": "Date Mismatch",
+    "level": "Item"
+  },
+  {
+    "code": "QUANTITY",
+    "reason": "Quantity Mismatch",
+    "level": "Item"
+  },
+  {
+    "code": "UNIT",
+    "reason": "Unit Mismatch",
+    "level": "Item"
+  },
+  {
+    "code": "UNIT_PRICE",
+    "reason": "Unit Price Mismatch",
+    "level": "Item"
+  },
+  {
+    "code": "SUB_TOTAL",
+    "reason": "Sub Total Mismatch",
+    "level": "Header"
+  },
+  {
+    "code": "VAT_TOTAL",
+    "reason": "Vat Total Mismatch",
+    "level": "Header"
+  }
+]

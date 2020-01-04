@@ -1,0 +1,19 @@
+{
+  "Upload Invoice Monitoring": "Upload Invoice Monitoring",
+  "Invoice No": "Invoice No.",
+  "PO No": "PO No.",
+  "Vendor Name": "Vendor Name",
+  "Upload Date": "Upload Date",
+  "Status": "Status",
+  "Validating": "Validating",
+  "Validation Failed": "Validation Failed",
+  "Validation Success": "Validation Success",
+  "Partial Success": "Partial Success",
+  "Success": "Success",
+  "Failed": "Failed",
+  "Source": "Source",
+  "File Name": "File Name",
+  "Total Records": "Total Records",
+  "Upload By": "Upload By",
+  "Message": "Message"
+}

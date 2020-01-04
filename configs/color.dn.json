@@ -1,0 +1,12 @@
+{
+  "Submitted": "#A9D4B6",
+  "Request to Resubmit": "#E42CA7",
+  "Verifying": "#36B8E5",
+  "Pending Clarification": "#FFDC30",
+  "Requesting DoA List": "#36B8E5",
+  "Pending DoA Approval": "#FF9E40",
+  "Waiting for Payment": "#671B9A",
+  "Cancelled": "#9B9B9B",
+  "Payment Failed": "#FF2944",
+  "Paid": "#287DC0"
+}

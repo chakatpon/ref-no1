@@ -1,0 +1,197 @@
+{
+  "name": "po-list",
+  "title": "PO List",
+  "search": { "url": "/api/purchaseorders" },
+  "table": {
+    "name": "po-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "PO", "url": "/api/purchaseorders" },
+    "columns": [
+      {
+        "header": "PO No.",
+        "field": "purchaseOrderNumber",
+        "sortField": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "PO Amount",
+        "field": "poAmount",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+
+      {
+        "header": "Company Name",
+        "field": "companyName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+
+      {
+        "header": "PO Remaining Amount",
+        "field": "poRemainingAmount",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Payment Term Description",
+        "field": "paymentTermDescription",
+        "displayMode": 2,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "PO No.",
+            "key": "purchaseOrderNumber",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/purchaseorders?page=1&pageSize=10&purchaseOrderNumber=",
+            "displayField": "purchaseOrderNumber"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Status",
+            "key": "statuses",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Pending Ack", "value": "Pending Ack" },
+              { "text": "Rejected", "value": "Rejected" },
+              { "text": "Confirmed", "value": "Confirmed" }
+            ]
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Delivery Date",
+            "key": "itemDeliveryDate",
+            "controlType": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Company Name",
+            "key": "companyName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Purchase Group",
+            "key": "businessPlaceOfficerName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "PO Last Updated",
+            "key": "purchaseUpdatedDate",
+            "controlType": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 10,
+            "title": "Reference 1",
+            "key": "referenceField1",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

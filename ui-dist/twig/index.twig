@@ -1,0 +1,36 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+	
+{% endblock %}
+
+{% block main %}
+<div class="container main pt-4">
+	<div class="container">
+		<div class="row">
+			<div class="text-center mb-3 col col-lg-12">
+				<h1>MENU</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col col-lg-6 mt-3">
+				<a class="btn w-100" href="login.html">Login</a>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col col-lg-6 mt-3">
+				<a class="btn w-100" href="forgot_password.html">forgot password</a>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col col-lg-6 mt-3">
+				<a class="btn w-100" href="dashboard.html">Dashboard</a>
+			</div>
+		</div>
+
+		<div class="row mb-5"></div>
+	</div>
+	
+</div> <!-- /container -->
+
+{% endblock main %}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="cs/style.min.css">
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png">
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <p><a href="javascript:void(0);" data-toggle="modal" data-target="#rejectReasonModal">Click ME!</a></p>
+      <!-- Modal #confirmCancel - Start -->
+      <div id="rejectReasonModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="reviseInvoice" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="col-12">Reject Reason</h3>
+            </div>
+            <div class="modal-body">
+              <form id="rejectReasonForm" name="rejectReasonForm" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <select class="custom-select">
+                    <option value="" selected="selected">Reason</option>
+                    <option value="reason-1">Wrong Deliery Date</option>
+                    <option value="reason-2">Wrong Price</option>
+                    <option value="reason-3">Wrong Term &amp; Condition</option>
+                    <option value="reason-4">Other - require free text</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea id="comment" placeholder="Comment" class="form-control" rows="5"></textarea>
+                  <p class="message c-red">This field is required.</p>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide btn--transparent" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn-wide">Change</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal #confirmCancel - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+    </script>
+  </body>
+
+</html>

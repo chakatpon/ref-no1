@@ -1,0 +1,183 @@
+{
+  "name": "liv-inv-list",
+  "title": "LIV Invoice Posting Result",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "liv-inv-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "Liv Posting", "url": "/api/invoices" },
+    "columns": [
+      {
+        "header": "Invoice No.",
+        "field": "externalId",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "LIV Doc Date",
+        "field": "invoiceDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "FI Doc",
+        "field": "customisedFields.LIV.accountingDocumentNumber",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Branch Code",
+        "field": "vendorBranchCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Amount (Inc. Tax)",
+        "field": "invoiceTotal",
+        "sortField": "total",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Reference 1",
+        "field": "referenceField1",
+        "type": "text",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "Invoice No.",
+            "key": "invoiceNumbers",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/invoices?page=1&pageSize=10&postingStatusNotIn=PENDING&invoiceNumbers=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Vendor Name",
+            "key": "vendorNames",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "LIV Posting Date",
+            "key": "invoicePostingIsUpdatedDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Status",
+            "key": "postingStatus",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Success", "value": "SUCCESS" },
+              { "text": "Fail", "value": "FAILED" }
+            ]
+          },
+          {
+            "fieldIndex": 5,
+            "title": "PO No.",
+            "key": "purchaseOrderNumber",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Company Code",
+            "key": "companyCodes",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Vendor Code",
+            "key": "vendorCodes",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Reference No.1",
+            "key": "referenceField1",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

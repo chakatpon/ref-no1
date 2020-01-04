@@ -1,0 +1,235 @@
+{
+  "name": "invoice-list",
+  "title": "Invoice",
+  "table": {
+    "name": "invoice-list",
+    "header": "",
+    "paging": true,
+    "container": "rows",
+    "create": true,
+    "createPermission": "Invoice-Create",
+    "exportPermission": "Invoice-Export",
+    "search": true,
+    "manualExport": false,
+    "sortable": true,
+    "hideAction": false,
+    "columns": [
+      {
+        "columnIndex": 1,
+        "requiredColumn": true,
+        "defaultOrder": 1,
+        "header": "Invoice No.",
+        "field": "externalId",
+        "type": "customLink",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 2,
+        "defaultOrder": 2,
+        "header": "Due Date",
+        "field": "initialDueDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 3,
+        "defaultOrder": 3,
+        "colorMap": {
+          "Submitted": "#36B8E5",
+          "Verifying": "#2D3B96",
+          "Request to Resubmit": "#FF6551",
+          "Waiting Payment Due Date": "#A9D4B6",
+          "Paid": "#70731D",
+          "Payment Failed": "#FFDC30",
+          "Cancelled": "#671B9A"
+        },
+        "header": "Invoice Status",
+        "field": "status",
+        "type": "color",
+        "editable": false,
+        "sort": false,
+        "sortField": "lifecycle",
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 4,
+        "defaultOrder": 4,
+        "header": "Company Code",
+        "field": "companyCode",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 5,
+        "defaultOrder": 5,
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 6,
+        "defaultOrder": 6,
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 7,
+        "defaultOrder": 7,
+        "header": "Invoice Date",
+        "field": "invoiceDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 8,
+        "defaultOrder": 8,
+        "header": "Payment Term Description",
+        "field": "paymentTermDesc",
+        "editable": false,
+        "sort": true,
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      },
+      {
+        "columnIndex": 9,
+        "defaultOrder": 9,
+        "header": "Invoice Amount (Inc. Tax)",
+        "field": "invoiceTotal",
+        "type": "number",
+        "pattern": "#,###.00",
+        "editable": false,
+        "sort": true,
+        "sortField": "total",
+        "hidden": false,
+        "defaultHidden": false,
+        "export": true,
+        "defaultExport": true
+      }
+    ],
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "Invoice", "url": "/api/invoices" }
+  },
+  "form": {
+    "name": "invoice-list",
+    "size": "medium",
+    "autoClose": true,
+    "clearOnClose": false,
+    "sections": [
+      {
+        "fields": [
+          {
+            "key": "invoiceNumber",
+            "title": "Invoice No.",
+            "controlType": "autocomplete",
+            "type": "api",
+            "required": false,
+            "apiUrl": "/api/invoices?page=1&pageSize=10&invoiceNumber=",
+            "displayField": "externalId"
+          },
+          {
+            "key": "purchaseOrderNumber",
+            "title": "PO No.",
+            "controlType": "textbox",
+            "type": "text",
+            "required": false
+          },
+          {
+            "key": "invoiceDate",
+            "title": "Invoice Date",
+            "controlType": "textbox",
+            "type": "date",
+            "required": false,
+            "pattern": "DD/MM/YYYY"
+          },
+          {
+            "key": "dueDate",
+            "title": "Due Date",
+            "controlType": "textbox",
+            "type": "date",
+            "required": false,
+            "pattern": "DD/MM/YYYY"
+          },
+          {
+            "key": "statuses",
+            "title": "Status",
+            "controlType": "dropdown",
+            "type": "api",
+            "required": false,
+            "apiUrl": "/api/invoices/status?role=SELLER"
+          },
+          {
+            "key": "companyCodes",
+            "title": "Company Code",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "companyName",
+            "title": "Company Name",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "vendorCode",
+            "title": "Vendor Code",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "vendorName",
+            "title": "Vendor Name",
+            "controlType": "textbox",
+            "required": false
+          },
+          {
+            "key": "referenceField1",
+            "title": "Reference No. 1",
+            "controlType": "textbox",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "buttons": [],
+    "header": { "add": "Search" }
+  },
+  "search": { "url": "", "filters": [] }
+}

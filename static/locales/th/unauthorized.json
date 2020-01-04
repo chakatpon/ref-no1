@@ -1,0 +1,13 @@
+{
+  "no-authorization-to-view-this-page": "คุณไม่มีสิทธิ์ในการเข้าถึงหน้านี้",
+  "how-to-fix": "วิธีแก้ปัญหา",
+  "push-ctrl-alt-del": "กด Ctrl+Shift+Del หรือ",
+  "click-more-menu": "คลิก “เพิ่มเติม” (More) ที่ด้านขวาบนของ Google Chrome",
+  "click-more-tool": "คลิก “เครื่องมือเพิ่มเติม” (More tools) > “ล้างข้อมูลการท่องเว็บ” (Clear browsing data)",
+  "select-all-time": "เลือกช่วงเวลาจากด้านบน หากต้องการลบทุกอย่าง ให้เลือก “ตั้งแต่เริ่มต้น” (All time)",
+  "select-cookie-other-site-data": "เลือก “คุกกี้และข้อมูลเว็บไซต์อื่นๆ” (Cookies and other site data) และ “รูปภาพและไฟล์ที่แคชไว้” (Cached images and files)",
+  "click-clear-data": "คลิกล้างข้อมูล (Clear data)",
+  "click-play-video": "click link นี้เพื่อชม Video สาธิต",
+  "back-to-login": "กลับไปล๊อคอิน",
+  "change-locale": "Change to English"
+}

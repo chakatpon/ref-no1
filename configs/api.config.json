@@ -1,0 +1,1452 @@
+{
+  "user": {
+    "authority": {
+      "endpoint": "/user",
+      "method": "get",
+      "authorization": true
+    },
+    "me": {
+      "endpoint": "/api/info/me",
+      "method": "get",
+      "authorization": true
+    },
+    "config": {
+      "endpoint": "/config",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "invoiceposting": {
+    "list": {
+      "endpoint": "/api/paymentitems/postings/results",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    },
+    "export": {
+      "endpoint": "/api/paymentitems/postings/results",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    },
+    "model": {
+      "get": {
+        "endpoint": "/model/payment-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/payment-list",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "invoice": {
+    "model": {
+      "get": {
+        "endpoint": "/model/invoice-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/invoice-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/invoice-list",
+        "method": "post",
+        "authorization": true
+      },
+      "cndetail": {
+        "endpoint": "/model/cn-item",
+        "method": "get",
+        "authorization": true
+      },
+      "getUploadInvoiceListModel": {
+        "endpoint": "/model/upload-invoice-list",
+        "method": "get",
+        "authorization": true
+      },
+      "saveUploadInvoiceList": {
+        "endpoint": "/model/upload-invoice-list",
+        "method": "post",
+        "authorization": true
+      },
+      "getUploadInvoiceFileModel": {
+        "endpoint": "/model/upload-invoice-file",
+        "method": "get",
+        "authorization": true
+      },
+      "invoiceItem": {
+        "endpoint": "/model/invoice-item",
+        "method": "get",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/invoices",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields", "paymentItemLinearId"]
+    },
+    "export": {
+      "endpoint": "/api/invoices/export",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields", "paymentItemLinearId"]
+    },
+    "holdlist": {
+      "endpoint": "/api/invoices",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields"]
+    },
+    "unholdlist": {
+      "endpoint": "/api/invoices",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields"]
+    },
+    "detail": {
+      "endpoint": "/api/invoices/:linearId?role=:role",
+      "method": "get",
+      "authorization": true
+    },
+    "status": {
+      "endpoint": "/invoices/statuses",
+      "method": "get",
+      "authorization": true
+    },
+    "edit": {
+      "duedates": {
+        "endpoint": "/api/invoices/duedates",
+        "method": "put",
+        "authorization": true
+      },
+      "attachments": {
+        "endpoint": "/api/invoices/attachments/edit",
+        "method": "put",
+        "authorization": true
+      },
+      "saveedit": {
+        "endpoint": "/api/invoices/edit",
+        "method": "put",
+        "authorization": true
+      },
+      "saveresubmit": {
+        "endpoint": "/api/invoices",
+        "method": "put",
+        "authorization": true
+      }
+    },
+    "cancel": {
+      "endpoint": "/api/invoices/cancel",
+      "method": "put",
+      "authorization": true
+    },
+    "invoiceConfig": {
+      "endpoint": "/api/offledgers/configuration/invoice?legalName=:legalName&companyTaxId=:companyTaxId&vendorTaxId=:vendorTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "configuration": {
+      "endpoint": "/api/offledgers/configuration",
+      "method": "get",
+      "authorization": true
+    },
+    "uploadMonitoringList": {
+      "endpoint": "/api/invoices/upload/fileMonitoring",
+      "method": "get",
+      "authorization": true
+    },
+    "uploadFileList": {
+      "endpoint": "/api/invoices/upload",
+      "method": "get",
+      "authorization": true
+    },
+    "hold": {
+      "endpoint": "/api/invoices/hold",
+      "method": "put",
+      "authorization": true
+    },
+    "unhold": {
+      "endpoint": "/api/invoices/unhold",
+      "method": "put",
+      "authorization": true
+    },
+    "requestInvoiceResubmit": {
+      "endpoint": "/api/invoices/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "creditNoteReferToInvoice": {
+      "endpoint": "/api/creditnotes",
+      "method": "get",
+      "authorization": true
+    },
+    "invoiceFinancing": {
+      "endpoint": "/api/invoices/edit/financing",
+      "method": "put",
+      "authorization": true
+    },
+    "reviseDueDate": {
+      "endpoint": "/api/invoices/duedates?linearId=:linearId&revisedDueDate=:revisedDueDate&revisedDueDateReason=:revisedDueDateReason",
+      "method": "put",
+      "authorization": true
+    },
+    "configHoliday": {
+      "endpoint": "/api/offledgers/next/holidays?party=:party&dateFrom=:dateFrom",
+      "method": "get",
+      "authorization": true
+    },
+    "settledCreditNote": {
+      "endpoint": "/api/creditnotes?bypass=true:url",
+      "method": "get",
+      "authorization": true
+    },
+    "lifecycleInvoiceFinancing": {
+      "endpoint": "/api/offledgers/configuration?companyTaxId=:companyTaxId&configOption=:configOption",
+      "method": "get",
+      "authorization": true
+    },
+    "paymentDueDateRange": {
+      "endpoint": "/standard/api/invoices/available_due_date",
+      "method": "get",
+      "authorization": true
+    },
+    "bankLegalName": {
+      "endpoint": "/api/offledgers/configuration/name?configOption=BANK_LEGAL_NAME",
+      "method": "get",
+      "authorization": true
+    },
+    "itemInformationModel": {
+      "endpoint": "/model/invoice-item",
+      "method": "get",
+      "authorization": true
+    },
+    "saveItemInformationModel": {
+      "endpoint": "/model/invoice-item?colSeq=:colSeq",
+      "method": "post",
+      "authorization": true
+    },
+    "checkDuplicateInvoiceNo": {
+      "endpoint": "/api/invoices/validate/uniqueness",
+      "method": "post",
+      "authorization": true
+    },
+    "getVendorBranchList": {
+      "endpoint": "/api/offledgers/company/branch",
+      "method": "get",
+      "authorization": true
+    },
+    "invoicegritems": {
+      "endpoint": "/api/invoices/edit/:linearId",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "grinquiry": {
+      "endpoint": "/api/purchaseorders/grinquiry/:linearId",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    }
+  },
+  "gr": {
+    "model": {
+      "get": {
+        "endpoint": "/model/gr-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/gr-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/gr-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/goodsreceivedheader/native",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "export": {
+      "endpoint": "/api/goodsreceivedheader/native",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "detail": {
+      "endpoint": "/api/goodsreceivedheader/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "reviseInvoice": {
+      "endpoint": "/api/goodsreceivedheader",
+      "method": "put",
+      "authorization": true
+    }
+  },
+  "poiteminfo": {
+    "model": {
+      "get": {
+        "endpoint": "/model/po-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/po-item",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "po": {
+    "model": {
+      "get": {
+        "endpoint": "/model/po-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/po-list",
+        "method": "get",
+        "authorization": true
+      },
+      "detail": {
+        "endpoint": "/model/po-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/po-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/purchaseorders/native",
+      "method": "get",
+      "authorization": true,
+      "extraField": [
+        "linearId",
+        "accounting",
+        "initialTotal",
+        "remainingTotal",
+        "customisedFields"
+      ]
+    },
+    "export": {
+      "endpoint": "/api/purchaseorders/export",
+      "method": "get",
+      "authorization": true,
+      "extraField": [
+        "linearId",
+        "accounting",
+        "initialTotal",
+        "remainingTotal",
+        "customisedFields"
+      ]
+    },
+    "poitem": {
+      "endpoint": "/api/purchaseitems",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "gritem": {
+      "endpoint": "/api/purchaseorders/grinquiry/:linearId",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "detail": {
+      "endpoint": "/api/purchaseorders/:linearId",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["customisedFields"]
+    },
+    "taxdesc": {
+      "endpoint": "/standard/api/tax?companyTaxId=:companyTaxId&taxCode=:taxCode&taxType=VAT",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "whtdesc": {
+      "endpoint": "/standard/api/tax?companyTaxId=:companyTaxId&taxCode=:taxCode&taxType=WHT",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "reasonReject": {
+      "endpoint": "/model/form/po-confirm-approval",
+      "method": "get",
+      "authorization": true
+    },
+    "rejectPO": {
+      "endpoint": "/api/purchaseorders/approvals/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "confirmPO": {
+      "endpoint": "/api/purchaseorders/approvals/confirm",
+      "method": "put",
+      "authorization": true
+    },
+    "actionHistory": {
+      "endpoint": "/standard/api/actionhistory?documentType=:documentType&documentLinearId=:documentLinearId",
+      "method": "get",
+      "authorization": true
+    },
+    "purchaseordersHeader": {
+      "endpoint": "/api/purchaseorders/header",
+      "method": "get",
+      "authorization": true,
+      "extraField": [
+        "linearId",
+        "accounting",
+        "initialTotal",
+        "remainingTotal",
+        "customisedFields"
+      ]
+    }
+  },
+  "poitem": {
+    "model": {
+      "get": {
+        "endpoint": "/model/po-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/po-list",
+        "method": "get",
+        "authorization": true
+      },
+      "detail": {
+        "endpoint": "/model/po-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/po-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/purchaseitems",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    }
+  },
+  "cn": {
+    "model": {
+      "get": {
+        "endpoint": "/model/cn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/cn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/cn-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/creditnotes",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "export": {
+      "endpoint": "/api/creditnotes",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "detailFromSearch": {
+      "endpoint": "/api/creditnotes?returnInvoiceItems=true&externalId=:externalId&bypass=true",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["externalId"]
+    },
+    "detail": {
+      "endpoint": "/api/creditnotes/:linearId?role=:role",
+      "method": "get",
+      "authorization": true
+    },
+    "rejectCNPriceAdj": {
+      "endpoint": "/api/creditnotes/price/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "approveCNPriceAdj": {
+      "endpoint": "/api/creditnotes/price/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "cancelCNPriceAdj": {
+      "endpoint": "/api/creditnotes/cancel",
+      "method": "put",
+      "authorization": true
+    },
+    "creditNoteModel": {
+      "endpoint": "/model/cn-item",
+      "method": "get",
+      "authorization": true
+    },
+    "saveCreditNoteModel": {
+      "endpoint": "/model/cn-item?colSeq=:colSeq",
+      "method": "post",
+      "authorization": true
+    }
+  },
+  "config": {
+    "configuration": {
+      "endpoint": "/api/offledgers/configuration",
+      "method": "get",
+      "authorization": true
+    },
+    "configuration-invoice": {
+      "endpoint": "/api/offledgers/configuration/invoice",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "dn": {
+    "model": {
+      "get": {
+        "endpoint": "/model/dn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/dn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "detail": {
+        "endpoint": "/model/po-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/dn-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "model-detail": {
+      "get": {
+        "endpoint": "/model/dn-detail",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/dn-detail",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/debitnotes",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "export": {
+      "endpoint": "/api/debitnotes",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "detail": {
+      "endpoint": "/api/debitnotes/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "configuration": {
+      "endpoint": "/api/offledgers/configuration/debitnote?legalName=:legalName&companyTaxId=:companyTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "approve": {
+      "endpoint": "/api/debitnotes/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "reject": {
+      "endpoint": "/api/debitnotes/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "cancel": {
+      "endpoint": "/api/debitnotes/cancel",
+      "method": "put",
+      "authorization": true
+    },
+    "bankLegalName": {
+      "endpoint": "/api/offledgers/configuration/name?configOption=BANK_LEGAL_NAME",
+      "method": "get",
+      "authorization": true
+    },
+    "configHoliday": {
+      "endpoint": "/api/offledgers/next/holidays?party=:party&dateFrom=:dateFrom",
+      "method": "get",
+      "authorization": true
+    },
+    "fileConfig": {
+      "endpoint": "/api/offledgers/configuration/invoice?legalName=:legalName&companyTaxId=:companyTaxId&vendorTaxId=:vendorTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "reviseDueDate": {
+      "endpoint": "/api/debitnotes/duedates",
+      "method": "put",
+      "authorization": true
+    },
+    "validateUniquenessDebitNote": {
+      "endpoint": "/api/debitnotes/validate/uniqueness",
+      "method": "post",
+      "authorization": true
+    },
+    "createDebitNote": {
+      "endpoint": "/api/debitnotes",
+      "method": "post",
+      "authorization": true
+    },
+    "editDebitNote": {
+      "endpoint": "/api/debitnotes/edit",
+      "method": "put",
+      "authorization": true
+    },
+    "actionHistory": {
+      "endpoint": "/standard/api/actionhistory?documentType=:documentType&documentLinearId=:documentLinearId",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "rq": {
+    "model": {
+      "get": {
+        "endpoint": "/model/rq-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/rq-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/rq-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/requests",
+      "method": "get",
+      "authorization": true
+    },
+    "export": {
+      "endpoint": "/api/requests",
+      "method": "get",
+      "authorization": true
+    },
+    "configuration": {
+      "endpoint": "/api/offledgers/configuration/request?legalName=:legalName&companyTaxId=:companyTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "offledgersCompany": {
+      "endpoint": "/api/offledgers/company",
+      "method": "get",
+      "authorization": true
+    },
+    "offledgersConfigRequestByTaxId": {
+      "endpoint": "/api/offledgers/configuration/request/byTaxId?companyTaxId=:companyTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "offledgersConfigRequestBySubType": {
+      "endpoint": "/api/offledgers/configuration/request/bySubtype?type=:type&subtype=:subType&companyTaxId=:companyTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "getVendor": {
+      "endpoint": "/api/offledgers/vendors",
+      "method": "get",
+      "authorization": true
+    },
+    "getBranches": {
+      "endpoint": "/api/offledgers/company/branch?companyCode=:companyCode&taxId=:taxId&legalName=:legalName",
+      "method": "get",
+      "authorization": true
+    },
+    "getPurchaseOrderByLinearId": {
+      "endpoint": "/api/purchaseorders/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "getInvoiceByLinearId": {
+      "endpoint": "/api/invoices/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "offledgersConfigRequestPermission": {
+      "endpoint": "/api/offledgers/configuration/request/permission?type=:type&subtype=:subType&companyTaxId=:companyTaxId&action=:action",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "griteminfo": {
+    "model": {
+      "get": {
+        "endpoint": "/model/gr-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/gr-item",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "grDetail": {
+    "model": {
+      "get": {
+        "endpoint": "/model/gr-item",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/gr-item",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "detail": {
+      "endpoint": "/api/goodsreceivedheader/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "getInvoiceLinearId": {
+      "endpoint": "/api/invoices?invoiceNumber=:invoiceExternalId",
+      "method": "get",
+      "authorization": true
+    },
+    "GRDoc": {
+      "endpoint": "/api/goodsreceivedheader?externalId=:GRDocId&companyTaxNumber=0105556176239",
+      "method": "get",
+      "authorization": true
+    },
+    "searchGROriginalDoc": {
+      "endpoint": "/api/goodsreceivedheader?externalId=:externalId&companyTaxNumber=:companyTaxNumber",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "threeWayMatching": {
+    "model": {
+      "get": {
+        "endpoint": "/model/3wm-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/3wm-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/3wm-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/invoices",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "currentAuthority"]
+    },
+    "export": {
+      "endpoint": "/api/invoices",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "currentAuthority"]
+    },
+    "uilist": {
+      "endpoint": "/api/3wm",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "detail": {
+      "endpoint": "/api/mapping/3wm/detail/new/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "requestInvoiceClarify": {
+      "endpoint": "/api/invoices/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "requestInvoiceApprove": {
+      "endpoint": "/api/invoices/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "requestInvoiceReject": {
+      "endpoint": "/api/invoices/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "getGrList": {
+      "endpoint": "api/mapping/grtag3wm/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "taggedGR": {
+      "endpoint": "/api/goodsreceivedheader/tag/invoice",
+      "method": "get",
+      "authorization": true
+    },
+    "fileConfig": {
+      "endpoint": "api/offledgers/configuration/invoice?legalName=:legalName&companyTaxId=:companyTaxId&vendorTaxId=:vendorTaxId",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "rejectReason": {
+    "list": {
+      "endpoint": "model/form/po-confirm-approval",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "doa": {
+    "model": {
+      "get": {
+        "endpoint": "/model/doa-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/doa-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/doa-list",
+        "method": "post",
+        "authorization": true
+      },
+      "cndetail": {
+        "endpoint": "/model/cn-item",
+        "method": "get",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/standard/api/pending/approval",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields", "previousAuthority"]
+    },
+    "export": {
+      "endpoint": "/standard/api/pending/approval",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields", "previousAuthority"]
+    },
+    "dtlist": {
+      "endpoint": "/api/doa",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "customisedFields", "previousAuthority"]
+    },
+    "approve": {
+      "endpoint": "/api/invoices/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "reject": {
+      "endpoint": "/api/invoices/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "detail": {
+      "endpoint": "/api/mapping/3wm/detail/new/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "fileConfigDoa": {
+      "endpoint": "/api/offledgers/configuration/invoice?legalName=:legalName&companyTaxId=:companyTaxId&vendorTaxId=:vendorTaxId",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "twoWayMatching": {
+    "model": {
+      "get": {
+        "endpoint": "/model/2wm-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/2wm-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/2wm-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/creditnotes?adjustmentType=QUANTITY",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "goodsReceived"]
+    },
+    "export": {
+      "endpoint": "/api/creditnotes?adjustmentType=QUANTITY",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "goodsReceived"]
+    },
+    "fileConfig": {
+      "endpoint": "/api/offledgers/configuration/creditnote?legalName=:legalName&companyTaxId=:companyTaxId",
+      "method": "get",
+      "authorization": true
+    },
+    "uilist": {
+      "endpoint": "/api/2wmlist",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId"]
+    },
+    "detail": {
+      "endpoint": "/api/mapping/2wm/detail/:linearId",
+      "method": "get",
+      "authorization": true
+    },
+    "requestInvoiceClarify": {
+      "endpoint": "/api/invoices/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "requestInvoiceApprove": {
+      "endpoint": "/api/invoices/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "requestInvoiceReject": {
+      "endpoint": "/api/invoices/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "getGrList": {
+      "endpoint": "api/mapping/grtag2wm/:linearId",
+      "method": "post",
+      "authorization": true
+    },
+    "taggedGR": {
+      "endpoint": "/api/goodsreceivedheader/tag/credit",
+      "method": "put",
+      "authorization": true
+    },
+    "quantityThreshold": {
+      "endpoint": "/api/offledgers/configuration",
+      "method": "get",
+      "authorization": true
+    },
+    "approveTypePrice": {
+      "endpoint": "/api/creditnotes/price/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "approveTypeQuantity": {
+      "endpoint": "/api/creditnotes/quantity/approve",
+      "method": "put",
+      "authorization": true
+    },
+    "resubmitTypePrice": {
+      "endpoint": "/api/creditnotes/price/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "resubmitTypeQuantity": {
+      "endpoint": "/api/creditnotes/quantity/reject",
+      "method": "put",
+      "authorization": true
+    },
+    "invoiceApproved": {
+      "endpoint": "/api/invoices/:linearId",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "dashboard": {
+    "threeWayMatching": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    },
+    "invoiceStatistic": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo",
+      "method": "get",
+      "authorization": true
+    },
+    "automergeStatistic": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo&isAutoMatched=:isAutoMatched&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    },
+    "umatchStatistic": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo&isAutoMatched=:isAutoMatched",
+      "method": "get",
+      "authorization": true
+    },
+    "poStatistic": {
+      "endpoint": "/api/purchaseorders/aggregate/summary?currency=:currency&entryDateFrom=:entryDateFrom&entryDateTo=:entryDateTo",
+      "method": "get",
+      "authorization": true
+    },
+    "grStatistic": {
+      "endpoint": "/api/goodsreceivedheader/aggregate/summary?postingDateFrom=:postingDateFrom&postingDateTo=:postingDateTo",
+      "method": "get",
+      "authorization": true
+    },
+    "paymentStatistic": {
+      "endpoint": "/api/invoices/aggregate/summary?invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    },
+    "grPendingConfig": {
+      "endpoint": "/api/offledgers/configuration/name?configOption=:configOption",
+      "method": "get",
+      "authorization": true
+    },
+    "grPending": {
+      "endpoint": "/api/goodsreceivedheader/aggregate/summary?movementClass=:movementClass&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    },
+    "invoicePendingConfig": {
+      "endpoint": "/api/offledgers/configuration/name?configOption=:configOption",
+      "method": "get",
+      "authorization": true
+    },
+    "invoicePending": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    },
+    "invoiceStatus": {
+      "endpoint": "/api/invoices/aggregate/summary?currency=:currency&invoiceEntryDateFrom=:invoiceEntryDateFrom&invoiceEntryDateTo=:invoiceEntryDateTo&groupBy=:groupBy",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "monitoring": {
+    "dt": {
+      "endpoint": "/api/invoices/upload/fileMonitoring",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["id", "vendorTaxNumber", "vendorName"]
+    },
+    "list": {
+      "endpoint": "/standard/api/invoices/upload/fileMonitoring",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["id", "vendorTaxNumber", "vendorName"]
+    },
+    "export": {
+      "endpoint": "/standard/api/invoices/upload/fileMonitoring",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["id", "vendorTaxNumber", "vendorName"]
+    },
+    "model": {
+      "get": {
+        "endpoint": "/model/upload-invoice-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/upload-invoice-list",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "uploadinvoicefile": {
+    "list": {
+      "endpoint": "/standard/api/invoices/upload",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "export": {
+      "endpoint": "/standard/api/invoices/upload",
+      "method": "get",
+      "authorization": true,
+      "extraField": []
+    },
+    "model": {
+      "get": {
+        "endpoint": "/model/upload-invoice-file",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/upload-invoice-file",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "po-delivery": {
+    "list": {
+      "endpoint": "/api/purchaseitems/native",
+      "method": "get",
+      "authorization": true,
+      "extraField": [
+        "lifecycle",
+        "linearId",
+        "remainingTotal",
+        "quantity",
+        "initialDeliveryDate",
+        "proposedRevisedDeliveryDate",
+        "expectedDeliveryDate",
+        "poItemNo",
+        "unitDescription",
+        "materialNumber",
+        "site",
+        "siteDescription",
+        "revisedReason"
+      ]
+    },
+    "export": {
+      "endpoint": "/api/purchaseitems/native",
+      "method": "get",
+      "authorization": true,
+      "extraField": [
+        "lifecycle",
+        "linearId",
+        "remainingTotal",
+        "quantity",
+        "initialDeliveryDate",
+        "proposedRevisedDeliveryDate",
+        "expectedDeliveryDate",
+        "poItemNo",
+        "unitDescription",
+        "materialNumber",
+        "site",
+        "siteDescription",
+        "revisedReason"
+      ]
+    },
+    "propose": {
+      "endpoint": "/api/purchaseorders/edit/deliverydate",
+      "method": "put",
+      "authorization": true
+    },
+    "confirm": {
+      "endpoint": "/api/purchaseorders/revisions/confirm",
+      "method": "put",
+      "authorization": true
+    },
+    "model": {
+      "get": {
+        "endpoint": "/model/po-delivery",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/po-delivery",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/po-delivery",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "liv-cn": {
+    "model": {
+      "get": {
+        "endpoint": "/model/liv-cn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/liv-cn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/liv-cn-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/creditnotes?postingStatusNotIn=PENDING&returnInvoiceItems=true",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    },
+    "export": {
+      "endpoint": "/api/creditnotes?postingStatusNotIn=PENDING&returnInvoiceItems=true",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    }
+  },
+  "liv-dn": {
+    "model": {
+      "get": {
+        "endpoint": "/model/liv-dn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/liv-dn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/liv-dn-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/debitnotes?postingStatusNotIn=PENDING",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    },
+    "export": {
+      "endpoint": "/api/debitnotes?postingStatusNotIn=PENDING",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    }
+  },
+  "liv-inv": {
+    "model": {
+      "get": {
+        "endpoint": "/model/liv-inv-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/liv-inv-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/liv-inv-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "list": {
+      "endpoint": "/api/invoices?postingStatusNotIn=PENDING&returnInvoiceItems=true",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    },
+    "export": {
+      "endpoint": "/api/invoices?postingStatusNotIn=PENDING&returnInvoiceItems=true",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "externalId", "customisedFields"]
+    }
+  },
+  "liv": {
+    "model": {
+      "invoice-list": {
+        "endpoint": "/model/liv-inv-list",
+        "method": "get",
+        "authorization": true
+      },
+      "invoice-save": {
+        "endpoint": "/model/invoice-list",
+        "method": "post",
+        "authorization": true
+      },
+      "cn-list": {
+        "endpoint": "/model/liv-cn-list",
+        "method": "get",
+        "authorization": true
+      },
+      "cn-save": {
+        "endpoint": "/model/cn-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "invoices": {
+      "endpoint": "/api/invoices?postingStatusNotIn=PENDING",
+      "method": "get",
+      "authorization": true
+    },
+    "creditnotes": {
+      "endpoint": "/api/creditnotes?postingStatusNotIn=PENDING",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "payment-posting": {
+    "list": {
+      "endpoint": "/api/paymentitems/postings/results",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "lifecycle", "customisedFields"]
+    },
+    "export": {
+      "endpoint": "/api/paymentitems/postings/results",
+      "method": "get",
+      "authorization": true,
+      "extraField": ["linearId", "lifecycle", "customisedFields"]
+    },
+    "model": {
+      "get": {
+        "endpoint": "/model/payment-list",
+        "method": "get",
+        "authorization": true
+      },
+      "mget": {
+        "endpoint": "/model/m/payment-list",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/payment-list",
+        "method": "post",
+        "authorization": true
+      }
+    },
+    "detail": {
+      "endpoint": "/api/paymentitems/postings/results/?returnInvoices=true&returnCreditNotes=true&returnDebitNotes=true&bypass=true&linearIds=:linearId",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "thresholdPopup": {
+    "getConfig": {
+      "endpoint": "/api/offledgers/configuration",
+      "method": "get",
+      "authorization": true
+    },
+    "getConfigDate": {
+      "endpoint": "/api/offledgers/configuration/name?configOption=:configOption",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "tracking": {
+    "model": {
+      "get": {
+        "endpoint": "/model/tracking",
+        "method": "get",
+        "authorization": true
+      },
+      "save": {
+        "endpoint": "/model/tracking",
+        "method": "post",
+        "authorization": true
+      }
+    }
+  },
+  "upload": {
+    "uploadFiles": {
+      "endpoint": "/api/files/upload",
+      "method": "post",
+      "authorization": true
+    }
+  },
+  "createInvoice": {
+    "checkDupInvoice": {
+      "endpoint": "/api/invoices/validate/uniqueness",
+      "method": "post",
+      "authorization": true
+    },
+    "calculateddDueDate": {
+      "endpoint": "/api/offledgers/next/workingday",
+      "method": "get",
+      "authorization": true
+    },
+    "getVendorBranchList": {
+      "endpoint": "/api/offledgers/company/branch",
+      "method": "get",
+      "authorization": true
+    },
+    "uploadFile": {
+      "endpoint": "/api/files/multiple-upload",
+      "method": "post",
+      "authorization": true
+    },
+    "createInvoice": {
+      "endpoint": "/api/invoices",
+      "method": "post",
+      "authorization": true
+    },
+    "getInvoiceSummary": {
+      "endpoint": "/api/invoices/get-payable-amount",
+      "method": "post",
+      "authorization": true
+    }
+  },
+  "uploadInvoice": {
+    "upload": {
+      "endpoint": "/api/invoices/upload",
+      "method": "post",
+      "authorization": true
+    }
+  },
+  "creditNoteEdit": {
+    "getVendorBranchList": {
+      "endpoint": "/api/offledgers/company/branch",
+      "method": "get",
+      "authorization": true
+    },
+    "detail": {
+      "endpoint": "/api/creditnotes/:linearId?role=:role",
+      "method": "get",
+      "authorization": true
+    }
+  },
+  "announcement": {
+    "get": {
+      "endpoint": "/announcement",
+      "method": "get",
+      "authorization": true
+    }
+  }
+}

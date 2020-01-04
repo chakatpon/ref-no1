@@ -1,0 +1,17 @@
+{
+  "NODE_TLS_REJECT_UNAUTHORIZED": 0,
+  "API_ENDPOINT_AUTHORIZE": "https://p2p-scgpa-uat.digitalventures.co.th/oauth/authorize",
+  "API_ENDPOINT_TOKEN": "https://p2p-scgpa-uat.digitalventures.co.th/oauth/token",
+  "API_ENDPOINT_LOGOUT": "https://p2p-scgpa-uat.digitalventures.co.th/logout",
+  "API_CLIENT_ID": "cordaui",
+  "API_CLIENT_SECRET": "P@ssw0rd",
+  "API_REDIRECT_URI": "http://localhost:3000/auth/callback",
+  "APP_DOMAIN": "http://localhost:3000",
+  "API_DOMAIN_URL_12000": "http://pmmpa-bkchn-uat.scg.com:12000",
+  "API_DOMAIN_URL_10004": "https://pmmpa-bkchn-uat.scg.com:10004",
+  "API_DOMAIN_URL_8999": "https://pmmpa-bkchn-uat.scg.com:8999",
+  "CUSTOM_TRACKING": "https://pmmpa-bkchn-uat.scg.com/static/scg/document-tracking-scg.js",
+  "SUPPORT_URL": "https://support.b2p.in/",
+  "SUPPORT_SCG_URL": "https://scg.service-now.com/myrequestscg",
+  "API_CUSTOM": "https://pmmpa-bkchn-uat.scg.com/api/"
+}

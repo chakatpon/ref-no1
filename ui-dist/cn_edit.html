@@ -1,0 +1,752 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <div class="page__header">
+        <h2 class="text-center">Edit Mode</h2>
+      </div>
+      <div id="invoice_detail_edit_page" class="row cn_edit">
+        <form id="editForm" name="editForm" method="post" enctype="multipart/form-data" action="" class="form col-10 offset-1">
+          <div class="form-group form-inline col-12 mb-3">
+            <label class="control-label h3 font-bold">Invoice No.:</label>
+            <input type="text" name="invoice_no" value="PTINV002" class="form-control" />
+          </div>
+          <section class="box box--width-header col-12">
+            <!-- box--no-shadow -->
+            <div class="box__header">
+              <div class="row justify-content-between align-items-center mb-2">
+                <div class="col"> Entry Date : <strong>07/03/2018</strong>
+                </div>
+              </div>
+            </div><!-- box__header -->
+            <div class="box__inner">
+              <!-- Box "#vendor" - Start -->
+              <div class="row box">
+                <a href="#vendorInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="vendorInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Vendor</h3>
+                  </div>
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Company</h3>
+                    <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <!-- Vendor Lists - Start -->
+                <div id="vendorInfo" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Code :</p>
+                          <p class="col-6">0001001150</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Name :</p>
+                          <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tax ID :</p>
+                          <p class="col-6">7729602003486</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Branch :</p>
+                          <p class="col-6">112 (BKK)</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Address :</p>
+                          <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tel. :</p>
+                          <p class="col-6">02-224-0027</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Code :</p>
+                          <p class="col-6">0100</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Name :</p>
+                          <p class="col-6">SCG Chemical</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tax ID :</p>
+                          <p class="col-6">263707019058</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Branch :</p>
+                          <p class="col-6">BU1 (SCG)</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Address :</p>
+                          <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tel. :</p>
+                          <p class="col-6">02-123-4567</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Vendor Lists - End -->
+              </div>
+              <!-- Box #vendor" - End -->
+              <!-- Box "#creditNoteInfo" - Start -->
+              <div class="row box">
+                <a href="#creditNoteInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="creditNoteInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-12">
+                    <h3 class="border-bottom gray-1">Credit Note Information</h3>
+                    <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <!-- Credit Note Information - Start -->
+                <div id="creditNoteInfo" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Invoice Ref. No. :</p>
+                          <p class="col-6">DIREUAT-001</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Type of CN :</p>
+                          <p class="col-6">Price Adjustment</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Settle to Invoice No. :</p>
+                          <p class="col-6">-</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Credit Note :</p>
+                          <div class="col-8 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                          <div class="col-6 offset-4 nopadding">
+                              <small>File type: PDF, JPG, JPGE, Required: 2-5 files</small>
+                          </div>
+                          <div class="col-6 offset-4 nopadding">
+                              <p>CN.PNG <a href="javascript:void(0);" class="purple ml-3"><i class="fa fa-times"></i></a></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Other Documents :</p>
+                          <div class="col-8 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                          <div class="col-6 offset-4 nopadding">
+                              <small>File type: PDF, JPG, CSV, XLS, XLSX, Required: 2 files</small>
+                          </div>
+                          <div class="col-6 offset-4 nopadding">
+                              <p>CN.PNG <a href="javascript:void(0);" class="purple ml-3"><i class="fa fa-times"></i></a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row form-group">
+                          <p class="col-4 text-right pl-0">Credit Note Date :</p>
+                          <p class="col-6 form-group">
+                            <i class="fa fa-calendar purple"></i>
+                            <input type="text" name="invoice_date" value="07/08/2018" class="datepicker form-control" />
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Credit Note Amount<br />[inc. TAX] :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Credit Note Remainning Amount <br />Amount [inc. TAX] :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Reason :</p>
+                          <p class="col-8">
+                            <textarea rows="5" class="border border-1px border-lightgray w-100"></textarea>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Payment Information Lists - End -->
+              </div>
+              <!-- Box #creditNoteInfo" - End -->
+              
+              <!-- Box PO List - Start -->
+              <div class="row box pt-0 pb-0">
+                <a href="javascript:void(0);" data-toggle="collapse" role="button" aria-expanded="true" area-controls="creditNoteInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-8">
+                    <h3 class="gray-1">Select Item: Invoice Ref. No.: INV872439843 (2 Items)</h3>
+                  </div>
+                  <div class="col-4 text-right nopadding">
+                    <button type="button" name="btnChangeInvRefNo" id="btnChangeInvRefNo" class="btn btn--transparent btn-wide mt-2" data-toggle="modal" data-target="#changeInvoiceRefNo">Change Invoice Ref. No.</button>
+                  </div>
+                </a>
+                <!-- Credit Note Information - Start -->
+                <div id="InvoiceItems" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="table-responsive table-wrapper">
+                        <table class="table dataTable">
+                            <thead class="bg-lightgrey">
+                                <tr>
+                                    <th><input type="checkbox" id="selectAll" /></th>
+                                    <th>Invoice<br />Item No.</th>
+                                    <th>Material Description</th>
+                                    <th>PO No.</th>
+                                    <th>PO<br />Item No.</th>
+                                    <th>Invoice QTY</th>
+                                    <th>CN QTY</th>
+                                    <th>Unit</th>
+                                    <th>Unit<br />Price</th>
+                                    <th>Currency</th>
+                                    <th>CN<br />Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                    <td><strong>001</strong></td>
+                                    <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                    <td>9999099992</td>
+                                    <td>003</td>
+                                    <td>
+                                        100.000
+                                        <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                    </td>
+                                    <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                    <td>PC</td>
+                                    <td>
+                                        50.00
+                                        <input type="hidden" name="unitPrice[]" value="50.00" />
+                                    </td>
+                                    <td>THB</td>
+                                    <td class="total">4,000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- Box PO List - End -->
+              <!-- Button - Start -->
+              <div class="row">
+                <div class="col-12 text-center">
+                  <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+                  <button type="submit" name="btnSubmit" id="btnSubmit" class="btn btn--transparent btn-purple">Resubmit</button>
+                </div>
+              </div>
+              <div class="row">&nbsp;</div>
+              <!-- Button - End -->
+            </div><!-- box__inner -->
+          </section>
+      </div>
+
+    <!-- Modal #changeInvoiceRefNo - Start -->
+    <div id="changeInvoiceRefNo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h3 id="myModalLabel">Change Invoice Ref. No.</h3>
+                </div>
+                <div class="modal-body d-flex">
+                    <div class="col-12 text-center">
+                        To change invoice Ref. No., the system has to remove all existing items from INV872439843 <br />
+                        <br />
+                        Do you want to continue changing 
+                        invoice Ref. No.?
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                    <button type="button" name="btnConfirmChange" id="btnConfirmChange" class="btn btn--transparent btn-wide" data-dismiss="modal" data-toggle="modal" data-target="#findNewInvoiceNo">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal #changeInvoiceRefNo - End -->
+
+    <!-- Modal #findNewInvoiceNo - Start -->
+    <div id="findNewInvoiceNo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="findNewInvoiceNo" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h3 id="myModalLabel">Please Select New Invoice Ref.</h3>
+                </div>
+                <div class="modal-body d-flex">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="text" id="inputDefault" class="form-control" placeholder="Invoice Ref No." />
+                                <label for="inputDefault">Invoice Ref No.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                    <button type="button" name="btnAddPO" id="btnAddPO" class="btn btn--transparent btn-wide" data-toggle="modal" data-target="#findNewInvoiceNo">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal #findNewInvoiceNo - End -->
+
+        <!-- Modal #confirmCancel - Start -->
+        <div id="confirmCancel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center w-100">Cancel</h3>
+              </div>
+              <div class="modal-body">
+                <p class="text-center">Do you want to cancel this invoice?</p>
+                <p>&nbsp;</p>
+                <p class="text-center">
+                  <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                  <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn--transparent btn-wide">Yes</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal #confirmCancel - End -->
+        <!-- Small Screen Cover - Start -->
+        <div id="smallScreenCover">
+          <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+        </div>
+        <!-- Small Screen Cover - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* Hiding Navigation - Start */
+        $('.page').css('width', '100%');
+        $('nav.side-navbar, .sidenav-header-toggle').hide();
+        /* Hiding Navigation - End */
+        /* Datepicker - Start */
+        var d = new Date();
+        var todayDate = '' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + (d.getFullYear() + 3);
+        $('.datepicker').daterangepicker({
+          singleDatePicker: true,
+          showDropdowns: true,
+          minDate: '01/01/2015',
+          maxDate: todayDate,
+          locale: {
+            format: 'DD/MM/YYYY'
+          }
+        });
+        /* Datepicker - End */
+        /* DataTable - Start */
+        var table = $('.datatable').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "scrollX": true,
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0],
+            "orderable": false,
+            "sortable": false
+          }, {
+            'targets': [1],
+            'width': '120px'
+          }, {
+            'targets': [2],
+            'width': '300px',
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7, 8],
+            'width': '100px'
+          }],
+          order: [
+            [1, "asc"]
+          ],
+          fixedHeader: true,
+          stateSave: false,
+          paging: false,
+          bLengthChange: false,
+          searching: false,
+          info: false
+        });
+        /* DataTable - End */
+        
+        /* input#selectAll handler - Start */
+        $('body').on('change', 'input#selectAll', function(){
+            $('input[name="selectedIds[]"]').prop( 'checked', $(this).prop('checked') );
+            if( $(this).prop('checked') === true ){
+                $('tbody').find('tr').addClass('selected');
+                $('tbody').find('input[name="adjustAmount[]"]').prop('disabled', false );
+                countSelectedTotal();
+                checkNextStep();
+            }else{
+                $('tbody').find('tr').removeClass('selected');
+                $('tbody').find('input[name="adjustAmount[]"]').prop('disabled', true );
+                countSelectedTotal();
+                checkNextStep();
+            }
+        });
+        /* input#selectAll handler - End */
+
+        /* input[name="selectedIds[]"] handler - Start */
+        $('body').on('change', 'input[name="selectedIds[]"]', function(){
+            $(this).each(function(){
+                if( $(this).prop('checked') === true ){
+                    $(this).parents('tr').addClass('selected');
+                    $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', false );
+                    countSelectedTotal();
+                    checkNextStep();
+                }else{
+                    $(this).parents('tr').removeClass('selected');
+                    $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', true );
+                    countSelectedTotal();
+                    checkNextStep();
+                }
+            });
+        });
+        /* input[name="selectedIds[]"] handler - End */
+
+        /* input[name="cnQty[]"] handler - Start */
+        $('body').on('keyup', 'input[name="cnQty[]"]', function(){
+            var limitVal = $(this).parents('tr').find('input[name="invoiceQty[]"]').val();
+            if( $(this).val() > limitVal ){
+                $(this).addClass('danger');
+            }else{
+                $(this).removeClass('danger');
+            }
+
+            /* Calculate Total - Start */
+            var unitPrice = $(this).parents('tr').find('input[name="unitPrice[]"]').val();
+            var total = parseInt( $(this).val() ) * parseInt( unitPrice );
+            $(this).parents('tr').find('.total').html( number_format( total, 2, '.', ',' ) );
+            /* Calculate Total - End */
+
+            checkNextStep();
+        });
+        /* input[name="cnQty[]"] handler - End */
+
+        function number_format(number, decimals, dec_point, thousands_sep){
+            number = number.toFixed(decimals);
+
+            var nstr = number.toString();
+            nstr += '';
+            x = nstr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? dec_point + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+
+            while (rgx.test(x1))
+                x1 = x1.replace(rgx, '$1' + thousands_sep + '$2');
+
+            return x1 + x2;
+
+        }
+
+        function checkNextStep(){
+            var nextStep = false;
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            var cnQtyExceed = $('input[name="cnQty[]"].danger').length;
+
+            if( checked > 0 && cnQtyExceed == 0 ){
+                $('#btnNext').prop('disabled', false);
+            }else{
+                $('#btnNext').prop('disabled', true);
+            }
+        }
+
+        function countSelectedTotal(){
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            if( checked > 1 ){
+                $('.selectedTotal').html( checked+' Items' );
+            }else{
+                $('.selectedTotal').html( checked+' Item' );
+            }
+        }
+      });
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+  <head><title>TIMEOUT</title> </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.min.js" integrity="sha256-dkuenzrThqqlzerpNoNTmU3mHAvt4IfI9+NXnLRD3js=" crossorigin="anonymous"></script>
+  <body>
+    <h2>Test timeout</h2>
+    <pre class="output"></pre>
+    <script type="text/javascript">
+let testing;
+jQuery.ajaxSetup({
+  timeout : 400000,
+  beforeSend: function() {
+    let t = 0;
+     testing = setInterval(()=>{
+       t = t+5;
+      $(".output").append(".."+t+"s\n");
+     },5000);
+  },
+  success: function(){
+    clearInterval(testing);
+    $(".output").append("\n");
+  },
+  failed: function(){
+    clearInterval(testing);
+    $(".output").append("\n");
+  }
+});
+
+
+    $(".output").append("Start test timeout\n");
+    async function test(t) {
+      sec = t*60;
+      $(".output").append("Testing "+sec+" seconds response\n");
+      return await $.get('/testtimeout/test/'+sec).done(()=>{
+        $(".output").append("Success test "+t+" minute response\n");
+      }).fail(()=>{
+        clearInterval(testing);
+        $(".output").append("\n");
+        $(".output").append("Failed test "+sec+" seconds response\n");
+      })
+    }
+    async function d(){
+      for(t=3;t<5;t++){
+        await test(t);
+      }
+     
+    }
+    d();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+{
+  "name": "3wm-list",
+  "title": "3 Way Matching",
+  "search": { "url": "" },
+  "table": {
+    "name": "3wm-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "export": { "name": "Three Way Matching", "url": "/api/invoices" },
+    "pageSizeOptions": [10, 25, 50, 100],
+    "columns": [
+      {
+        "header": "Invoice No.",
+        "field": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Unmatched Reason",
+        "field": "unmatchedReason",
+        "displayMode": 2,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "3WM Status",
+        "field": "matchingStatus",
+        "type": "color",
+        "displayMode": 3,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true,
+        "colorMap": {
+          "Submitted": "#36B8E5",
+          "Partial GR": "",
+          "Missing GR": "",
+          "Missing DoA List": "",
+          "Pending Manual Approval": "",
+          "Request Invoice Resubmission": "",
+          "Pending DoA Approval": "",
+          "Pending Clarification": "",
+          "Waiting Payment Due Date": "#A9D4B6",
+          "Paid": "#70731D",
+          "Payment Failed": "#FFDC30",
+          "Cancelled": "#671B9A"
+        }
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+
+      {
+        "header": "PO No.",
+        "field": "purchaseOrder",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true,
+        "separator": ","
+      },
+      {
+        "header": "GR No.",
+        "field": "goodsReceived",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true,
+        "separator": ","
+      },
+
+      {
+        "header": "3WM Processing Timestamp",
+        "field": "lastMatchUpdatedDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY HH:mm:ss",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "Invoice No.",
+            "key": "invoiceNumber",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/invoices?page=1&pageSize=10&invoiceNumber=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "PO No.",
+            "key": "purchaseOrderNumber",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorCode",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "3 Way Matching",
+            "key": "matchingDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Status",
+            "key": "matchingStatus",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/invoices/status/matching"
+          },
+          {
+            "fieldIndex": 6,
+            "title": "GR No.",
+            "key": "goodsReceivedNumber",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Code",
+            "key": "companyCodes",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "Reference No. 1",
+            "key": "referenceField1",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 10,
+            "title": "Invoice Financing",
+            "key": "isInvoiceFinancing",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "All", "value": "" },
+              { "text": "Yes", "value": "true" },
+              { "text": "No", "value": "false" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

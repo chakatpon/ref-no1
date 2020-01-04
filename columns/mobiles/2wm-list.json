@@ -1,0 +1,195 @@
+{
+  "name": "2wm-list",
+  "title": "2 Way Matching",
+  "search": { "url": "" },
+  "table": {
+    "name": "2wm-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "export": { "name": "Two Way Matching", "url": "/api/creditnotes" },
+    "pageSizeOptions": [10, 25, 50, 100],
+    "columns": [
+      {
+        "header": "CN No.",
+        "field": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Unmatched Reason",
+        "field": "unmatchedReason",
+        "displayMode": 2,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "2WM Status",
+        "field": "matchingStatus",
+        "type": "text",
+        "displayMode": 3,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "GR No.",
+        "field": "goodsReceived",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true,
+        "separator": ","
+      },
+      {
+        "header": "Invoice Ref. No.",
+        "field": "invoiceExternalId",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "2WM Processing Timestamp",
+        "field": "lastMatchUpdatedDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY HH:mm:ss",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "CN. No.",
+            "key": "externalId",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/creditnotes/?page=1&pageSize=10&externalId=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "GR No.",
+            "key": "goodsReceivedExternalId",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "2WM Date",
+            "key": "matchingDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Status",
+            "key": "matchingStatus",
+            "controlType": "dropdown",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Submitted", "value": "Submitted" },
+              { "text": "Partial Return GR", "value": "Partial Return GR" },
+              { "text": "Missing Return GR", "value": "Missing Return GR" },
+              {
+                "text": "Pending Manual Approve",
+                "value": "Pending Manual Approve"
+              },
+              {
+                "text": "Request Credit Note Resubmission",
+                "value": "Request Credit Note Resubmission"
+              },
+              { "text": "Approved", "value": "Approved" },
+              { "text": "Cancelled By Vendor", "value": "Cancelled By Vendor" },
+              { "text": "Settled", "value": "Settled" },
+              { "text": "Payment Failed", "value": "Payment Failed" }
+            ]
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Invoice Ref. No.",
+            "key": "invoiceExternalId",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.enable": false,
+  "editor.tabSize": 2
+}

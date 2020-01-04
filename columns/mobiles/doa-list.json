@@ -1,0 +1,169 @@
+{
+  "name": "doa-list",
+  "title": "DOA Approval",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "doa-list",
+    "header": "",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "sortField": "dueDate",
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "DOA", "url": "api/invoices" },
+    "checkBoxCol": "multiple",
+    "columns": [
+      {
+        "header": "Offset columns",
+        "field": "offsetColumns",
+        "sortField": "offsetColumns",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 99,
+        "active": true
+      },
+      {
+        "header": "Document No.",
+        "field": "documentNumber",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Due Date",
+        "field": "dueDate",
+        "sortField": "dueDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Amount",
+        "field": "amount",
+        "sortField": "total",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Company Name",
+        "field": "companyName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Invoice Financing",
+        "field": "financing",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Initiator",
+        "field": "initiator",
+        "sortField": "initiator",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "Document No.",
+            "key": "documentNumber",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/standard/api/pending/approval?page=1&pageSize=10&documentNumber=",
+            "displayField": "documentNumber"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Vendor Code",
+            "key": "vendorCode",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Due Date",
+            "key": "dueDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

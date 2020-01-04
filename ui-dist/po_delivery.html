@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="cs/select2.min.css">
+    <link rel="stylesheet" href="cs/style.css">
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png">
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+
+    <!-- Modal - Start -->
+
+        <!-- Detail 1 - Start -->
+        <div id="detail-1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="detail-1" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="myModalLabel">Detail (PO No. 5002111790)</h3>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap noborder">
+                        
+                        <div class="col-12 d-flex flex-wrap">
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Item No.</p>
+                                <p class="mb-2">48A02</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">QTY</p>
+                                <p class="mb-2">200.000</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Unit</p>
+                                <p class="mb-2">BAG</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material No. : </div>
+                                <div class="col-7">1034PCK0005</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material Description : </div>
+                                <div class="col-7">Ink Cartridge Mother Earth Recycling</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site : </div>
+                                <div class="col-7">SCB Park Plaza</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site Description : </div>
+                                <div class="col-7">9 SCB Park Plaza Chatuchak</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Original Delivery Date : </div>
+                                <div class="col-7">23/12/2018</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Proposed Delivery Date : </div>
+                                <div class="col-7">25/04/2018, 11:30</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Effective Delivery Date : </div>
+                                <div class="col-7">21/12/2018, 11:30</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <p>Reason: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-center noborder">
+                        <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Detail 1 - End -->
+
+        <!-- Detail 2 - Start -->
+        <div id="detail-2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="detail-2" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="myModalLabel">Detail (PO No. 5002111790)</h3>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap noborder">
+                        
+                        <div class="col-12 d-flex flex-wrap">
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Item No.</p>
+                                <p class="mb-2">48A02</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">QTY</p>
+                                <p class="mb-2">200.000</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Unit</p>
+                                <p class="mb-2">BAG</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material No. : </div>
+                                <div class="col-7">1034PCK0005</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material Description : </div>
+                                <div class="col-7">Ink Cartridge Mother Earth Recycling</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site : </div>
+                                <div class="col-7">SCB Park Plaza</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site Description : </div>
+                                <div class="col-7">9 SCB Park Plaza Chatuchak</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Original Delivery Date : </div>
+                                <div class="col-7">23/12/2018</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Proposed Delivery Date : </div>
+                                <div class="col-7">-</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Effective Delivery Date : </div>
+                                <div class="col-7">21/12/2018, 11:30</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-center noborder">
+                        <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Detail 2 - End -->
+
+        <!-- Detail 3 - Start -->
+        <div id="detail-3" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="detail-3" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="myModalLabel">Confirm (PO No. 5002111790)</h3>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap noborder">
+                        
+                        <div class="col-12 d-flex flex-wrap">
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Item No.</p>
+                                <p class="mb-2">48A02</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">QTY</p>
+                                <p class="mb-2">200.000</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Unit</p>
+                                <p class="mb-2">BAG</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material No. : </div>
+                                <div class="col-7">1034PCK0005</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material Description : </div>
+                                <div class="col-7">Ink Cartridge Mother Earth Recycling</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site : </div>
+                                <div class="col-7">SCB Park Plaza</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site Description : </div>
+                                <div class="col-7">9 SCB Park Plaza Chatuchak</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Original Delivery Date : </div>
+                                <div class="col-7">23/12/2018</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Proposed Delivery Date : </div>
+                                <div class="col-7"><strong>25/04/2018, 11:30</strong></div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Effective Delivery Date : </div>
+                                <div class="col-7">21/12/2018, 11:30</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 pb-3 border-bottom border-1px border-lightgray">
+                            <p>Reason: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                        <div class="col-12 mt-3 text-center">
+                            <p>
+                                Do you want to confirm proposed delivery date<br />
+                                on 25/04/2018, 11:30?
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-center noborder">
+                        <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                        <button type="button" name="btnYes" id="btnYes" class="btn btn-wide">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Detail 3 - End -->
+
+        <!-- Detail 4 - Start -->
+        <div id="detail-4" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="detail-4" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="myModalLabel">Propose (PO No. 5002111790)</h3>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap noborder">
+                        
+                        <div class="col-12 d-flex flex-wrap">
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Item No.</p>
+                                <p class="mb-2">48A02</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">QTY</p>
+                                <p class="mb-2">200.000</p>
+                            </div>
+                            <div class="col border-bottom border-1px border-gray">
+                                <p class="lightgray mb-0">Unit</p>
+                                <p class="mb-2">BAG</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap mt-3">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material No. : </div>
+                                <div class="col-7">1034PCK0005</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Material Description : </div>
+                                <div class="col-7">Ink Cartridge Mother Earth Recycling</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site : </div>
+                                <div class="col-7">SCB Park Plaza</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Site Description : </div>
+                                <div class="col-7">9 SCB Park Plaza Chatuchak</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap">
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Original Delivery Date : </div>
+                                <div class="col-7">23/12/2018</div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Proposed Delivery Date : </div>
+                                <div class="col-7"><strong>25/04/2018, 11:30</strong></div>
+                            </div>
+                            <div class="col-12 px-0 d-flex flex-wrap">
+                                <div class="col-5 text-right">Effective Delivery Date : </div>
+                                <div class="col-7">21/12/2018, 11:30</div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 pr-1">
+                            <div class="form-group mb-0">
+                                <div class="form-label-group">
+                                    <input type="text" id="delivery_date" class="form-control datepicker" name="daterange" placeholder="Propose Delivery Date" readonly />
+                                    <label for="delivery_date">Propose Delivery Date</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 d-flex flex-wrap pl-1">
+                            <div class="form-group col-6 px-0 mb-0 d-flex">
+                                <div class="form-label-group col-12 px-0 align-self-stretch">
+                                    <select id="hour" class="select2 col-12">
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                        <option value="" selected>Hour</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-6 px-0 mb-0 d-flex">
+                                <div class="form-label-group col-12 px-0 align-self-stretch">
+                                    <select id="min" class="select2 col-12">
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                        <option value="" selected>Min</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-1 text-center">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <textarea name="reason" id="reason" placeholder="Reason*"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-center noborder">
+                        <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                        <button type="button" name="btnYes" id="btnYes" class="btn btn-wide">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Detail 4 - End -->
+
+    <!-- Modal - End -->
+
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#detail-4').modal();
+
+            $('.select2').select2({
+                element:'.hour-selectbox'
+            });
+
+            $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
+
+            $('.datepicker').daterangepicker({
+                "showDropdowns": true,
+                "autoApply": true,
+                "autoUpdateInput": false,
+                "singleDatePicker": true
+            });
+            $('.datepicker').on('apply.daterangepicker', function(ev, picker){
+                $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+            });
+            $('.datepicker').on('cancel.daterangepicker', function(ev, picker){
+                $(this).val('');
+            })
+        });
+    </script>
+  </body>
+
+</html>

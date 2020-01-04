@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <div class="page__header">
+        <div class="row align-items-center justify-content-between justify-content-lg-start m-0">
+          <div class="col-2 col-md-1 p-0 d-lg-none"></div>
+          <div class="text-center text-lg-left">
+            <h2 class="list">3 Way Matching</h2>
+          </div>
+          <div class="col-2 col-md-1 p-0 text-right">
+            <div id="btn-toggle-search" class="btn-toggle-search d-sm-none">
+              <i class="icon icon-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="box box--width-header pb-0 pb-lg-3">
+        <!-- box--no-shadow -->
+        <div class="box__header box__header--shadow box-toggle-search">
+          <!-- start display only mobile -->
+          <div class="page__header d-sm-none">
+            <div class="row align-items-center justify-content-center m-0">
+              <div class="col-10 text-center text-lg-left">
+                <h2 class="list">Search</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center d-sm-none pt-3 pl-2 pr-2">
+            <div class="col-4 pl-1 pr-1">
+              <a class="btn btn--transparent remove-toggle-search w-100" href="javascript:;">Cancle</a>
+            </div>
+            <div class="col-4 pl-1 pr-1">
+              <a class="btn btn--transparent font-bold w-100" href="javascript:;"><i class="icon icon-x small"></i> Clear</a>
+            </div>
+            <div class="col-4 pl-1 pr-1">
+              <button class="btn w-100" type="submit"><i class="icon icon-search"></i> Search</button>
+            </div>
+          </div>
+          <!-- end display only mobile -->
+          <div class="row justify-content-between align-items-center mb-2 d-none d-sm-flex">
+            <div class="col">
+              <h4>Search: </h4>
+            </div>
+            <div class="col text-right">
+              <a class="btn btn--transparent btn-clear mr-2" href="javascript:;"><i class="icon icon-x small"></i> Clear</a>
+              <button class="btn" type="submit"><i class="icon icon-search"></i> Search</button>
+            </div>
+          </div>
+          <div class="row justify-content-between align-items-start ml--2 mr--2 pt-3 pt-md-0">
+            <div class="col-12 col-md-10 pl-2 pr-2 pb-2 pb-md-0 box-more-search">
+              <div class="row justify-content-start align-items-center ml--2 mr--2">
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                        <div class="blah"><input type="text" id="invoice_no" class="form-control" placeholder="Invoice No." /></div>
+                      <label for="invoice_no">Invoice No.</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="inputDefault" class="form-control" placeholder="PO No." />
+                      <label for="inputDefault">PO No.</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="inputDefault" class="form-control" placeholder="Vendor Code" />
+                      <label for="inputDefault">Vendor Code</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="invoice_date" class="form-control datepicker" name="daterange" placeholder="3 Way Matching" />
+                      <label for="invoice_date">3 Way Matching</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <select class="custom-select" id="status">
+                        <option selected disabled>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="gr_no" class="form-control" placeholder="GR No." />
+                      <label for="gr_no">GR No.</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="company_code" class="form-control" placeholder="Company Code" />
+                      <label for="company_code">Company Code</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="vendor_name" class="form-control" placeholder="Vendor Name" />
+                      <label for="vendor_name">Vendor Name</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                  <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="ref_1" class="form-control" placeholder="Reference No. 1" />
+                      <label for="ref_1">Reference No. 1</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .row -->
+            </div>
+            <div class="col-12 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center d-none d-md-block">
+              <div class="purple mt-3 mb-3">
+                <a href="javascript:;" class="btn-show-more-search">
+                  <span class="text-close text-bold">More Search</span><span class="text-open text-bold">Less Search</span> <i class="icon icon-arrow_small_down"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><!-- box__header -->
+        <!-- start display only mobile -->
+        <!-- // Show when search -->
+        <div class="row justify-content-between bg-lightgray align-items-center m-0 d-sm-none">
+          <div class="col pt-3 pb-3">
+            <span class="font-large font-bold black">Search: 100 Results</span>
+          </div>
+          <div class="col text-right pt-3 pb-3">
+            <a class="font-large btn-clear font-bold" href="javascript:;"><i class="icon icon-x small"></i> Clear Search</a>
+          </div>
+        </div>
+        <!-- end display only mobile -->
+        <div class="box__inner box__inner--table">
+          <div class="table__wrapper">
+            <table class="table datatable">
+              <thead>
+                <tr>
+                    <th>Vendor Code</th>
+                    <th>Vendor Name</th>
+                    <th>Invoice No.</th>
+                    <th>PO No.</th>
+                    <th>GR No.</th>
+                    <th>3 Way Matching<br />Status</th>
+                    <th>3 Way Matching<br />Reason</th>
+                    <th>3 Way Processing<br />Timestamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001001150</a></td>
+                    <td>BKK BAYSWOOD CO.,LT…</td>
+                    <td><a href="javascript:void(0);" class="purple underline">PTINV002</a></td>
+                    <td>5002111679-00001…</td>
+                    <td>3000250522-0002…</td>
+                    <td><strong style="color:#85CAEA;">Pending DoA<br />Approval</strong></td>
+                    <td>Date Mismatch</td>
+                    <td>03/09/2018 10:53:38</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001036744</a></td>
+                    <td>SIAM ABITECH INNO…</td>
+                    <td><a href="javascript:void(0);" class="purple underline">amperetest2</a></td>
+                    <td>5002111782-00001</td>
+                    <td>1000027056-0001</td>
+                    <td><strong style="color:#5A3799;">Waiting Payment<br />Due Date</strong></td>
+                    <td>&nbsp;</td>
+                    <td>03/09/2018 17:05:17</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001036856</a></td>
+                    <td>SEC BKK CO.,LTD.</td>
+                    <td><a href="javascript:void(0);" class="purple underline">DIRESIT-002</a></td>
+                    <td>20180831-1-1</td>
+                    <td>201808311-1</td>
+                    <td><strong style="color:#ED735E;">Pending Manual<br />Approve</strong></td>
+                    <td>Quality Mismatch,…</td>
+                    <td>31/08/2018 19:53:37</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001023836</a></td>
+                    <td>STRUCTECO CO.,LTD</td>
+                    <td><a href="javascript:void(0);" class="purple underline">BIGINV01</a></td>
+                    <td>5002111782-00001</td>
+                    <td>3000284622-0002</td>
+                    <td><strong style="color:#D053AA;">Request Invoice<br />Resubmission</strong></td>
+                    <td>Date Mismatch</td>
+                    <td>04/09/2018 11:30:05</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001042940</a></td>
+                    <td>BANGKOK HOMESWARD</td>
+                    <td><a href="javascript:void(0);" class="purple underline">INVFEE01</a></td>
+                    <td>5002143679-00001</td>
+                    <td>3000251036-0002</td>
+                    <td><strong style="color:#85CAEA;">Pending DoA<br />Approval</strong></td>
+                    <td>&nbsp;</td>
+                    <td>03/09/2018 14:44:25</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001001150</a></td>
+                    <td>THAI MASTERPACK C…</td>
+                    <td><a href="javascript:void(0);" class="purple underline">INVFEE02</a></td>
+                    <td>20180831-1-1</td>
+                    <td>1000027084-0001</td>
+                    <td><strong style="color:#727023;">Partial GR</strong></td>
+                    <td>&nbsp;</td>
+                    <td>03/09/2018 14:44:21</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001065684</a></td>
+                    <td>HABRICK LIMITED COMP…</td>
+                    <td><a href="javascript:void(0);" class="purple underline">LETMEDO</a></td>
+                    <td>5002111799-00001</td>
+                    <td>1000027084-0001</td>
+                    <td><strong style="color:#ADC9AF;">Paid Missing<br />DoA List</strong></td>
+                    <td>&nbsp;</td>
+                    <td>03/09/2018 16:08:37</td>
+                </tr>
+                <tr>
+                    <td><a href="3wm_detail.html" class="purple">0001068206</a></td>
+                    <td>TCC GOLDBOURNE COM…</td>
+                    <td><a href="javascript:void(0);" class="purple underline">NEWFEE01</a></td>
+                    <td>5002111679-00001</td>
+                    <td>3000250522-0002</td>
+                    <td><strong style="color:#ED735E;">Pending Manual<br />Approve</strong></td>
+                    <td>Date Mismatch,…</td>
+                    <td>04/09/2018 14:06:25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- box__inner -->
+      </section>
+      <!-- Modal -->
+      <div class="modal fade" id="openColumnDisplay" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content bg-lightgray mb-3">
+            <div class="modal-header">
+              <h5 class="modal-title">Column List</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center" style="height: 60vh">
+                <div class="col w-45 h-100 pr-0">
+                  <div data-force="30" class="lists h-100">
+                    <div class="lists__header justify-content-between">
+                      <span>Choose Column Display</span>
+                      <button class="list-btn add-all green">All <i class="fa fa-plus"></i></button>
+                    </div>
+                    <ul id="allColumn" class="lists__sortlist">
+                      <li class="li">
+                        <span>Invoice No</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Company Code</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Vendor Code</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Vendor Name</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Invoice Date</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Due Date</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Payment Term Description</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Invoice Amount</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col w-10 p-0 h-100 column-display">
+                </div>
+                <div class="col w-45 h-100 pl-0">
+                  <div data-force="18" class="lists h-100">
+                    <div class="lists__header justify-content-between">
+                      <span>Current Column Display</span>
+                      <!-- <button class="list-btn">All <i class="fa fa-minus remove"></i></button> -->
+                    </div>
+                    <ul id="currentColumn" class="lists__sortlist sortable">
+                      <li class="li fixed">
+                        <span>Status</span>
+                        <button class="list-btn"><i class="fa fa-plus"></i></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn--transparent remove-all">Reset Default</button>
+              <button type="button" class="btn btn--transparent" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      $(window).on('load', function() {
+        // $('#openColumnDisplay').modal('show');
+      });
+      $("document").ready(function() {
+        var table = $('.datatable').DataTable({
+          dom: '<<"d-none d-sm-flex flex-wrap row justify-content-between align-items-center mb-3"<"col-12 col-lg-4 pr-lg-0 d-none d-lg-flex align-items-center justify-content-center justify-content-lg-start"lp><"col-12 col-lg-8 d-none d-sm-flex flex-wrap justify-content-center justify-content-lg-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><"table--responsive"t><"row"<"col-12 row-bottom d-flex d-lg-none"p>>>',
+          "language": {
+            "lengthMenu": "Show _MENU_ Per Page",
+            "paginate": {
+              "previous": "<i class='icon icon-arrow_small_left'></i> Previous",
+              "next": "Next <i class='icon icon-arrow_small_right'></i>"
+            },
+          },
+          responsive: {
+            details: {
+              type: 'column',
+              target: 'td:last-child'
+            }
+          },
+          scrollX: true,
+          scrollCollapse: true,
+          "columnDefs": [{
+            "targets": 0,
+            "orderable": true,
+            "width": 100
+          }, {
+            "targets": 1,
+            "orderable": false,
+            "width": 100
+          }, {
+            "targets": 2,
+            "orderable": false,
+            "width": 120
+          }, {
+            "targets": 3,
+            "orderable": true,
+            "width": 100
+          }, {
+            "targets": 4,
+            "orderable": false,
+            "width": 350
+          }, {
+            "targets": 5,
+            "orderable": false,
+            "width": 150
+          }, {
+            "targets": 6,
+            "orderable": false,
+            "width": 150
+          }, {
+            "targets": 7,
+            "orderable": false,
+            "width": 150
+          }],
+          fixedHeader: true,
+          stateSave: true
+        });
+        $(".btn-wrap.col-display").html('<button class="btn btn--transparent ml-10" data-toggle="modal" data-target="#openColumnDisplay">Column Display</button>');
+        $(".btn-wrap.export").html('<a class="btn btn--transparent ml-10" href="javascript:;"><i class="icon icon-export"></i> Export</a>');
+      });
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          "showDropdowns": true,
+          "autoApply": false,
+          "autoUpdateInput": false
+        });
+        $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker){
+            $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+        });
+        $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker){
+            $(this).val('');
+        })
+      });
+      Sortable.create(document.getElementById('currentColumn'), {
+        group: "column",
+        animation: 150,
+        onAdd: function(evt) {
+          console.log('onAdd.currentColumn:', evt.item);
+        },
+        onUpdate: function(evt) {
+          console.log('onUpdate.currentColumn:', evt.item);
+        },
+        onRemove: function(evt) {
+          console.log('onRemove.currentColumn:', evt.item);
+        },
+        onStart: function(evt) {
+          console.log('onStart.allColumn:', evt.item);
+        },
+        onEnd: function(evt) {
+          console.log('onEnd.allColumn:', evt.item);
+        }
+      });
+    </script>
+  </body>
+
+</html>

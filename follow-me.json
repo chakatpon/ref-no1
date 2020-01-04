@@ -1,0 +1,25 @@
+{
+  "devVersion": false,
+  "helper": {
+    "enable": true,
+    "version": "1.0.0"
+  },
+  "invoice": {
+    "enable": false
+  },
+  "createInvoice": {
+    "enableStep1": true,
+    "enableStep3": true,
+    "GR": {
+      "enableStep2": true,
+      "enableStep4": true
+    },
+    "PO": {
+      "enableStep2": true,
+      "enableStep4": true
+    }
+  },
+  "editInvoice": {
+    "enable": false
+  }
+}

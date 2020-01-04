@@ -1,0 +1,14 @@
+{
+  "Submitted": "#A9D4B6",
+  "Missing GR": "#C99262",
+  "Partial GR": "#532C06",
+  "Pending Manual Approval": "#FF6551",
+  "Request Invoice Resubmission": "#E42CA7",
+  "Requesting DoA List": "#36B8E5",
+  "Pending DoA Approval": "#FF9E40",
+  "Pending Clarification": "#FFDC30",
+  "Waiting Payment Due Date": "#671B9A",
+  "Paid": "#287DC0",
+  "Payment Failed": "#FF2944",
+  "Cancelled": "#9B9B9B"
+}

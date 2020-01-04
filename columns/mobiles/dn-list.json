@@ -1,0 +1,220 @@
+{
+  "name": "dn-list",
+  "title": "Debit Note",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "dn-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "Debit Note List" },
+    "createRole": ["SELLER:Supplier"],
+    "columns": [
+      {
+        "header": "DN No.",
+        "field": "externalId",
+        "sortField": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Due Date",
+        "field": "initialDueDate",
+        "sortField": "dueDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Status",
+        "field": "status",
+        "type": "color",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true,
+        "colorMap": {
+          "Submitted": "#A9D4B6",
+          "Request to Resubmit": "#E42CA7",
+          "Waiting for Payment": "#671B9A",
+          "Cancelled By Vendor": "#9B9B9B",
+          "Payment Failed": "#FF2944",
+          "Paid": "#287DC0"
+        }
+      },
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sortField": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sortField": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "sortField": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+
+      {
+        "header": "Invoice Ref. No.",
+        "field": "invoiceExternalId",
+        "sortField": "invoiceExternalId",
+        "type": "router",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true,
+        "editable": false,
+        "pathParam": "invoiceLinearId",
+        "defaultHidden": false,
+        "defaultExport": true
+      },
+      {
+        "header": "DN Type",
+        "field": "adjustmentType",
+        "sortField": "adjustmentType",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      },
+      {
+        "header": "DN Amount (Inc. Tax)",
+        "field": "total",
+        "sortField": "total",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 9,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "DN No.",
+            "key": "externalId",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/debitnotes?page=1&pageSize=10&externalId=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Invoice Ref No.",
+            "key": "invoiceExternalId",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "DN Type",
+            "key": "adjustmentType",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Others", "value": "OTHER" },
+              { "text": "Price Adj.", "value": "PRICE" }
+            ]
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Status",
+            "key": "statuses",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/debitnotes/status?role=BUYER"
+          },
+          {
+            "fieldIndex": 5,
+            "title": "DN Date",
+            "key": "debitNoteDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false,
+            "pattern": "DD/MM/YYYY"
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Company Code",
+            "key": "companyCode",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Name",
+            "key": "companyName",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

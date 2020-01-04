@@ -1,0 +1,35 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script>
+  const socket = io('http://localhost:3000/doa');
+  //const {accessToken } this.props
+  const accessToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW5pZXMiOlsiMDEwMCJdLCJ1c2VyX25hbWUiOiJ0ZXN0ZG9hMSIsInNjb3BlIjpbInNlcnZlciJdLCJleHAiOjE1NDM5Mzk3OTcsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwianRpIjoiMjRhMDU2OTktZmQ0OC00YzFhLThmODQtMjExOGZmMmQ2MTQ3IiwiY2xpZW50X2lkIjoiY29yZGF1aSJ9.Gb6yq-2vKD0ekB_BWVrux_DNPhkSHv3khQVKVDL5BMXjXjr8U-lPI4mt2f8qAeeuBN37Xp9Y76AgCrmlSCLBi7WcUdBeIIqETapdWiujPsdW8D9M4K57e2G1CR7itB0an061Z9xdkpcD6JoB2FQU8YFUGSwwwfdqwxf7zk4kHZzI8tJuhv94iFS8rkVBP0jVXwrmswQvVU2WYVGoBKhDaxiB47ve6BQ-J0JT3ZMWTQQaaeJbZnvwccF3EXxifUPFYUpTE9jlV7DEMxm6ovkjITpm91CCFiL0edZHt6lFHLH5q9V0Dbl1yCIiJwXi4KOJbOH06gsKIdxh2Rv-4gcmGQ"
+  socket.on('connect', function () { 
+    console.log('connect')
+    socket.on("queue",function(msg){
+        console.log('queue',msg)
+    });
+    socket.on("processing",function(msg){
+        console.log('processing',msg)
+    });
+    socket.on("success",function(msg){
+        console.log('success',msg)
+    });
+    socket.on("error",function(msg){
+        console.warn('error',msg)
+    });
+  });
+  function addItem()
+  {
+    socket.emit("approve",accessToken,
+            [
+                {
+                    linearId : "7b270c33-8c86-40bb-a516-d96db82c231b",
+                    buyerApprovedRemark : "test"
+                }
+            ]
+        )
+  }
+</script>
+<a href="javascript:addItem();">Add To.</a>
+</html>

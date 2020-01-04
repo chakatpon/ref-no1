@@ -1,0 +1,11 @@
+{
+  "Submitted": "#A9D4B6",
+  "Partial Return GR": "#C99262",
+  "Missing Return GR": "#532C06",
+  "Pending Manual Approval": "#FF6551",
+  "Request Credit Note Resubmission": "#E42CA7",
+  "Approved": "#548235",
+  "Cancelled By Vendor": "#9B9B9B",
+  "Settled": "#287DC0",
+  "Payment Failed": "#FF2944"
+}

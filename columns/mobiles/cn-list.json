@@ -1,0 +1,218 @@
+{
+  "name": "cn-list",
+  "title": "Credit Note",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "cn-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "Credit Note List" },
+    "createRole": ["SELLER:Supplier"],
+    "columns": [
+      {
+        "header": "CN No.",
+        "field": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "CN Amount (Inc. Tax)",
+        "field": "total",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Status",
+        "field": "status",
+        "type": "color",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true,
+        "colorMap": {
+          "Submitted": "#A9D4B6",
+          "Verifying": "#36B8E5",
+          "Request to Resubmit": "#E42CA7",
+          "Waiting for Settlement": "#671B9A",
+          "Cancelled By Vendor": "#9B9B9B",
+          "Settled": "#287DC0",
+          "Payment Failed": "#FF2944"
+        }
+      },
+      {
+        "header": "Company Code",
+        "field": "companyCode",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Vendor Code",
+        "field": "vendorNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "CN Date",
+        "field": "creditNoteDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Invoice Ref. No.",
+        "field": "invoiceExternalId",
+        "type": "router",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true,
+        "pathParam": "invoiceLinearId"
+      },
+      {
+        "header": "CN Type",
+        "field": "adjustmentType",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 9,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "CN No. ",
+            "key": "externalId",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/creditnotes?page=1&pageSize=10&externalId=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Invoice Ref No.",
+            "key": "invoiceExternalId",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "CN Type",
+            "key": "adjustmentType",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              { "text": "Quantity Adjustment", "value": "QUANTITY" },
+              { "text": "Price Adjustment", "value": "PRICE" }
+            ]
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Status",
+            "key": "statuses",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/creditnotes/status?role=BUYER"
+          },
+          {
+            "fieldIndex": 5,
+            "title": "CN Date",
+            "key": "creditNoteDate",
+            "controlType": "textbox",
+            "type": "date",
+            "active": true,
+            "required": false,
+            "pattern": "DD/MM/YYYY"
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Company Code",
+            "key": "companyCode",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Name",
+            "key": "companyName",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 10,
+            "title": "Reference No.1",
+            "key": "referenceField1",
+            "controlType": "textbox",
+            "type": "text",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

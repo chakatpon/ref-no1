@@ -1,0 +1,18 @@
+{
+  "debit": {
+    "fields": [
+      {
+        "adjustmentType": [
+          {
+            "value": "OTHER",
+            "display": "Others"
+          },
+          {
+            "value": "PRICE",
+            "display": "Price Adj."
+          }
+        ]
+      }
+    ]
+  }
+}

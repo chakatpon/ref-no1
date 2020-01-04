@@ -1,0 +1,52 @@
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field-edited {
+  color: #af3694;
+  border-color: #af3694;
+}
+
+.field-invalid {
+  color: red;
+}
+
+.field-font-basic {
+  font-size: 14px;
+}
+
+.table-constructor {
+  background-color: #ffffff;
+  border-radius: 10px;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+.table-header {
+  font-family: "kanitmedium";
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+}
+
+.table-title-component {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+.selected-row {
+  background-color: #af3694;
+}
+
+.auto-complete-rbt-input-hint {
+  padding: 6px 11px 4.25px 12.75px !important;
+  font-family: "kanitmedium";
+}
+
+table.datatable .custom-radio .custom-control-label::before {
+  top: 5px !important;
+}

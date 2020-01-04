@@ -1,0 +1,19 @@
+{
+  "Request": "Request",
+  "Request No.": "Request No.",
+  "Ref No.": "Ref No.",
+  "Company Name": "Company Name",
+  "Vendor Name": "Vendor Name",
+  "Request Type": "Request Type",
+  "Remark": "Remark",
+  "Sub Type": "Sub Type",
+  "Status": "Status",
+  "Document No": "Document No.",
+  "Amount": "Amount",
+  "Request Reason": "Request Reason",
+  "Issued": "Issued",
+  "Pending seller approval": "Pending seller approval",
+  "Pending buyer approval": "Pending buyer approval",
+  "Column Display": "Column Display",
+  "Export": "Export"
+}

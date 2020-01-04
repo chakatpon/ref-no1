@@ -1,0 +1,116 @@
+{
+  "name": "invoice-item",
+  "title": "Invoice Detail",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "invoice-item",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "columns": [
+      {
+        "header": "PO No",
+        "field": "purchaseOrderExternalId",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "PO Item No",
+        "field": "purchaseItemExternalId",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Material Description",
+        "field": "materialDescription",
+        "displayMode": 3,
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "Qty",
+        "field": "quantity.initial",
+        "type": "number",
+        "pattern": "#,###.000",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+      {
+        "header": "Unit Description",
+        "field": "unitDescription",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Unit Price",
+        "field": "unitPrice",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Site",
+        "field": "site",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "WHT Rate (%)",
+        "field": "withholdingTaxRate",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      },
+      {
+        "header": "Sub Total",
+        "field": "itemSubTotal",
+        "type": "number",
+        "pattern": "#,###.00",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 9,
+        "active": true
+      },
+      {
+        "header": "Currency",
+        "field": "currency",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 10,
+        "active": true
+      }
+    ]
+  },
+  "form": { "sections": [{ "fields": [] }] }
+}

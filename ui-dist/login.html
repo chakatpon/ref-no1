@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+    <!--build:css cs/login.min.css -->
+    <link rel="stylesheet" href="cs/login.css">
+    <!--/build-->
+    <script src="js/modernizr.js"></script>
+    <style> #particles-js {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            background-image: url('');
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        #particles-js.bg-gray {
+            background-color: #f1f3f6;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="loginpage" id="particles-js">
+      <div class="loginpage__wrap">
+        <div class="container d-flex h-100 p-0">
+          <div class="row w-100 m-0 justify-content-center align-self-center">
+            <div class="col-10 col-md-6 col-lg-12">
+              <div class="logo mb-2 mb-md-2">
+                <img src="./img/logo/logo_b2p.png" />
+              </div>
+              <div class="w-100 text-md-right mb-4 pb-3 mb-md-0 pb-md-0 d-none d-lg-block">
+                <p class="mb-0 color-gray">Blockchain Solution for</p>
+                <h1 class="gray-1 mb-0 color-gray">PROCURE-TO-PAY</h1>
+              </div>
+              <div class="middle">
+                <h2 class="gray-1 mb-1 color-gray">Welcome</h2>
+                <p class="mb-3">Please login to your account.</p>
+                <form id="loginForm" class="col-12 col-md-12 col-lg-5 p-0 needs-validation" novalidate="" action="/" method="POST">
+                  <div class="form-group mb-2">
+                    <div class="form-label-group">
+                      <input type="text" id="inputUsername" class="form-control" placeholder="Username" value="testusername" required autofocus />
+                      <label for="inputUsername">Username</label>
+                    </div>
+                  </div>
+                  <div class="form-group mb-2">
+                    <div class="form-label-group">
+                      <input type="password" id="password" class="form-control" placeholder="Password" required autofocus />
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <p class="invalid-feedback error_msg mb-2">Your account or password is incorrect. Please try again.</p>
+                  <div class="row">
+                    <div class="col-6 pr-1">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="remember" />
+                        <label class="custom-control-label pl-1" for="remember">Remember Me</label>
+                      </div>
+                    </div>
+                    <div class="col-6 pl-1 text-right">
+                      <a class="gray-2" href="forgot_password.html">Forgot Password?</a>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-6 p-0 mt-4">
+                    <button id="btnSubmit" type="submit" class="btn w-100">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="mt-5 pt-3">
+                <div class="col-3 col-md-2 col-lg-1 p-0">
+                  <img class="w-100" src="./img/logo/dv.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- .loginpage__wrap -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/particles_json.js"></script>
+    <script>
+      $("#btnSubmit").click(function(event) {
+        var form = $("#loginForm")
+        if (form[0].checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.addClass('was-validated');
+      });
+    </script>
+  </body>
+
+</html>

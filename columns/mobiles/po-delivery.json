@@ -1,0 +1,210 @@
+{
+  "name": "po-delivery",
+  "title": "PO Delivery Schedule",
+  "search": {
+    "url": ""
+  },
+  "table": {
+    "name": "po-delivery",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": {
+      "name": "PO",
+      "url": "/api/purchaseitems"
+    },
+    "columns": [
+      {
+        "header": "Material Description",
+        "field": "materialDescription",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "active": true
+      },
+      {
+        "header": "Proposed Delivery Date",
+        "field": "proposedRevisedDeliveryDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY HH:mm",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+      {
+        "header": "Action",
+        "field": "action",
+        "type": "action",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true
+      },
+      {
+        "header": "PO No.",
+        "field": "poNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "requiredColumn": true,
+        "active": true
+      },
+
+      {
+        "header": "Company Name",
+        "field": "companyName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Proposed Delivery Date",
+        "field": "proposedRevisedDeliveryDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY HH:mm",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Effective Delivery Date",
+        "field": "expectedDeliveryDate",
+        "type": "date",
+        "pattern": "DD/MM/YYYY HH:mm",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "PO No.",
+            "key": "poNumber",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/purchaseorders?page=1&pageSize=10&purchaseOrderNumber=",
+            "displayField": "purchaseOrderNumber"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Material Description",
+            "key": "materialDescription",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Status",
+            "key": "statuses",
+            "controlType": "dropdown",
+            "type": "option",
+            "active": true,
+            "required": false,
+            "options": [
+              {
+                "text": "Pending Ack",
+                "value": "Pending Ack"
+              },
+              {
+                "text": "Rejected",
+                "value": "Rejected"
+              },
+              {
+                "text": "Pending Buyer",
+                "value": "Pending Buyer"
+              },
+              {
+                "text": "Pending Seller",
+                "value": "Pending Vendor"
+              },
+              {
+                "text": "Confirmed",
+                "value": "Confirmed"
+              }
+            ]
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Proposed Delivery Date",
+            "key": "proposedDeliveryDate",
+            "controlType": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Effective Delivery Date",
+            "key": "effectiveDeliveryDate",
+            "controlType": "date",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Company Name",
+            "key": "companyName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Company Code",
+            "key": "companyCode",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Vendor Name",
+            "key": "vendorName",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 9,
+            "title": "Vendor Code",
+            "key": "vendorNumber",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<p><a href="javascript:void(0);" data-toggle="modal" data-target="#rejectReasonModal">Click ME!</a></p>
+
+<!-- Modal #confirmCancel - Start -->
+<div id="rejectReasonModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="reviseInvoice" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="col-12">Reject Reason</h3>
+      </div>
+
+      <div class="modal-body">
+        <form id="rejectReasonForm" name="rejectReasonForm" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+              <select class="custom-select">
+                <option value="" selected>Reason</option>
+                <option value="reason-1">Wrong Deliery Date</option>
+                <option value="reason-2">Wrong Price</option>
+                <option value="reason-3">Wrong Term &amp; Condition</option>
+                <option value="reason-4">Other - require free text</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="comment" placeholder="Comment" class="form-control" rows="5"></textarea>
+              <p class="message c-red">This field is required.</p>
+            </div>
+        </form>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+          <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide btn--transparent" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn-wide">Change</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal #confirmCancel - End -->
+
+{% endblock main %}
+
+{% block scripts %}
+	{{ parent() }}
+  <script type="text/javascript">
+
+  </script>
+{% endblock %}

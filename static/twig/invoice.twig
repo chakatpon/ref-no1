@@ -1,0 +1,447 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+    <div class="page__header">
+        <div class="row align-items-center justify-content-between justify-content-lg-start m-0">
+            <div class="col-2 col-md-1 p-0 d-lg-none"></div>
+            <div class="text-center text-lg-left">
+                <h2 class="list">Invoice</h2>
+            </div>
+            <div class="col-2 col-md-1 p-0 text-right">
+                <div id="btn-toggle-search" class="btn-toggle-search d-sm-none">
+                    <i class="icon icon-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="box box--width-header pb-0 pb-lg-3"><!-- box--no-shadow -->
+
+        <div class="box__header box__header--shadow box-toggle-search">
+
+            <!-- start display only mobile -->
+            <div class="page__header d-sm-none">
+                <div class="row align-items-center justify-content-center m-0">
+                    <div class="col-10 text-center text-lg-left">
+                        <h2 class="list">Search</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center d-sm-none pt-3 pl-2 pr-2">
+                <div class="col-4 pl-1 pr-1">
+                    <a class="btn btn--transparent remove-toggle-search w-100" href="javascript:;">Cancle</a>
+                </div>
+                <div class="col-4 pl-1 pr-1">
+                    <a class="btn btn--transparent font-bold w-100" href="javascript:;"><i class="icon icon-x small"></i> Clear</a>
+                </div>
+                <div class="col-4 pl-1 pr-1">
+                    <button class="btn w-100" type="submit"><i class="icon icon-search"></i> Search</button>
+                </div>
+            </div>
+            <!-- end display only mobile -->
+
+            <div class="row justify-content-between align-items-center mb-2 d-none d-sm-flex">
+                <div class="col">
+                    <h4>Search: </h4>
+                </div>
+                <div class="col text-right">
+                    <a class="btn btn--transparent btn-clear mr-2" href="javascript:;"><i class="icon icon-x small"></i> Clear</a>
+                    <button class="btn" type="submit"><i class="icon icon-search"></i> Search</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-between align-items-start ml--2 mr--2 pt-3 pt-md-0">
+                <div class="col-12 col-md-10 pl-2 pr-2 pb-2 pb-md-0 box-more-search">   
+
+                    <div class="row justify-content-start align-items-center ml--2 mr--2">
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                                <div class="form-group">
+                                    <div class="form-label-group">
+                                        <input type="text" id="invoice_no" class="form-control" placeholder="Invoice No." />
+                                        <label for="invoice_no">Invoice No.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="inputDefault" class="form-control" placeholder="PO No." />
+                                    <label for="inputDefault">PO No.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="invoice_date" class="form-control datepicker" name="daterange" placeholder="Invoice Date" />
+                                    <label for="invoice_date">Invoice Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="due_date" class="form-control datepicker" name="daterange" placeholder="Due Date" />
+                                    <label for="due_date">Due Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <select class="custom-select" id="status">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="company_code" class="form-control" placeholder="Company Code" />
+                                    <label for="company_code">Company Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="company_name" class="form-control" placeholder="Company Name" />
+                                    <label for="company_name">Company Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="vendor_code" class="form-control" placeholder="Vendor Code" />
+                                    <label for="vendor_code">Vendor Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 w-lg-20 col-md-4 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="vendor_name" class="form-control" placeholder="Vendor Name" />
+                                    <label for="vendor_name">Vendor Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .row -->
+                </div>
+                <div class="col-12 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center d-none d-md-block">
+                    <div class="purple mt-3 mb-3">
+                        <a href="javascript:;" class="btn-show-more-search">
+                            <span class="text-close text-bold">More Search</span><span class="text-open text-bold">Less Search</span> <i class="icon icon-arrow_small_down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- box__header -->
+
+        <!-- start display only mobile -->
+        <!-- // Show when search -->
+        <div class="row justify-content-between bg-lightgray align-items-center m-0 d-sm-none">
+            <div class="col pt-3 pb-3">
+                <span class="font-large font-bold black">Search: 100 Results</span>
+            </div>
+            <div class="col text-right pt-3 pb-3">
+                <a class="font-large btn-clear font-bold" href="javascript:;"><i class="icon icon-x small"></i> Clear Search</a>
+            </div>
+        </div>
+        <!-- end display only mobile -->
+
+        <div class="box__inner box__inner--table">
+            <div class="table__wrapper">
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>Invoice No.</th>
+                            <th>Company <br />Code</th>
+                            <th>Vendor Code</th>
+                            <th>Vendor Name</th>
+                            <th>Invoice Date</th>
+                            <th>Due Date</th>
+                            <th>Payment Term <br />Description</th>
+                            <th>Invoice Amount</th>
+                            <th>Status</th>
+                            <th class="p-2">More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a class="link" href="#">NEGRESIT-001</a></td>
+                            <td>0101</td>
+                            <td>0001001150</td>
+                            <td>AABKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td><span class="status green">Verifying</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="#">NEGRESIT-002</a></td>
+                            <td>2100</td>
+                            <td>0001001150</td>
+                            <td>BKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td><span class="status blue">Submitted</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="#">NEGRESIT-003</a></td>
+                            <td>0140</td>
+                            <td>0001001150</td>
+                            <td>CCBKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td><span class="status pink">Requested to Resubmit</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="#">NEGRESIT-005</a></td>
+                            <td>0450</td>
+                            <td>0001001150</td>
+                            <td>BKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td><span class="status navy">Paid</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="#">NEGRESIT-009</a></td>
+                            <td>0990</td>
+                            <td>0001001150</td>
+                            <td>BKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td><span class="status purple">Waiting Payment Due Date</span></td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- box__inner -->
+        
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="openColumnDisplay" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content bg-lightgray mb-3">
+                <div class="modal-header">
+                    <h5 class="modal-title">Column List</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center" style="height: 60vh">
+                            
+                        <div class="col w-45 h-100 pr-0">
+                            <div data-force="30" class="lists h-100">
+                                <div class="lists__header justify-content-between">
+                                    <span>Choose Column Display</span>
+                                    <button class="list-btn add-all green">All <i class="fa fa-plus"></i></button>
+                                </div>
+                                <ul id="allColumn" class="lists__sortlist">
+                                    <li class="li">
+                                        <span>Invoice No</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Company Code</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Vendor Code</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Vendor Name</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Invoice Date</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Due Date</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Payment Term Description</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                    <li class="li">
+                                        <span>Invoice Amount</span>
+                                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col w-10 p-0 h-100 column-display">
+                            
+                        </div>
+                        <div class="col w-45 h-100 pl-0">
+                            <div data-force="18" class="lists h-100">
+                                    <div class="lists__header justify-content-between">
+                                        <span>Current Column Display</span>
+                                        <!-- <button class="list-btn">All <i class="fa fa-minus remove"></i></button> -->
+                                    </div>
+                                <ul id="currentColumn" class="lists__sortlist sortable">
+                                    <li class="li fixed">
+                                        <span>Status</span>
+                                        <button class="list-btn"><i class="fa fa-plus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn--transparent remove-all">Reset Default</button>
+                    <button type="button" class="btn btn--transparent" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+{% endblock main %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+    
+    $(window).on('load', function() {
+		// $('#openColumnDisplay').modal('show');
+	});
+
+    $("document").ready(function() {
+
+        var table = $('.datatable').DataTable( {
+            dom: '<<"d-none d-sm-flex flex-wrap row justify-content-between align-items-center mb-3"<"col-12 col-lg-4 pr-lg-0 d-none d-lg-flex align-items-center justify-content-center justify-content-lg-start"lp><"col-12 col-lg-8 d-none d-sm-flex flex-wrap justify-content-center justify-content-lg-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><"table--responsive"t><"row"<"col-12 row-bottom d-flex d-lg-none"p>>>',
+            "language": {
+                "lengthMenu": "Show _MENU_ Per Page",
+                "paginate": {
+                    "previous": "<i class='icon icon-arrow_small_left'></i> Previous",
+                    "next": "Next <i class='icon icon-arrow_small_right'></i>"
+                },  
+            },
+            responsive: {
+                details: {
+                    type: 'column',
+                    target: 'td:last-child'
+                }
+            },
+            scrollX:        true,
+            scrollCollapse: true,
+            "columnDefs": [
+                {
+                    "targets": 0,
+                    "orderable": true,
+                    "width": 100
+                },
+                {
+                    "targets": 1,
+                    "orderable": false,
+                    "width": 100
+                },
+                {
+                    "targets": 2,
+                    "orderable": false,
+                    "width": 120
+                },
+                {
+                    "targets": 3,
+                    "orderable": true,
+                    "width": 100
+                },
+                {
+                    "targets": 4,
+                    "orderable": false,
+                    "width": 350
+                },
+                {
+                    "targets": 5,
+                    "orderable": false,
+                    "width": 150
+                },
+                {
+                    "targets": 6,
+                    "orderable": false,
+                    "width": 150
+                },
+                {
+                    "targets": 7,
+                    "orderable": false,
+                    "width": 150
+                },
+                {
+                    "targets": 8,
+                    "orderable": false,
+                    "width": 150,
+                },
+                {
+                    "targets": 9,
+                    className: 'control',
+                    "orderable": false,
+                    "width": 40
+                }
+            ],
+            fixedHeader: true,
+            stateSave: true
+        });
+
+        $(".btn-wrap.upload").html('<a class="btn" href="javascript:;">Upload Invoice</a>');
+        $(".btn-wrap.create").html('<a class="btn ml-10" href="javascript:;">Create Invoice</a>');
+        $(".btn-wrap.col-display").html('<button class="btn btn--transparent ml-10" data-toggle="modal" data-target="#openColumnDisplay">Column Display</button>');
+        $(".btn-wrap.export").html('<a class="btn btn--transparent ml-10" href="javascript:;"><i class="icon icon-export"></i> Export</a>');
+    });
+
+    $(function() {
+        $('input[name="daterange"]').daterangepicker({
+            "showDropdowns": true,
+            "autoApply": true,
+        }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+        $('input[name="daterange"]').val('');
+    });
+
+	Sortable.create(document.getElementById('currentColumn'), {
+		group: "column",
+		animation: 150,
+		onAdd: function (evt){ console.log('onAdd.currentColumn:', evt.item); },
+		onUpdate: function (evt){ console.log('onUpdate.currentColumn:', evt.item); },
+		onRemove: function (evt){ console.log('onRemove.currentColumn:', evt.item); },
+		onStart:function(evt){ console.log('onStart.allColumn:', evt.item);},
+		onEnd: function(evt){ console.log('onEnd.allColumn:', evt.item);}
+	});
+    </script>
+{% endblock %}
+

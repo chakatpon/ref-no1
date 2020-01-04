@@ -1,0 +1,354 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+  <!-- Start #invoice_create - Start -->
+  <div id="invoice_create" class="row">
+
+    <div id="step-indicator" class="col-12">
+      <ul class="d-flex justify-content-center">
+        <li class="flex-fill active">
+          <div class="indicator step-1 rounded-circle text-center">
+            <span class="number">1</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Select PO and Items</p>
+        </li>
+        <li class="flex-fill">
+          <div class="indicator step-2 rounded-circle text-center">
+            <span class="number">2</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Insert Invoice Details</p>
+        </li>
+        <li class="flex-fill">
+          <div class="indicator step-3 rounded-circle text-center">
+            <span class="number">3</span>
+            <i class="fa fa-check"></i>
+          </div>
+          <p class="text-center">Summary</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page__header col-12">
+        <h2>Please Select PO and PO Items</h2>
+    </div>
+
+    <form id="editForm" name="editForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+      <div class="box box--width-header col-12">
+
+        <div class="d-flex">
+
+          <!-- Left Panel - Start -->
+          <div id="selectPO-panel" class="col-2 border-right border-1px border-lightgrey pl-0">
+
+            <div class="form-group border-bottom border-1px border-lightgrey">
+              <input type="text" name="invoice_no" value="" placeholder="Select PO" class="form-control" />
+            </div>
+
+            <div id="po_items" class="col-12 pb-3">
+              <ul>
+                <li>
+                  <a href="javascript:void(0);">
+                    <strong class="gray-1 text-center font-bold">
+                      9999099564<br />
+                      (4 items)
+                    </strong>
+                    <i class="fa fa-times gray-2"></i>
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="javascript:void(0);">
+                    <strong class="gray-1 text-center font-bold">
+                      9999099565<br />
+                      (3 items)
+                    </strong>
+                    <i class="fa fa-times gray-2"></i>
+                  </a>
+                </li>
+              </ul>
+              <p class="text-center"><a href="javascript:void(0);" class="text-bold" data-toggle="modal" data-target="#addPO"><i class="fa fa-plus small"></i> Add PO</a></p>
+            </div>
+
+            <p class="text-center ">
+              Start selecting items<br/>
+              by adding PO
+            </p>
+
+          </div>
+          <!-- Left Panel - End -->
+
+          <!-- Right Panel - Start -->
+          <div id="POLists" class="col-10">
+            <div class="table_wrapper">
+              <table class="table datatable">
+                <thead class="rounded">
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="selectall" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="selectall"></label>
+                      </div>
+                    </th>
+                    <th>PO Item No.</th>
+                    <th>Material Description</th>
+                    <th>Remaining QTY</th>
+                    <th>QTY</th>
+                    <th>Unit Description</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="select-1" name="ids[]" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="select-1"></label>
+                      </div>
+                    </td>
+                    <td>001</td>
+                    <td class="text-uppercase">Flexible Bag For Resin With..</td>
+                    <td class="text-right">10,000.000</td>
+                    <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control text-right" disabled /></td>
+                    <td>BAG</td>
+                    <td>30.00</td>
+                    <td>0.00</td>
+                    <td>THB</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="select-2" name="ids[]" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="select-2"></label>
+                      </div>
+                    </td>
+                    <td>002</td>
+                    <td class="text-uppercase">BIG BAG,100X100X125CM,W/LOGO</td>
+                    <td class="text-right">100.000</td>
+                    <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control text-right" disabled /></td>
+                    <td>BAG</td>
+                    <td>325.00</td>
+                    <td>0.00</td>
+                    <td>THB</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="select-3" name="ids[]" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="select-3"></label>
+                      </div>
+                    </td>
+                    <td>003</td>
+                    <td class="text-uppercase">BIG BAG,200X200X250CM,W/LOGO</td>
+                    <td class="text-right">1,000.000</td>
+                    <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control text-right" disabled /></td>
+                    <td>BAG</td>
+                    <td>500.00</td>
+                    <td>0.00</td>
+                    <td>THB</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="select-4" name="ids[]" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="select-4"></label>
+                      </div>
+                    </td>
+                    <td>004</td>
+                    <td class="text-uppercase">FLEXIBLE PC FOR RESIN WITH…</td>
+                    <td class="text-right">80.000</td>
+                    <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control text-right" disabled /></td>
+                    <td>PCE</td>
+                    <td>50.00</td>
+                    <td>0.00</td>
+                    <td>THB</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="select-5" name="ids[]" />
+                        <label class="custom-control-label pl-1 font-small text-shadow" for="select-5"></label>
+                      </div>
+                    </td>
+                    <td>005</td>
+                    <td class="text-uppercase">ADDITIVE,UR</td>
+                    <td class="text-right">60.000</td>
+                    <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control text-right" disabled /></td>
+                    <td>KG</td>
+                    <td>5,000.00</td>
+                    <td>0.00</td>
+                    <td>THB</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Right Panel - End -->
+
+        </div>
+      </div>
+
+      <!-- Button - Start -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+          <button type="button" name="btnNext" id="btnNext" class="btn btn--transparent btn-purple">Next <i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <!-- Button - End -->
+    </form>
+
+    <!-- Modal - Start -->
+    <div id="addPO" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="myModalLabel">Company Information</h3>
+          </div>
+          <div class="modal-body d-flex">
+
+            <div class="col-6">
+              <div class="form-group border border-1px border-lightgrey rounded disabled">
+                <label class="form-label" for="po_code">Code</label>
+                <input type="text" name="po_code" value="56" class="form-control noborder" disabled />
+              </div>
+              <div class="form-group border border-1px border-lightgrey rounded disabled">
+                <label class="form-label" for="po_name">Name</label>
+                <input type="text" name="po_name" value="SCG Chemical" class="form-control noborder" disabled />
+              </div>
+              <div class="form-group border border-1px border-lightgrey rounded">
+                <label class="form-label" for="po_taxId">Tax ID</label>
+                <input type="text" name="po_taxId" value="2637070190598" class="form-control noborder" />
+              </div>
+              <div class="form-group border border-1px border-lightgrey rounded">
+                <label class="form-label" for="po_tel">Tel.</label>
+                <input type="text" name="po_code" value="02-123-4567" class="form-control noborder" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group border border-1px border-lightgrey rounded">
+                <label class="form-label" for="po_branch">Branch</label>
+                <input type="text" name="po_code" value="BU1 (SCG)" class="form-control noborder" />
+              </div>
+              <div class="form-group border border-1px border-lightgrey rounded">
+                <label class="form-label" for="po_address">Address</label>
+                <textarea name="po_address" class="form-control noborder">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800 02-123-4567</textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button type="button" name="btnAddPO" id="btnAddPO" class="btn btn--transparent btn-purple btn-wide">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal - End -->
+
+  </div>
+  <!-- Start #invoice_create - End -->
+
+{% endblock main %}
+
+{% block scripts %}
+	{{ parent() }}
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    /* Hiding Navigation - Start */
+    $('.page').css('width','100%');
+    $('nav.side-navbar, .sidenav-header-toggle').hide();
+    /* Hiding Navigation - End */
+
+    /* DataTable - Start */
+      var table = $('.datatable').DataTable( {
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "scrollX": true,
+          "language": {
+              "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs:[
+            {
+              "targets": [0],
+              "orderable": false
+            },
+            {
+              'targets': [1],
+              'width': '120px'
+            },
+            {
+              'targets': [2],
+              'width': '300px',
+            },
+            {
+              'targets': [3],
+              'width': '150px'
+            },
+            {
+              'targets': [4],
+              'width': '100px'
+            },
+            {
+              'targets': [5],
+              'width': '150px'
+            },
+            {
+              'targets': [6],
+              'width': '120px'
+            },
+            {
+              'targets': [7,8],
+              'width': '100px'
+            }
+          ],
+          fixedHeader: true,
+          stateSave: true,
+          paging: false,
+          bLengthChange: false,
+          searching: false,
+          info: false
+      });
+      /* DataTable - End */
+
+      /* Select all handler - Start */
+      $('body').on('click','#selectall', function(){
+        var target = $('.datatable');
+        target.find('input[type="checkbox"]').prop( 'checked', $(this).prop('checked') );
+        if( $(this).prop('checked') === true ){
+          target.find('input[type="text"]').prop( 'disabled', false );
+        }else{
+          target.find('input[type="text"]').prop( 'disabled', true );
+        }
+      });
+      /* Select all handler - End */
+
+      /* Checkbox handler - Start */
+      $('body').on('change','input[name="ids[]"]', function(){
+        if( $(this).prop('checked') === true ){
+          $(this).parents( 'tr' ).find( 'input[name="qty[]"]' ).prop( 'disabled', false );
+        }else{
+          $(this).parents( 'tr' ).find( 'input[name="qty[]"]' ).prop( 'disabled', true );
+        }
+      });
+      /* Checkbox handler - End */
+
+      /* Button Handler - Start */
+      $('body').on('click', '#btnNext', function(){
+        top.location.href='invoice_create_2.html';
+      });
+      $('body').on('click', '#btnCancel', function(){
+        top.location.href='invoice.html';
+      });
+      /* Button Handler - End */
+  });
+  </script>
+{% endblock %}

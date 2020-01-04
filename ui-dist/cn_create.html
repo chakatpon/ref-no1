@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <!-- Start #cn_create - Start -->
+      <div id="cn_create" class="row">
+        <div id="step-indicator" class="col-12">
+          <ul class="d-flex justify-content-center">
+            <li class="flex-fill active">
+              <div class="indicator step-1 rounded-circle text-center">
+                <span class="number">1</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Select Invoice</p>
+            </li>
+            <li class="flex-fill">
+              <div class="indicator step-2 rounded-circle text-center">
+                <span class="number">2</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Credit Note Items</p>
+            </li>
+            <li class="flex-fill">
+              <div class="indicator step-3 rounded-circle text-center">
+                <span class="number">3</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Insert Credit Note Details</p>
+            </li>
+            <li class="flex-fill">
+              <div class="indicator step-4 rounded-circle text-center">
+                <span class="number">4</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Summary</p>
+            </li>
+          </ul>
+        </div>
+        <div class="page__header col-12">
+          <h2>Please Select Invoice Reference No.</h2>
+        </div>
+        <form id="cnCreateForm" name="cnCreateForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+          
+            <!-- Reference Invoice - Start -->
+            <div class="box col-12">
+                <div class="col-6 offset-3">
+                    <div class="form-group d-flex flex-wrap align-items-center">
+                        <label class="form-label col-6 text-right mb-0">Referece to:</label>
+                        <div class="col-3 nopadding">
+                            <input type="text" name="invoice_no" id="invoice_no" value="" class="border border-1px border-lightgrey rounded py-2" />
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-wrap">
+                        <label class="form-label col-6 text-right">Select type of credit note:</label>
+                        <div class="col-4 nopadding">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="adjustment_type" id="adjustment_type_qty" value="qty" />
+                                <label class="custom-control-label" for="adjustment_type_qty"> Quantity Adjustment</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="adjustment_type" id="adjustment_type_price" value="price" />
+                                <label class="custom-control-label" for="adjustment_type_price"> Price Adjustment</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reference Invoice - End -->
+
+            <!-- Box "#vendor" - Start -->
+            <div class="d-flex flex-wrap box">
+                <a href="#vendorInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="vendorInfo" class="d-flex col-12 btnToggle">
+                    <div class="col-6">
+                        <h3 class="border-bottom gray-1">Vendor</h3>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="border-bottom gray-1">Company</h3>
+                        <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <!-- Vendor Lists - Start -->
+                <div id="vendorInfo" class="collapse multi-collapse col-12 show">
+                    <div class="card card-body noborder">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <p class="col-4 text-right">Code :</p>
+                                    <p class="col-6">0001001150</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Name :</p>
+                                    <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Tax ID :</p>
+                                    <p class="col-6">7729602003486</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Branch :</p>
+                                    <p class="col-6">112 (BKK)</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Address :</p>
+                                    <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Tel. :</p>
+                                    <p class="col-6">02-224-0027</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <p class="col-4 text-right">Code :</p>
+                                    <p class="col-6">0100</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Name :</p>
+                                    <p class="col-6">SCG Chemical</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Tax ID :</p>
+                                    <p class="col-6">263707019058</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Branch :</p>
+                                    <p class="col-6">BU1 (SCG)</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Address :</p>
+                                    <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-4 text-right">Tel. :</p>
+                                    <p class="col-6">02-123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vendor Lists - End -->
+
+            </div>
+            <!-- Box #vendor" - End -->
+
+            <!-- Button - Start -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+                    <button type="button" name="btnNext" id="btnNext" class="btn" disabled>Next <i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <!-- Button - End -->
+
+        </form>
+        <!-- Modal #addPO - Start -->
+        <div id="addPO" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 id="myModalLabel">Company Information</h3>
+              </div>
+              <div class="modal-body d-flex">
+                <div class="col-6">
+                  <div class="form-group border border-1px border-lightgrey rounded disabled">
+                    <label class="form-label" for="po_code">Code</label>
+                    <input type="text" name="po_code" value="56" class="form-control noborder" disabled />
+                  </div>
+                  <div class="form-group border border-1px border-lightgrey rounded disabled">
+                    <label class="form-label" for="po_name">Name</label>
+                    <input type="text" name="po_name" value="SCG Chemical" class="form-control noborder" disabled />
+                  </div>
+                  <div class="form-group border border-1px border-lightgrey rounded">
+                    <label class="form-label" for="po_taxId">Tax ID</label>
+                    <input type="text" name="po_taxId" value="2637070190598" class="form-control noborder" />
+                  </div>
+                  <div class="form-group border border-1px border-lightgrey rounded">
+                    <label class="form-label" for="po_tel">Tel.</label>
+                    <input type="text" name="po_code" value="02-123-4567" class="form-control noborder" />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group border border-1px border-lightgrey rounded">
+                    <label class="form-label" for="po_branch">Branch</label>
+                    <input type="text" name="po_code" value="BU1 (SCG)" class="form-control noborder" />
+                  </div>
+                  <div class="form-group border border-1px border-lightgrey rounded">
+                    <label class="form-label" for="po_address">Address</label>
+                    <textarea name="po_address" class="form-control noborder">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800 02-123-4567</textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn--transparent btn-wide" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button type="button" name="btnAddPO" id="btnAddPO" class="btn btn--transparent btn-purple btn-wide">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal #addPO - End -->
+        <!-- Modal #confirmCancel - Start -->
+        <div id="confirmCancel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center w-100">Cancel</h3>
+              </div>
+              <div class="modal-body">
+                <p class="text-center">Do you want to cancel this invoice?</p>
+                <p>&nbsp;</p>
+                <p class="text-center">
+                  <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                  <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn--transparent btn-wide">Yes</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal #confirmCancel - End -->
+        <!-- Small Screen Cover - Start -->
+        <div id="smallScreenCover">
+          <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+        </div>
+        <!-- Small Screen Cover - End -->
+      </div>
+      <p><a href="javascript:void(0);" data-toggle="modal" data-target="#alertBox">Click ME!</a></p>
+      <!-- Start #cn_create - End -->
+
+      <!-- Modal - Start -->
+      <div id="alertBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alertBox" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                <h3 id="myModalLabel">Error</h3>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <p>The system cannot get attachment configuration because {error message}</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        var nextStep_1 = false;
+        var nextStep_2 = false;
+        $(document).ready(function() {
+            
+            /* Hiding Navigation - Start */
+            $('.page').css('width', '100%');
+            $('nav.side-navbar, .sidenav-header-toggle').hide();
+            /* Hiding Navigation - End */
+
+            $('body').on('change', 'input[name="adjustment_type"]', function(){
+                if( $(this).prop('checked') === true ){
+                    nextStep_2 = true;
+                }else{
+                    nextStep_2 = false;
+                }
+                checkNextStep();
+            });
+            $('body').on('keyup', 'input#invoice_no', function(){
+                if( $(this).val() != '' ){
+                    nextStep_1 = true;
+                }else{
+                    nextStep_1 = false;
+                }
+                checkNextStep();
+            });
+            $('body').on('click','#btnNext', function(){
+                if( $('input[name="adjustment_type"]:checked').val() == 'price'){
+                    top.location.href='cn_create_2_price.html';
+                }else{
+                    top.location.href='cn_create_2.html';
+                }
+            });
+        });
+        function checkNextStep(){
+            if( nextStep_1 === true && nextStep_2 === true ){
+                $('#btnNext').prop('disabled', false);
+            }else{
+                $('#btnNext').prop('disabled', true);
+            }
+        }
+    </script>
+  </body>
+
+</html>

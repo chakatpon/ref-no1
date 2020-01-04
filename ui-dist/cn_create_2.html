@@ -1,0 +1,570 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <!-- Start #cn_create - Start -->
+      <div id="cn_create" class="row step-2">
+        <div id="step-indicator" class="col-12">
+          <ul class="d-flex justify-content-center">
+            <li class="flex-fill finished">
+              <div class="indicator step-1 rounded-circle text-center finished">
+                <span class="number">1</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Select Invoice</p>
+            </li>
+            <li class="flex-fill active">
+              <div class="indicator step-2 rounded-circle text-center">
+                <span class="number">2</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Credit Note Items</p>
+            </li>
+            <li class="flex-fill">
+              <div class="indicator step-3 rounded-circle text-center">
+                <span class="number">3</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Insert Credit Note Details</p>
+            </li>
+            <li class="flex-fill">
+              <div class="indicator step-4 rounded-circle text-center">
+                <span class="number">4</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Summary</p>
+            </li>
+          </ul>
+        </div>
+        <div class="page__header col-12">
+          <h2>Please Select Credit Note Item</h2>
+        </div>
+        <form id="cnCreateForm" name="cnCreateForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+          
+            <!-- Credit Note Item List - Start -->
+            <div class="box col-12">
+                <h3>Invoice No.: INV872439843 (<span class="selectedTotal">0 Item</span>)</h3>
+                <div class="table-responsive">
+                    <table class="table dataTable">
+                        <thead class="bg-lightgrey">
+                            <tr>
+                                <th><input type="checkbox" id="selectAll" /></th>
+                                <th>Invoice<br />Item No.</th>
+                                <th>Material Description</th>
+                                <th>PO No.</th>
+                                <th>PO<br />Item No.</th>
+                                <th>Invoice QTY</th>
+                                <th>CN QTY</th>
+                                <th>Unit</th>
+                                <th>Unit<br />Price</th>
+                                <th>Currency</th>
+                                <th>CN<br />Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="selectedIds[]" value="1" /></td>
+                                <td><strong>001</strong></td>
+                                <td>BREAKER,0.6-1 A,3VU 1340-1MF00, …</td>
+                                <td>9999099992</td>
+                                <td>003</td>
+                                <td>
+                                    100.000
+                                    <input type="hidden" name="invoiceQty[]" value="100.000" />
+                                </td>
+                                <td><input type="text" name="cnQty[]" value="80.000" class="text-right rounded border border-1px border-lightgrey" disabled /></td>
+                                <td>PC</td>
+                                <td>
+                                    50.00
+                                    <input type="hidden" name="unitPrice[]" value="50.00" />
+                                </td>
+                                <td>THB</td>
+                                <td class="total">4,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Credit Note Item List - End -->
+
+            <!-- Button - Start -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+                    <button type="button" name="btnBack" id="btnBack" class="btn btn--transparent"><i class="fa fa-chevron-left"></i> Back</button>
+                    <button type="button" name="btnNext" id="btnNext" class="btn" disabled>Next <i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <!-- Button - End -->
+
+        </form>
+        
+        <!-- Modal #confirmCancel - Start -->
+        <div id="confirmCancel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center w-100">Cancel</h3>
+              </div>
+              <div class="modal-body">
+                <p class="text-center">Do you want to cancel this invoice?</p>
+                <p>&nbsp;</p>
+                <p class="text-center">
+                  <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">No</button>
+                  <button type="button" name="btnConfirmCancel" id="btnConfirmCancel" class="btn btn--transparent btn-wide" onclick="top.location.href='cn.html';">Yes</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal #confirmCancel - End -->
+
+        <!-- Small Screen Cover - Start -->
+        <div id="smallScreenCover">
+          <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+        </div>
+        <!-- Small Screen Cover - End -->
+      </div>
+      <p><a href="javascript:void(0);" data-toggle="modal" data-target="#alertBox">Click ME!</a></p>
+      <!-- Start #cn_create - End -->
+
+      <!-- Modal - Start -->
+      <div id="alertBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alertBox" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+            <h3 id="myModalLabel">Error</h3>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <p>The system cannot get attachment configuration because {error message}</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" name="btnCloseModal" id="btnCloseModal" class="btn btn-wide" data-dismiss="modal" aria-hidden="true">OK</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Modal - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /* Hiding Navigation - Start */
+            $('.page').css('width', '100%');
+            $('nav.side-navbar, .sidenav-header-toggle').hide();
+            /* Hiding Navigation - End */
+
+            $('.dataTable').DataTable({
+                //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+                "language": {
+                    "lengthMenu": "Display _MENU_ Per Page"
+                },
+                columnDefs: [{
+                    "targets": [0],
+                    "orderable": false,
+                    'sortable': false,
+                    'width' : '60px'
+                }, {
+                    'targets': [1],
+                    'width': '80px',
+                    'orderable': true
+                }, {
+                    'targets': [2],
+                    'width': '300px',
+                }, {
+                    'targets': [3],
+                    'width': '100px'
+                }, {
+                    'targets': [4],
+                    'width': '80px'
+                }, {
+                    'targets': [5],
+                    'width': '80px'
+                }, {
+                    'targets': [6],
+                    'width': '80px'
+                }, {
+                    'targets': [7,8,9,10],
+                    'width': '80px'
+                }],
+                order: [
+                    [1, "asc"]
+                ],
+                fixedHeader: true,
+                stateSave: false,
+                paging: false,
+                bLengthChange: true,
+                searching: false,
+                info: false,
+                ordering: true
+            });
+
+            /* input#selectAll handler - Start */
+            $('body').on('change', 'input#selectAll', function(){
+                $('input[name="selectedIds[]"]').prop( 'checked', $(this).prop('checked') );
+                if( $(this).prop('checked') === true ){
+                    $('tbody').find('tr').addClass('selected');
+                    $('tbody').find('input[name="cnQty[]"]').prop('disabled', false );
+                    countSelectedTotal();
+                    checkNextStep();
+                }else{
+                    $('tbody').find('tr').removeClass('selected');
+                    $('tbody').find('input[name="cnQty[]"]').prop('disabled', true );
+                    countSelectedTotal();
+                    checkNextStep();
+                }
+            });
+            /* input#selectAll handler - End */
+
+            /* input[name="selectedIds[]"] handler - Start */
+            $('body').on('change', 'input[name="selectedIds[]"]', function(){
+                $(this).each(function(){
+                    if( $(this).prop('checked') === true ){
+                        $(this).parents('tr').addClass('selected');
+                        $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', false );
+                        countSelectedTotal();
+                        checkNextStep();
+                    }else{
+                        $(this).parents('tr').removeClass('selected');
+                        $(this).parents('tr').find('input[name="cnQty[]"]').prop('disabled', true );
+                        countSelectedTotal();
+                        checkNextStep();
+                    }
+                });
+            });
+            /* input[name="selectedIds[]"] handler - End */
+
+            /* input[name="cnQty[]"] handler - Start */
+            $('body').on('keyup', 'input[name="cnQty[]"]', function(){
+                var limitVal = $(this).parents('tr').find('input[name="invoiceQty[]"]').val();
+                if( $(this).val() > limitVal ){
+                    $(this).addClass('danger');
+                }else{
+                    $(this).removeClass('danger');
+                }
+
+                /* Calculate Total - Start */
+                var unitPrice = $(this).parents('tr').find('input[name="unitPrice[]"]').val();
+                var total = parseInt( $(this).val() ) * parseInt( unitPrice );
+                $(this).parents('tr').find('.total').html( number_format( total, 2, '.', ',' ) );
+                /* Calculate Total - End */
+
+                checkNextStep();
+            });
+            /* input[name="cnQty[]"] handler - End */
+
+            /* btnCancel Handler - Start */
+            $('body').on('click', '#btnCancel', function(){
+                $('#confirmCancel').modal();
+            });
+            /* btnCancel Handler - End */
+
+            /* btnBack Handler - Start */
+            $('body').on('click', '#btnBack', function(){
+                top.location.href='cn_create.html';
+            });
+            /* btnBack Handler - End */
+
+            /* btnNextStep Handler - Start */
+            $('body').on('click', '#btnNext', function(){
+                top.location.href='cn_create_3.html';
+            });
+            /* btnNextStep Handler - End */
+        });
+        function number_format(number, decimals, dec_point, thousands_sep){
+            number = number.toFixed(decimals);
+
+            var nstr = number.toString();
+            nstr += '';
+            x = nstr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? dec_point + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+
+            while (rgx.test(x1))
+                x1 = x1.replace(rgx, '$1' + thousands_sep + '$2');
+
+            return x1 + x2;
+
+        }
+
+        function checkNextStep(){
+            var nextStep = false;
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            var cnQtyExceed = $('input[name="cnQty[]"].danger').length;
+
+            if( checked > 0 && cnQtyExceed == 0 ){
+                $('#btnNext').prop('disabled', false);
+            }else{
+                $('#btnNext').prop('disabled', true);
+            }
+        }
+
+        function countSelectedTotal(){
+            var checked = $('input[name="selectedIds[]"]:checked').length;
+            if( checked > 1 ){
+                $('.selectedTotal').html( checked+' Items' );
+            }else{
+                $('.selectedTotal').html( checked+' Item' );
+            }
+        }
+    </script>
+  </body>
+
+</html>

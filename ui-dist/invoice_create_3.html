@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <!-- Start #invoice_create - Start -->
+      <div id="invoice_create" class="row">
+        <div id="step-indicator" class="col-12">
+          <ul class="d-flex justify-content-center">
+            <li class="flex-fill finished">
+              <div class="indicator step-1 rounded-circle text-center">
+                <span class="number">1</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Select PO and Items</p>
+            </li>
+            <li class="flex-fill finished">
+              <div class="indicator step-2 rounded-circle text-center">
+                <span class="number">2</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Insert Invoice Details</p>
+            </li>
+            <li class="flex-fill active">
+              <div class="indicator step-3 rounded-circle text-center">
+                <span class="number">3</span>
+                <i class="fa fa-check"></i>
+              </div>
+              <p class="text-center">Summary</p>
+            </li>
+          </ul>
+        </div>
+        <div class="page__header col-12">
+          <h2>Invoice No.: PTINV002</h2>
+        </div>
+        <form id="editForm" name="editForm" method="post" enctype="multipart/form-data" action="" class="form col-12">
+          <div class="box box--width-header col-12">
+            <div class="box__header">
+              <div class="row justify-content-between align-items-center mb-2">
+                <div class="col"> Entry Date : <strong>07/03/2018</strong>
+                </div>
+              </div>
+            </div><!-- box__header -->
+            <div class="box__inner">
+              <!-- Box "#vendor" - Start -->
+              <div class="row box ml-0 mr-0">
+                <a href="#vendorInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Vendor</h3>
+                  </div>
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Company</h3>
+                  </div>
+                </a>
+                <!-- Vendor Lists - Start -->
+                <div id="vendorInfo" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Code :</p>
+                          <p class="col-6">0001001150</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Name :</p>
+                          <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Tax ID :</p>
+                          <p class="col-6">7729602003486</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Branch :</p>
+                          <p class="col-6">112 (BKK)</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Address :</p>
+                          <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Tel. :</p>
+                          <p class="col-6">02-224-0027</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Code :</p>
+                          <p class="col-6">0100</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Name :</p>
+                          <p class="col-6">SCG Chemical</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Tax ID :</p>
+                          <p class="col-6">263707019058</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Branch :</p>
+                          <p class="col-3">
+                            <select class="custom-select">
+                              <option value="1">Branch 1</option>
+                              <option value="2">Branch 2</option>
+                              <option value="3">Branch 3</option>
+                              <option value="4">Branch 4</option>
+                              <option value="5">Branch 5</option>
+                              <option value="6">Branch 6</option>
+                              <option value="7">Branch 7</option>
+                              <option value="8">Branch 8</option>
+                              <option value="9">Branch 9</option>
+                            </select>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Address :</p>
+                          <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Tel. :</p>
+                          <p class="col-6">02-123-4567</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Vendor Lists - End -->
+              </div>
+              <!-- Box #vendor" - End -->
+              <!-- Box "#paymentInfo" - Start -->
+              <div class="row box ml-0 mr-0">
+                <a href="#paymentInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-12">
+                    <h3 class="border-bottom gray-1">Payment Information</h3>
+                  </div>
+                </a>
+                <!-- Payment Information Lists - Start -->
+                <div id="paymentInfo" class="w-100">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Invoice Date :</p>
+                          <p class="col-6">07/08/2018</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Payment Date :</p>
+                          <p class="col-6">30 days</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Payment Term Description :</p>
+                          <p class="col-6">Credit 30 days after receive bill</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Invoice Financing :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Send to CMS :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Send to Bank :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Due Date :</p>
+                          <p class="col-6">21/08/2018</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Revised Payment Due Date :</p>
+                          <p class="col-6">-</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Sub Total :</p>
+                          <p class="col-6">
+                            <span class="number text-right">625,500.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">TAX Total :</p>
+                          <p class="col-6">
+                            <span class="number text-right">45,675.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Invoice Amount (inc. TAX) :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Invoice Payable Amount (inc. TAX) :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Payment Information Lists - End -->
+              </div>
+              <!-- Box #paymentInfo" - End -->
+              <!-- Box Attachment - Start -->
+              <div class="row box ml-0 mr-0">
+                <a href="#attachmentLists" class="d-flex w-100 btnToggle">
+                  <div class="col-12">
+                    <h3 class="border-bottom gray-1">Attachments</h3>
+                  </div>
+                </a>
+                <!-- Attachment lists - Start -->
+                <div id="attachmentLists" class="w-100">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Attach Tax Invoice :</p>
+                          <p class="col-6"><span class="fileName">TaxINV.PNG</span</p> </div> <div class="row">
+                              <p class="col-4 text-right nopadding">Receipt NO. :</p>
+                              <p class="col-6">123456789</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Attach Delivery Note :</p>
+                          <p class="col-6"><span class="fileName">Filename.pdf</span></p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Attach Receipt :</p>
+                          <p class="col-6"><span class="fileName">Filename.pdf</span></p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right nopadding">Attach Other Documents :</p>
+                          <p class="col-6"><span class="fileName">Filename.pdf, Filename.pdf</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Attachment lists - End -->
+              </div>
+              <!-- Box Attachment - End -->
+              <!-- Box "#tax3" - Start -->
+              <div class="row box ml-0 mr-0">
+                <a href="#tax3" class="d-flex w-100 btnToggle">
+                  <div class="col-12">
+                    <h3 class="gray-1">Items Information</h3>
+                  </div>
+                </a>
+                <!-- tax3 Lists - Start -->
+                <div id="tax3" class="w-100">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="table_wrapper">
+                          <table class="table datatable">
+                            <thead>
+                              <tr>
+                                <th>PO No.</th>
+                                <th>PO Item No.</th>
+                                <th>Material Description</th>
+                                <th>Qty</th>
+                                <th>Unit Description</th>
+                                <th>Unit Price</th>
+                                <th>Sub Total</th>
+                                <th>Currency</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="text-uppercase">9999099564</td>
+                                <td class="text-uppercase">0001</td>
+                                <td class="text-uppercase">Flexible bag for resin with...</td>
+                                <td class="text-uppercase">8,500.000</td>
+                                <td class="text-uppercase">Bag</td>
+                                <td class="text-uppercase">30.00</td>
+                                <td class="text-uppercase">255,000.00</td>
+                                <td class="text-uppercase">THB</td>
+                              </tr>
+                              <tr>
+                                <td class="text-uppercase">9999099564</td>
+                                <td class="text-uppercase">0002</td>
+                                <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                                <td class="text-uppercase">1,200.000</td>
+                                <td class="text-uppercase">Bag</td>
+                                <td class="text-uppercase">325.00</td>
+                                <td class="text-uppercase">390,000.00</td>
+                                <td class="text-uppercase">THB</td>
+                              </tr>
+                              <tr>
+                                <td class="text-uppercase">9999099564</td>
+                                <td class="text-uppercase">0003</td>
+                                <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                                <td class="text-uppercase">15.000</td>
+                                <td class="text-uppercase">Bag</td>
+                                <td class="text-uppercase">300.00</td>
+                                <td class="text-uppercase">4,500.00</td>
+                                <td class="text-uppercase">THB</td>
+                              </tr>
+                              <tr>
+                                <td class="text-uppercase">9999099564</td>
+                                <td class="text-uppercase">0004</td>
+                                <td class="text-uppercase">Flexible bag for resin with...</td>
+                                <td class="text-uppercase">60.000</td>
+                                <td class="text-uppercase">Bag</td>
+                                <td class="text-uppercase">50.00</td>
+                                <td class="text-uppercase">3,000.00</td>
+                                <td class="text-uppercase">THB</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- tax3 Lists - End -->
+              </div>
+              <!-- Box #tax3" - End -->
+            </div><!-- box__inner -->
+          </div>
+          <!-- Button - Start -->
+          <div class="row w-100">
+            <div class="col-12 text-center">
+              <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+              <button type="button" name="btnBack" id="btnBack" class="btn btn--transparent"><i class="fa fa-chevron-left"></i> Back</button>
+              <button type="submit" name="btnSubmit" id="btnSubmit" class="btn btn-purple">Submit</button>
+            </div>
+          </div>
+          <div class="row">&nbsp;</div>
+          <!-- Button - End -->
+        </form>
+        <!-- Small Screen Cover - Start -->
+        <div id="smallScreenCover">
+          <p class="text-center"><img src="img/icon_expanded.png" alt="" /></p>
+        </div>
+        <!-- Small Screen Cover - End -->
+      </div>
+      <!-- Start #invoice_create - End -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* Hiding Navigation - Start */
+        $('.page').css('width', '100%');
+        $('nav.side-navbar, .sidenav-header-toggle').hide();
+        /* Hiding Navigation - End */
+        /* DataTable - Start */
+        var table = $('.datatable').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "scrollX": true,
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0],
+            "orderable": false
+          }, {
+            'targets': [1],
+            'width': '120px'
+          }, {
+            'targets': [2],
+            'width': '300px',
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7],
+            'width': '100px'
+          }],
+          fixedHeader: true,
+          stateSave: true,
+          paging: false,
+          bLengthChange: false,
+          searching: false,
+          info: false
+        });
+        /* DataTable - End */
+        /* Button Handler - Start */
+        $('body').on('click', '#btnBack', function() {
+          top.location.href = 'invoice_create_2.html';
+        });
+        $('body').on('click', '#btnCancel', function() {
+          if (confirm('Do you want to cancel all information?') === true) {
+            top.location.href = 'invoice.html';
+          }
+        });
+        $('body').on('clikc', '#btnSubmit', function() {
+          alert('Submit!');
+        });
+        /* Button Handler - End */
+      });
+    </script>
+  </body>
+
+</html>

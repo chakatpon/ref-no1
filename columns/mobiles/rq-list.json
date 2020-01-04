@@ -1,0 +1,195 @@
+{
+  "name": "rq-list",
+  "title": "Request List",
+  "search": { "url": "", "filters": [] },
+  "table": {
+    "name": "rq-list",
+    "paging": true,
+    "search": true,
+    "sortable": true,
+    "hideColumn": true,
+    "pageSizeOptions": [10, 25, 50, 100],
+    "export": { "name": "Request List" },
+    "createRole": ["SELLER:Supplier"],
+    "columns": [
+      {
+        "header": "Request No.",
+        "field": "externalId",
+        "type": "customLink",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 1,
+        "requiredColumn": true,
+        "active": true
+      },
+      {
+        "header": "Request Type",
+        "field": "type",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 2,
+        "active": true
+      },
+
+      {
+        "header": "Request Status",
+        "field": "status",
+        "type": "color",
+        "sort": false,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 3,
+        "active": true,
+        "colorMap": {
+          "Submitted": "#A9D4B6",
+          "Request to Resubmit": "#E42CA7",
+          "Waiting for Payment": "#671B9A",
+          "Cancelled By Vendor": "#9B9B9B",
+          "Payment Failed": "#FF2944",
+          "Paid": "#287DC0"
+        }
+      },
+      {
+        "header": "Sub Type",
+        "field": "subType",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 4,
+        "active": true
+      },
+
+      {
+        "header": "Ref No.",
+        "field": "referenceNumber",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 5,
+        "active": true
+      },
+      {
+        "header": "Vendor Name",
+        "field": "vendorName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 6,
+        "active": true
+      },
+      {
+        "header": "Company Name",
+        "field": "companyName",
+        "displayMode": 1,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 7,
+        "active": true
+      },
+      {
+        "header": "Amount",
+        "field": "total",
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 8,
+        "active": true
+      },
+      {
+        "header": "Request Reason",
+        "field": "requestReason",
+        "displayMode": 2,
+        "sort": true,
+        "export": true,
+        "hidden": false,
+        "defaultOrder": 9,
+        "active": true
+      }
+    ]
+  },
+  "form": {
+    "sections": [
+      {
+        "fields": [
+          {
+            "fieldIndex": 1,
+            "title": "Request No.",
+            "key": "requestDocumentNumbers",
+            "controlType": "autocomplete",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/requests?page=1&pageSize=10&requestDocumentNumbers=",
+            "displayField": "externalId"
+          },
+          {
+            "fieldIndex": 2,
+            "title": "Ref No.",
+            "key": "referenceDocumentNumbers",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 3,
+            "title": "Company Name",
+            "key": "companyNames",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 4,
+            "title": "Vendor Name",
+            "key": "vendorNames",
+            "type": "textbox",
+            "active": true,
+            "required": false
+          },
+          {
+            "fieldIndex": 5,
+            "title": "Request Type",
+            "key": "requestTypes",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/requests/TYPE/available?organisationUnit=BUYER"
+          },
+          {
+            "fieldIndex": 6,
+            "title": "Sub Type",
+            "key": "requestSubTypes",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/requests/SUBTYPE/available?organisationUnit=BUYER"
+          },
+          {
+            "fieldIndex": 7,
+            "title": "Status",
+            "key": "statuses",
+            "controlType": "dropdown",
+            "type": "api",
+            "active": true,
+            "required": false,
+            "apiUrl": "/api/requests/status?role=BUYER"
+          },
+          {
+            "fieldIndex": 8,
+            "title": "Document No.",
+            "key": "documentNumbers",
+            "controlType": "textbox",
+            "active": true,
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

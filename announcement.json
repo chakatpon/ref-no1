@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "type": "b",
+  "typeA": {
+    "en": {
+      "title": "Annoucement",
+      "date": "15/8/2019",
+      "imgURL": "https://i.imgur.com/pYoFqRV.png",
+      "link": "https://www.google.com/",
+      "linkLabel": "for more detail",
+      "click": "Click.",
+      "dontShowLabel": "Don't show next time.",
+      "closeLabel": "Close",
+      "th": "TH - ไทย",
+      "en": "En - English"
+    },
+    "th": {
+      "title": "ฟังก์ชันใหม่บนระบบ B2P",
+      "date": "15/8/2019",
+      "imgURL": "https://i.imgur.com/pYoFqRV.png",
+      "link": "http://dv.co.th/index.php",
+      "linkLabel": "อ่านรายละเอียดเพิ่มเติม",
+      "click": "คลิก",
+      "dontShowLabel": "คลิกที่นี่ เพื่อไม่ต้องการให้แสดงหน้านี้อีก",
+      "closeLabel": "ปิด",
+      "th": "TH - ไทย",
+      "en": "En - English"
+    }
+  },
+  "typeB": {
+    "en": {
+      "title": "New Functions on Release 8",
+      "dateLabel": "Date",
+      "date": "15/8/2019",
+      "link": "http://dv.co.th/index.php",
+      "linkLabel": "for more detail",
+      "click": "Click.",
+      "dontShowLabel": "Don't show next time.",
+      "closeLabel": "Close",
+      "th": "TH - ไทย",
+      "en": "En - English",
+      "data": [
+        {
+          "header": "1. Function A",
+          "description": "this is description for function A.",
+          "imgURL": "https://i.imgur.com/pYoFqRV.png"
+        },
+        {
+          "header": "2. Function B",
+          "description": "this is description for function B.",
+          "imgURL": "https://www.blognone.com/sites/default/files/externals/4a98e64724a8866ef8ca748c45ecd948.jpg"
+        },
+        {
+          "header": "3. Function C",
+          "description": "this is description for function C.",
+          "imgURL": "http://thumbsup.in.th/wp-content/uploads/2017/07/use02.jpg"
+        },
+        {
+          "header": "4. Function D",
+          "description": "this is description for function D.",
+          "imgURL": "https://brandinside.asia/wp-content/uploads/2016/08/dv.png"
+        },
+        {
+          "header": "5. Function E",
+          "description": "this is description for function E.",
+          "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ubGeR40rlAQFOfodLmHjBZN7w4RoH1QQDlHeKyVfFn4KGttd"
+        },
+        {
+          "header": "6. Function F",
+          "description": "this is description for function F.",
+          "imgURL": "https://i.imgur.com/pYoFqRV.png"
+        }
+      ]
+    },
+    "th": {
+      "title": "ฟังก์ชันใหม่บนระบบ B2P (Release 8)",
+      "dateLabel": "วันที่",
+      "date": "15/8/2019",
+      "link": "http://dv.co.th/index.php",
+      "linkLabel": "อ่านรายละเอียดเพิ่มเติม",
+      "click": "คลิก",
+      "dontShowLabel": "คลิกที่นี่ เพื่อไม่ต้องการให้แสดงหน้านี้อีก",
+      "closeLabel": "ปิด",
+      "th": "TH - ไทย",
+      "en": "En - English",
+      "data": [
+        {
+          "header": "1. Function Retention Collection and Payback",
+          "description": "การหักเงินประกันผลงานในใบแจ้งหนี้ และการคืนเงินประกันผลงาน",
+          "imgURL": "https://i.imgur.com/pYoFqRV.png"
+        },
+        {
+          "header": "2. Function Request Feature for Claim/ Penalty and Rebate",
+          "description": "การสร้างเอกสารคำร้องสำหรับเงินค่าปรับและเงินคืน ของผู้ขาย",
+          "imgURL": "https://www.blognone.com/sites/default/files/externals/4a98e64724a8866ef8ca748c45ecd948.jpg"
+        },
+        {
+          "header": "3. Function Attachment in GR and Link to GR Attachment from DOA Detail Page",
+          "description": "การแนบไฟล์ ที่เอกสารทำรับสินค้า จากหน้าอนุมัติเอกสารใบแจ้งหนี้",
+          "imgURL": "http://thumbsup.in.th/wp-content/uploads/2017/07/use02.jpg"
+        },
+        {
+          "header": "4. Function New DOA Email format as daily summary",
+          "description": "อีเมลเพื่อแจ้งเตือนผู้อนุมัติใบแจ้งหนี้ของทางผู้ซื้อ โดยส่งข้อมูลสรุปใบแจ้งหนี้ที่ต้องทำการอนุมัติรวมในแต่ละวัน",
+          "imgURL": "https://brandinside.asia/wp-content/uploads/2016/08/dv.png"
+        },
+        {
+          "header": "5. Function Request to Resubmit Notification to Supplier via email",
+          "description": "อีเมลเพื่อแจ้งเตือนผู้ขายให้ทำการแก้ไขใบแจ้งหนี้ กรณีที่ทางผู้ซื้อทำการร้องขอให้แก้ไข",
+          "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ubGeR40rlAQFOfodLmHjBZN7w4RoH1QQDlHeKyVfFn4KGttd"
+        }
+      ]
+    }
+  }
+}

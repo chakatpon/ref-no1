@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <div class="page__header">
+        <h2 class="text-center">Edit Mode</h2>
+      </div>
+      <div id="invoice_detail_edit_page" class="row">
+        <form id="editForm" name="editForm" method="post" enctype="multipart/form-data" action="" class="form col-10 offset-1">
+          <div class="form-group form-inline col-12 mb-3">
+            <label class="control-label h3 font-bold">Invoice No.:</label>
+            <input type="text" name="invoice_no" value="PTINV002" class="form-control" />
+          </div>
+          <section class="box box--width-header col-12">
+            <!-- box--no-shadow -->
+            <div class="box__header">
+              <div class="row justify-content-between align-items-center mb-2">
+                <div class="col"> Entry Date : <strong>07/03/2018</strong>
+                </div>
+              </div>
+            </div><!-- box__header -->
+            <div class="box__inner">
+              <!-- Box "#vendor" - Start -->
+              <div class="row box">
+                <a href="#vendorInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="vendorInfo" class="d-flex w-100 btnToggle">
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Vendor</h3>
+                  </div>
+                  <div class="col-6">
+                    <h3 class="border-bottom gray-1">Company</h3>
+                    <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <!-- Vendor Lists - Start -->
+                <div id="vendorInfo" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Code :</p>
+                          <p class="col-6">0001001150</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Name :</p>
+                          <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tax ID :</p>
+                          <p class="col-6">7729602003486</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Branch :</p>
+                          <p class="col-6">112 (BKK)</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Address :</p>
+                          <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tel. :</p>
+                          <p class="col-6">02-224-0027</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Code :</p>
+                          <p class="col-6">0100</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Name :</p>
+                          <p class="col-6">SCG Chemical</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tax ID :</p>
+                          <p class="col-6">263707019058</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Branch :</p>
+                          <p class="col-6">BU1 (SCG)</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Address :</p>
+                          <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Tel. :</p>
+                          <p class="col-6">02-123-4567</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Vendor Lists - End -->
+              </div>
+              <!-- Box #vendor" - End -->
+              <!-- Box "#paymentInfo" - Start -->
+              <div class="row box">
+                <a href="javascript:void(0);" aria-expanded="true" class="d-flex w-100 btnToggle itsNotButton">
+                  <div class="col-12">
+                    <h3 class="border-bottom gray-1">Payment Information</h3>
+                  </div>
+                </a>
+                <!-- Payment Information Lists - Start -->
+                <div id="paymentInfo" class="w-100">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row form-group">
+                          <p class="col-4 text-right pl-0">Invoice Date :</p>
+                          <p class="col-6 form-group">
+                            <i class="fa fa-calendar purple"></i>
+                            <input type="text" name="invoice_date" value="07/08/2018" class="datepicker form-control" />
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Payment Date :</p>
+                          <p class="col-6">30 days</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Payment Term <br />Description :</p>
+                          <p class="col-6">Credit 30 days after receive bill</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Invoice Financing :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Send to CMS :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Send to Bank :</p>
+                          <p class="col-6">No</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Invoice Financing :</p>
+                          <div class="col-6 d-inline-flex form-group">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="invoice_financing" id="invoice_financing_y" value="Y" />
+                              <label class="custom-control-label" for="invoice_financing_y"> Yes</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="invoice_financing" id="invoice_financing_n" value="N" checked="checked" />
+                              <label class="custom-control-label" for="invoice_financing_n"> No</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Due Date :</p>
+                          <p class="col-6">21/08/2018</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Revised Payment <br />Due Date :</p>
+                          <p class="col-6">-</p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Sub Total :</p>
+                          <p class="col-6">
+                            <span class="number text-right">625,500.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">TAX Total [7%] :</p>
+                          <p class="col-6">
+                            <span class="number text-right">45,675.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Invoice Amount <br />[inc. TAX] :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Invoice Payable <br />Amount [inc. TAX] :</p>
+                          <p class="col-6">
+                            <span class="number text-right">698,175.00</span>
+                            <span class="unit">THB</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Payment Information Lists - End -->
+              </div>
+              <!-- Box #paymentInfo" - End -->
+              <!-- Box Attachment - Start -->
+              <div class="row box">
+                <a href="javascript:void(0);" aria-expanded="true" class="d-flex w-100 btnToggle itsNotButton">
+                  <div class="col-12">
+                    <h3 class="border-bottom gray-1">Attachments</h3>
+                  </div>
+                </a>
+                <!-- Attachment lists - Start -->
+                <div id="attachmentLists" class="collapse multi-collapse w-100 show">
+                  <div class="card card-body noborder">
+                    <div class="row">
+                      <div class="col-6 nopadding">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Attach Tax Invoice :</p>
+                          <div class="col-6 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-4">&nbsp;</p>
+                          <ul id="attach_tax_invoice_list" class="uploadedList col-6">
+                            <li>
+                              <a href="javascript:void(0);" class="gray-1">TaxINV.PNG <i class="fa fa-times purple"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Receipt NO. :</p>
+                          <p class="col-6">123456789</p>
+                        </div>
+                      </div>
+                      <div class="col-6 nopadding">
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Attach Delivery Note :</p>
+                          <div class="col-6 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-4">&nbsp;</p>
+                          <ul id="attach_tax_invoice_list" class="uploadedList col-6">
+                            <li>
+                              <a href="javascript:void(0);" class="gray-1">TaxINV.PNG <i class="fa fa-times purple"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Attach Receipt :</p>
+                          <div class="col-6 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-4">&nbsp;</p>
+                          <ul id="attach_tax_invoice_list" class="uploadedList col-6">
+                            <li>
+                              <a href="javascript:void(0);" class="gray-1">TaxINV.PNG <i class="fa fa-times purple"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="row">
+                          <p class="col-4 text-right pl-0">Attach Other Documents :</p>
+                          <div class="col-6 nopadding form-group d-inline-flex custom-fileUpload">
+                            <input type="text" name="attach_tax_invoice" disabled="disabled" class="form-control" />
+                            <div class="upload-btn-wrapper">
+                              <button type="button" class="btn btn--transparent btnUpload">Browse</button>
+                              <input type="file" name="attach_tax_invoice_file" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-4">&nbsp;</p>
+                          <ul id="attach_tax_invoice_list" class="uploadedList col-6">
+                            <li>
+                              <a href="javascript:void(0);" class="gray-1">TaxINV.PNG <i class="fa fa-times purple"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Attachment lists - End -->
+              </div>
+              <!-- Box Attachment - End -->
+              <!-- Box PO List - Start -->
+              <div class="row box pt-0 pb-0">
+                <div id="po_items" class="col-2 border-right pt-3 pb-3">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);">
+                        <strong class="gray-1 text-center font-bold"> 9999099564<br /> (4 items) </strong>
+                        <i class="fa fa-times gray-2"></i>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="javascript:void(0);">
+                        <strong class="gray-1 text-center font-bold"> 9999099565<br /> (3 items) </strong>
+                        <i class="fa fa-times gray-2"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="text-center"><a href="javascript:void(0);" class="text-bold"><i class="fa fa-plus small"></i> Add PO</a></p>
+                </div>
+                <div id="po_lists" class="col-10">
+                  <div class="table_wrapper">
+                    <table class="table datatable">
+                      <thead>
+                        <tr>
+                          <th>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="selectall">
+                              <label class="custom-control-label pl-1 font-small text-shadow" for="selectall"></label>
+                            </div>
+                          </th>
+                          <th>PO Item No.</th>
+                          <th>Material Description</th>
+                          <th>Remaining Qty</th>
+                          <th>Qty</th>
+                          <th>Unit Description</th>
+                          <th>Unit Price</th>
+                          <th>Amount</th>
+                          <th>Currency</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="select-1" name="ids[]">
+                              <label class="custom-control-label pl-1 font-small text-shadow" for="select-1"></label>
+                            </div>
+                          </td>
+                          <td>001</td>
+                          <td>Big Bag, 100x100x125CM, W/Logo</td>
+                          <td>200.000</td>
+                          <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control" disabled="disabled" /></td>
+                          <td>Bag</td>
+                          <td>40.00</td>
+                          <td>0.00</td>
+                          <td>THB</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="select-2" name="ids[]" checked="checked">
+                              <label class="custom-control-label pl-1 font-small text-shadow" for="select-2"></label>
+                            </div>
+                          </td>
+                          <td>002</td>
+                          <td>Big Bag, 100x100x125CM, W/Logo</td>
+                          <td>50.000</td>
+                          <td class="form-group"><input type="text" name="qty[]" value="20.000" class="form-control" /></td>
+                          <td>Bag</td>
+                          <td>550.00</td>
+                          <td>11,000.00</td>
+                          <td>THB</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="select-3" name="ids[]">
+                              <label class="custom-control-label pl-1 font-small text-shadow" for="select-3"></label>
+                            </div>
+                          </td>
+                          <td>003</td>
+                          <td>Flexible PC for resin with...</td>
+                          <td>100.000</td>
+                          <td class="form-group"><input type="text" name="qty[]" value="0.000" class="form-control" disabled="disabled" /></td>
+                          <td>PCE</td>
+                          <td>330.00</td>
+                          <td>0.00</td>
+                          <td>THB</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Box PO List - End -->
+              <!-- Button - Start -->
+              <div class="row">
+                <div class="col-12 text-center">
+                  <button type="button" name="btnCancel" id="btnCancel" class="btn btn--transparent">Cancel</button>
+                  <button type="submit" name="btnSubmit" id="btnSubmit" class="btn btn--transparent btn-purple">Resubmit</button>
+                </div>
+              </div>
+              <div class="row">&nbsp;</div>
+              <!-- Button - End -->
+            </div><!-- box__inner -->
+          </section>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* Hiding Navigation - Start */
+        $('.page').css('width', '100%');
+        $('nav.side-navbar, .sidenav-header-toggle').hide();
+        /* Hiding Navigation - End */
+        /* Datepicker - Start */
+        var d = new Date();
+        var todayDate = '' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + (d.getFullYear() + 3);
+        $('.datepicker').daterangepicker({
+          singleDatePicker: true,
+          showDropdowns: true,
+          minDate: '01/01/2015',
+          maxDate: todayDate,
+          locale: {
+            format: 'DD/MM/YYYY'
+          }
+        });
+        /* Datepicker - End */
+        /* DataTable - Start */
+        var table = $('.datatable').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "scrollX": true,
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0],
+            "orderable": false,
+            "sortable": false
+          }, {
+            'targets': [1],
+            'width': '120px'
+          }, {
+            'targets': [2],
+            'width': '300px',
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7, 8],
+            'width': '100px'
+          }],
+          order: [
+            [1, "asc"]
+          ],
+          fixedHeader: true,
+          stateSave: false,
+          paging: false,
+          bLengthChange: false,
+          searching: false,
+          info: false
+        });
+        /* DataTable - End */
+        /* Select all handler - Start */
+        $('body').on('click', '#selectall', function() {
+          var target = $('.datatable');
+          target.find('input[type="checkbox"]').prop('checked', $(this).prop('checked'));
+          if ($(this).prop('checked') === true) {
+            target.find('input[type="text"]').prop('disabled', false);
+          }
+          else {
+            target.find('input[type="text"]').prop('disabled', true);
+          }
+        });
+        /* Select all handler - End */
+        /* Checkbox handler - Start */
+        $('body').on('change', 'input[name="ids[]"]', function() {
+          if ($(this).prop('checked') === true) {
+            $(this).parents('tr').find('input[name="qty[]"]').prop('disabled', false);
+          }
+          else {
+            $(this).parents('tr').find('input[name="qty[]"]').prop('disabled', true);
+          }
+        });
+        /* Checkbox handler - End */
+      });
+    </script>
+  </body>
+
+</html>

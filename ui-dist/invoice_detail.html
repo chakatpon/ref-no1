@@ -1,0 +1,795 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--build:css cs/style.min.css -->
+    <link rel="stylesheet" href="cs/style.css">
+    <!--/build-->
+  </head>
+
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper h-100">
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">
+            <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png" />
+                    </div>
+                  </span> Dashboard </a>
+              </li>
+              <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
+              <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
+              <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
+              <li><a class="nav-link" href="cn.html"><span><i class="icon icon-CN"></i></span>Credit Note</a></li>
+              <li><a class="nav-link" href="dn.html"><span><i class="icon icon-DN"></i></span>Debit Note</a></li>
+              <li><a class="nav-link" href="3wm.html"><span><i class="icon icon-3wm"></i></span>3 Way Matching</a></li>
+              <li><a class="nav-link" href="2wm.html"><span><i class="icon icon-2wm"></i></span>2 Way Matching</a></li>
+              <li><a class="nav-link" href="doa.html"><span><i class="icon icon-DOA"></i></span>Waiting DOA Approval</a></li>
+              <!-- <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-Mon"></i></span>LIV Posting Result</a></li>
+                    <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-PPR"></i></span>Payment Posting Result</a></li> -->
+              <li><a class="nav-link" href="log.html"><span><i class="icon icon-LOG"></i></span>Log</a></li>
+              <!-- <li>
+                        <a class="nav-link" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"><span><i class="icon icon-interface-windows"></i></span>Example dropdown </a>
+                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                            <li><a class="nav-link" href="#">Page</a></li>
+                        </ul>
+                    </li> -->
+            </div>
+            <li class="bottom"><a class="nav-link" href="login.html"><span><i class="icon icon-Logout"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sidenav-header-toggle">
+      <div class="row justify-content-start m-0">
+        <div class="col-2 p-0">
+          <div id="toggle-btn-open" class="toggle-btn-open">
+            <div class="hamburger">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page active">
+      <div class="page__header">
+        <h2>Invoice No. : NEGRESIT-001</h2>
+      </div>
+      <div class="page__breadcrumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Invoice</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Invoice No. : NEGRESIT-001</li>
+          </ol>
+        </nav>
+      </div>
+      <section id="invoice_detail_page" class="box box--width-header">
+        <!-- box--no-shadow -->
+        <div class="box__header">
+          <div class="row justify-content-between align-items-center mb-2">
+            <div class="col-4"> Entry Date : <strong>07/03/2018</strong>
+            </div>
+            <div class="col-8 text-right"> Invoice Status : <strong class="purple">Request to Resubmit</strong>
+              <button name="btnCancel" class="btn btn--transparent mr-2">Cancel Invoice</button>
+              <button name="btnEdit" class="btn btn--transparent mr-2">Edit Invoice</button>
+              <button name="btnHold" class="btn btn-wide mr-2">Hold</button>
+            </div>
+          </div>
+        </div><!-- box__header -->
+        <div class="box__inner">
+          <!-- Box "#vendor" - Start -->
+          <div class="row box">
+            <a href="#vendorInfo" data-toggle="collapse" role="button" aria-expanded="true" area-controls="vendorInfo" class="d-flex w-100 btnToggle">
+              <div class="col-6">
+                <h3 class="border-bottom gray-1">Vendor</h3>
+              </div>
+              <div class="col-6">
+                <h3 class="border-bottom gray-1">Company</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Vendor Lists - Start -->
+            <div id="vendorInfo" class="collapse multi-collapse w-100 show">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Code :</p>
+                      <p class="col-6">0001001150</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Name :</p>
+                      <p class="col-6">BKK BAYS WOOD CO., LTD</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tax ID :</p>
+                      <p class="col-6">7729602003486</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Branch :</p>
+                      <p class="col-6">112 (BKK)</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Address :</p>
+                      <p class="col-6">12/43 ถ.นราธิวาสราชนครดินทร์​แขวงสีลม เขตบางรัก กรุงเทพฯ 10500</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tel. :</p>
+                      <p class="col-6">02-224-0027</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Code :</p>
+                      <p class="col-6">0100</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Name :</p>
+                      <p class="col-6">SCG Chemical</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tax ID :</p>
+                      <p class="col-6">263707019058</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Branch :</p>
+                      <p class="col-6">BU1 (SCG)</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Address :</p>
+                      <p class="col-6">1 ถ.ปูนซีเมนต์ไทย แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Tel. :</p>
+                      <p class="col-6">02-123-4567</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Vendor Lists - End -->
+          </div>
+          <!-- Box #vendor" - End -->
+          <!-- Box "#paymentInfo" - Start -->
+          <div class="row box">
+            <a href="#paymentInfo" data-toggle="collapse" role="button" aria-expanded="false" area-controls="paymentInfo" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="border-bottom gray-1">Payment Information</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Payment Information Lists - Start -->
+            <div id="paymentInfo" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Date :</p>
+                      <p class="col-6">07/08/2018</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Payment Date :</p>
+                      <p class="col-6">30 days</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Payment Term <br />Description :</p>
+                      <p class="col-6">Credit 30 days after receive bill</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Financing :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Send to CMS :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Send to Bank :</p>
+                      <p class="col-6">No</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited By :</p>
+                      <p class="col-6">Thanakit.a</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited Date :</p>
+                      <p class="col-6">20/08/2018</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Due Date :</p>
+                      <p class="col-6">21/08/2018</p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Revised Payment <br />Due Date :</p>
+                      <p class="col-6">
+                            <strong class="purple d-flex align-items-center">
+                                30/09/2018 
+                                <svg width="24px" height="24px" viewBox="10 8 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-left:15px;">
+                                    <defs>
+                                        <filter x="-2.9%" y="-7.9%" width="105.8%" height="116.9%" filterUnits="objectBoundingBox" id="filter-1">
+                                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                                            <feMerge>
+                                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    <g id="Invoice" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Invoice_Detail_supplier_full" transform="translate(-1054.000000, -576.000000)" fill="#AF3694">
+                                            <g id="02_payment_information" filter="url(#filter-1)" transform="translate(166.000000, 480.000000)">
+                                                <g id="tb_revised_payment_due_date" transform="translate(801.000000, 102.000000)">
+                                                    <path d="M106,19.9404 L112.07,13.8794 L114.12,15.8794 L108.06,22.0004 L106,22.0004 L106,19.9404 Z M115.7,14.3494 L114.7,15.3494 L112.65,13.3504 L113.65,12.3504 C113.85,12.1404 114.19,12.1294 114.42,12.3504 L115.7,13.6294 C115.89,13.8304 115.89,14.1504 115.7,14.3494 Z M113,4.0004 L112,4.0004 L112,2.0004 L110,2.0004 L110,4.0004 L102,4.0004 L102,2.0004 L100,2.0004 L100,4.0004 L99,4.0004 C97.896,4.0004 97,4.8954 97,6.0004 L97,20.0004 C97,21.1044 97.896,22.0004 99,22.0004 L104,22.0004 L104,20.0004 L99,20.0004 L99,9.0004 L113,9.0004 L113,10.0004 L115,10.0004 L115,6.0004 C115,4.8954 114.104,4.0004 113,4.0004 Z" id="Fill-1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Sub Total :</p>
+                      <p class="col-6">
+                        <span class="number text-right">625,500.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">TAX Total :</p>
+                      <p class="col-6">
+                        <span class="number text-right">45,675.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Amount <br />(inc. TAX) :</p>
+                      <p class="col-6">
+                        <span class="number text-right">698,175.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Invoice Payable <br />Amount (inc. TAX) :</p>
+                      <p class="col-6">
+                        <span class="number text-right">698,175.00</span>
+                        <span class="unit">THB</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Last Edited Reason :</p>
+                      <p class="col-6">Lorem ipsum dolor sit amet, consetetursadipsc ing elitr, sed diam nonumy eirmod temporinvid unt ut Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodtem…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Payment Information Lists - End -->
+          </div>
+          <!-- Box #paymentInfo" - End -->
+          <!-- Box "#creditnoteList" - Start -->
+          <div class="row box">
+            <a href="#creditnoteList" data-toggle="collapse" role="button" aria-expanded="false" area-controls="creditnoteList" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="gray-1">Credit Note Refer to this Invoice ( 2 Items )</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- CreditNote Lists - Start -->
+            <div id="creditnoteList" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row overflow-x-scroll">
+                  <div class="col-12">
+                    <div class="table_wrapper">
+                      <table class="table table-1 datatable">
+                        <thead>
+                          <tr>
+                            <th>No.</th>
+                            <th>CN No.</th>
+                            <th>Type of CN</th>
+                            <th>CN Reason</th>
+                            <th>CN Date</th>
+                            <th>CN Amount [inc. VAT]</th>
+                            <th>CN Status</th>
+                            <th>Currency</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>0001</td>
+                            <td>Qty Adjustment</td>
+                            <td>Incorrect Date</td>
+                            <td>07/08/2018</td>
+                            <td>8,500.00</td>
+                            <td>Waiting for Settlement</td>
+                            <td>THB</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>0001</td>
+                            <td>Price Adjustment</td>
+                            <td>Incorrect Unit</td>
+                            <td>09/08/2018</td>
+                            <td>1,200.00</td>
+                            <td>Waiting for Settlement</td>
+                            <td>THB</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-12 pr-0">
+                    <p class="border-bottom border-top pt-3 pb-3 text-center">
+                      <a href="javascript:void(0);" id="btnAddCN" class="purple d-flex self-align-center justify-content-center">
+                        <i class="fa fa-plus-circle"></i> Create CN </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CreditNote Lists - End -->
+          </div>
+          <!-- Box #creditnoteList" - End -->
+          <!-- Box "#creditnoteRefer" - Start -->
+          <div class="row box">
+            <a href="#creditnoteRefer" data-toggle="collapse" role="button" aria-expanded="false" area-controls="creditnoteRefer" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="gray-1">Credit Note Settled to this Invoice ( 1 Item )</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- creditnoteRefer Lists - Start -->
+            <div id="creditnoteRefer" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row overflow-x-scroll">
+                  <div class="col-12">
+                    <div class="table_wrapper">
+                      <table class="table table-2 datatable">
+                        <thead>
+                          <tr>
+                            <th>No.</th>
+                            <th>CN No.</th>
+                            <th>Type of CN</th>
+                            <th>CN Reason</th>
+                            <th>CN Date</th>
+                            <th>CN Amount [inc. VAT]</th>
+                            <th>Settle Value</th>
+                            <th>CN Status</th>
+                            <th>Currency</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>0001</td>
+                            <td>Qty Adjustment</td>
+                            <td>Incorrect Date</td>
+                            <td>07/08/2018</td>
+                            <td>8,500.00</td>
+                            <td>8,500.00</td>
+                            <td>Settled</td>
+                            <td>THB</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- creditnoteRefer Lists - End -->
+          </div>
+          <!-- Box #creditnoteRefer" - End -->
+          <!-- Box Attachment - Start -->
+          <div class="row box">
+            <a href="#attachmentLists" data-toggle="collapse" role="button" aria-expanded="false" area-controls="attachmentLists" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="border-bottom gray-1">Attachments</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- Attachment lists - Start -->
+            <div id="attachmentLists" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Tax Invoice :</p>
+                      <p class="col-6"><span class="fileName">TaxINV.PNG</span><a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Receipt NO. :</p>
+                      <p class="col-6">123456789</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Delivery Note :</p>
+                      <p class="col-6"><span class="fileName">DeliveryNote.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Receipt :</p>
+                      <p class="col-6"><span class="fileName">Receipt.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                    <div class="row">
+                      <p class="col-4 text-right">Attach Other Documents :</p>
+                      <p class="col-6"><span class="fileName">OtherDoc.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                      <p class="col-6 offset-4"><span class="fileName">OtherDoc2.PNG</span> <a href="javascript:void(0);" class="purple font-bold underline">Download</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Attachment lists - End -->
+          </div>
+          <!-- Box Attachment - End -->
+        </div><!-- box__inner -->
+      </section>
+      <section id="invoice_detail_page_2" class="box box--width-header">
+        <!-- box--no-shadow -->
+        <div class="box__header">
+          <div class="row justify-content-between align-items-center mb-2">
+            <div class="col">
+              <h3>Items Information</h3>
+            </div>
+          </div>
+        </div><!-- box__header -->
+        <div class="box__inner">
+          <!-- Box "#tax3" - Start -->
+          <div class="row box">
+            <a href="#tax3" data-toggle="collapse" role="button" aria-expanded="false" area-controls="tax3" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="gray-1">TAX 3%</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- tax3 Lists - Start -->
+            <div id="tax3" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row overflow-x-scroll">
+                  <div class="col-12">
+                    <div class="table_wrapper">
+                      <table class="table table-3 datatable">
+                        <thead>
+                          <tr>
+                            <th>PO No.</th>
+                            <th>PO Item No.</th>
+                            <th>Material Description</th>
+                            <th>Qty</th>
+                            <th>Unit Description</th>
+                            <th>Unit Price</th>
+                            <th>Sub Total</th>
+                            <th>Currency</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-uppercase">5002111695</td>
+                            <td class="text-uppercase">0001</td>
+                            <td class="text-uppercase">Flexible bag for resin with...</td>
+                            <td class="text-uppercase">8,500.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">30.00</td>
+                            <td class="text-uppercase">255,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111694</td>
+                            <td class="text-uppercase">0002</td>
+                            <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                            <td class="text-uppercase">1,200.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">325.00</td>
+                            <td class="text-uppercase">390,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111693</td>
+                            <td class="text-uppercase">0003</td>
+                            <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                            <td class="text-uppercase">15.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">300.00</td>
+                            <td class="text-uppercase">4,500.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111692</td>
+                            <td class="text-uppercase">0004</td>
+                            <td class="text-uppercase">Flexible bag for resin with...</td>
+                            <td class="text-uppercase">60.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">50.00</td>
+                            <td class="text-uppercase">3,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="6" class="text-right">Sub Total (Exclude VAT)</td>
+                            <td class="font-bold">652,500.00</td>
+                            <td>THB</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" class="text-right">TAX Total (3%)</td>
+                            <td class="font-bold">45,675.00</td>
+                            <td>THB</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" class="text-right">Invoice Amount (inc. TAX)</td>
+                            <td class="font-bold">698,175.00</td>
+                            <td>THB</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- tax3 Lists - End -->
+          </div>
+          <!-- Box #tax3" - End -->
+          <!-- Box "#tax7" - Start -->
+          <div class="row box">
+            <a href="#tax7" data-toggle="collapse" role="button" aria-expanded="false" area-controls="tax7" class="d-flex w-100 btnToggle">
+              <div class="col-12">
+                <h3 class="gray-1">TAX 7%</h3>
+                <i class="fa fa-chevron-up gray-1" aria-hidden="true"></i>
+                <i class="fa fa-chevron-down gray-1" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- tax7 Lists - Start -->
+            <div id="tax7" class="collapse multi-collapse w-100">
+              <div class="card card-body noborder">
+                <div class="row overflow-x-scroll">
+                  <div class="col-12">
+                    <div class="table_wrapper">
+                      <table class="table table-4 datatable">
+                        <thead>
+                          <tr>
+                            <th>PO No.</th>
+                            <th>PO Item No.</th>
+                            <th>Material Description</th>
+                            <th>Qty</th>
+                            <th>Unit Description</th>
+                            <th>Unit Price</th>
+                            <th>Sub Total</th>
+                            <th>Currency</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-uppercase">5002111695</td>
+                            <td class="text-uppercase">0001</td>
+                            <td class="text-uppercase">Flexible bag for resin with...</td>
+                            <td class="text-uppercase">8,500.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">30.00</td>
+                            <td class="text-uppercase">255,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111694</td>
+                            <td class="text-uppercase">0002</td>
+                            <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                            <td class="text-uppercase">1,200.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">325.00</td>
+                            <td class="text-uppercase">390,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111693</td>
+                            <td class="text-uppercase">0003</td>
+                            <td class="text-uppercase">Big Bag, 100x100x125CM, W/Logo</td>
+                            <td class="text-uppercase">15.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">300.00</td>
+                            <td class="text-uppercase">4,500.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                          <tr>
+                            <td class="text-uppercase">5002111692</td>
+                            <td class="text-uppercase">0004</td>
+                            <td class="text-uppercase">Flexible bag for resin with...</td>
+                            <td class="text-uppercase">60.000</td>
+                            <td class="text-uppercase">Bag</td>
+                            <td class="text-uppercase">50.00</td>
+                            <td class="text-uppercase">3,000.00</td>
+                            <td class="text-uppercase">THB</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="6" class="text-right">Sub Total (Exclude VAT)</td>
+                            <td class="font-bold">652,500.00</td>
+                            <td>THB</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" class="text-right">TAX Total (7%)</td>
+                            <td class="font-bold">45,675.00</td>
+                            <td>THB</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" class="text-right">Invoice Amount (inc. TAX)</td>
+                            <td class="font-bold">698,175.00</td>
+                            <td>THB</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- tax3 Lists - End -->
+          </div>
+          <!-- Box #tax7" - End -->
+        </div><!-- box__inner -->
+      </section>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* Datatable #1 : Credit Note Refer - Start */
+        $('.table-1').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0],
+            "orderable": false,
+            'sortable': false
+          }, {
+            'targets': [1],
+            'width': '120px',
+            'orderable': true
+          }, {
+            'targets': [2],
+            'width': '300px',
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7],
+            'width': '100px'
+          }],
+          order: [
+            [1, "asc"]
+          ],
+          fixedHeader: true,
+          stateSave: false,
+          paging: false,
+          bLengthChange: true,
+          searching: false,
+          info: false,
+          ordering: true
+        });
+        /* Datatable #1 : Credit Note Refer - End */
+        /* Datatable #2 : Credit Note Settled - Start */
+        $('.table-2').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0],
+            "orderable": false,
+            'sortable': false
+          }, {
+            'targets': [1],
+            'width': '120px',
+            'orderable': true
+          }, {
+            'targets': [2],
+            'width': '300px',
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7, 8],
+            'width': '100px'
+          }],
+          order: [
+            [1, "asc"]
+          ],
+          fixedHeader: true,
+          stateSave: false,
+          paging: false,
+          bLengthChange: true,
+          searching: false,
+          info: false,
+          ordering: true
+        });
+        /* Datatable #2 : Credit Note Settled - End */
+        /* Datatable #3, Datatable #4 : Tax - Start */
+        $('.table-3, .table-4').DataTable({
+          //dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
+          "language": {
+            "lengthMenu": "Display _MENU_ Per Page"
+          },
+          columnDefs: [{
+            "targets": [0]
+          }, {
+            'targets': [1],
+            'width': '120px'
+          }, {
+            'targets': [2],
+            'width': '300px'
+          }, {
+            'targets': [3],
+            'width': '150px'
+          }, {
+            'targets': [4],
+            'width': '100px'
+          }, {
+            'targets': [5],
+            'width': '150px'
+          }, {
+            'targets': [6],
+            'width': '120px'
+          }, {
+            'targets': [7],
+            'width': '100px'
+          }],
+          fixedHeader: true,
+          stateSave: false,
+          paging: false,
+          bLengthChange: true,
+          searching: false,
+          info: false,
+          ordering: true
+        });
+        /* Datatable #1 : Credit Note Refer - End */
+        $('body').on('click', 'button[name="btnEdit"]', function() {
+          top.location.href = 'invoice_detail_edit.html';
+        })
+      });
+    </script>
+  </body>
+
+</html>
